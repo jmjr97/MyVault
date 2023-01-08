@@ -1,4 +1,5 @@
 # Lines configured by zsh-newuser-install
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -26,10 +27,10 @@ alias vim="nvim"
 
 # Prompt
 setopt PROMPT_SUBST
-PROMPT='%F{#ff9800} %~%f ${vcs_info_msg_0_}%F{#ff9800}%f '
+PROMPT='%F{#ff9800} %~ %f${vcs_info_msg_0_}%F{#ff9800}%f '
 #PROMPT='%F{#ff9800} %~%f ${vcs_info_msg_0_}%F{#ff9800}%f '
 
-zstyle ':vcs_info:git:*' formats '%F{#03a9f4} %b%u%c%f '
+zstyle ':vcs_info:git:*' formats '%F{#ff9800}%f %F{#03a9f4} %b%u%c%f '
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr ' %F{#00ff00}ﰚ%f'
 zstyle ':vcs_info:*' unstagedstr ' %F{#ff0000}ﰜ%f'
