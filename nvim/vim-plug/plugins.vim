@@ -1,0 +1,10 @@
+call plug#begin('~/.config/nvim/autoload/plugged')
+
+" vim nightfly
+"Plug 'bluz71/vim-nightfly-colors'
+
+" hexokinase
+" Plug 'rrethy/vim-hexokinase'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
+call plug#end()

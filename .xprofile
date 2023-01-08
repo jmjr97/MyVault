@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# go path
+export PATH=$PATH:/usr/local/go/bin
+
+# Autostart
+discord --start-minimized &
+dunst &
+lxsession &
+nitrogen --restore &
+picom -f &
