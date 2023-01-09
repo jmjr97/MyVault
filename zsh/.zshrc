@@ -10,6 +10,8 @@ zstyle :compinstall filename '/home/john/.config/zsh/.zshrc'
 
 # End of lines added by compinstall
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#03a9f4'
+
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-Z}'
 
@@ -23,7 +25,15 @@ alias ll="lsd -Alh"
 alias cat="bat"
 alias cls="clear"
 alias vim="nvim"
-#alias ..="cd .."
+
+# Config Alias
+alias zconfig="vim ~/.config/zsh/.zshrc"
+alias bconfig="vim ~/.config/bspwm/bspwmrc"
+alias sconfig="vim ~/.config/sxhkd/sxhkdrc"
+alias vconfig="vim ~/.config/nvim/init.vim"
+alias vpconfig="vim ~/.config/nvim/vim-plug/plugins.vim"
+alias aconfig="vim ~/.config/awesome/rc.lua"
+alias atconfig="vim ~/.config/awesome/themes/mytheme.lua"
 
 # Prompt
 setopt PROMPT_SUBST

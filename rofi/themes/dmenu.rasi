@@ -14,9 +14,9 @@ window {
     location:   north;
     width:      100%;
     padding:    4px;
-	margin: 34px 0px 0px 0px;
-	border: 0px 0px 2px 0px;
-	border-color: #666666; 
+	margin: 29px 0px 0px 0px;
+	border: 2px 0px 2px 0px;
+	border-color: #555555; 
     children:   [ horibox ];
 }
 horibox {
