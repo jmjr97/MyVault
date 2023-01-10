@@ -824,30 +824,32 @@ font:
   # Highlight window damage information.
   #highlight_damage: false
 colors:
-  name: Material
-  author: ""
+  # Default colors
   primary:
-    background: "#363740"
-    foreground: "#eceff1"
-  cursor:
-    text: "#263238"
-    cursor: "#eceff1"
+    background: '#282c34'
+    foreground: '#abb2bf'
+
+  # Normal colors
   normal:
-    black: "#263238"
-    red: "#ff9800"
-    green: "#8bc34a"
-    yellow: "#ffc107"
-    blue: "#03a9f4"
-    magenta: "#e91e63"
-    cyan: "#009688"
-    white: "#cfd8dc"
+    # NOTE: Use '#131613' for the `black` color if you'd like to see
+    # black text on the background.
+    black: '#282c34'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#abb2bf'
+
+  # Bright colors
   bright:
-    black: "#37474f"
-    red: "#ffa74d"
-    green: "#9ccc65"
-    yellow: "#ffa000"
-    blue: "#81d4fa"
-    magenta: "#ad1457"
-    cyan: "#26a69a"
-    white: "#eceff1"
-theme: Material
+    black: '#5c6370'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#ffffff'
+theme: One-Dark

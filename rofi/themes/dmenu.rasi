@@ -5,8 +5,8 @@
  */
 
 * {
-    background-color:      #363740;
-    text-color:           #eceff1;
+    background-color:      #282c34;
+    text-color:           #abb2bf;
     font:            "Hack Nerd Font Mono 12";
 }
 window {
@@ -16,7 +16,7 @@ window {
     padding:    4px;
 	margin: 29px 0px 0px 0px;
 	border: 2px 0px 2px 0px;
-	border-color: #555555; 
+	border-color: #363740; 
     children:   [ horibox ];
 }
 horibox {
@@ -24,7 +24,7 @@ horibox {
     children:   [ prompt, textbox-prompt-colon, entry, listview ];
 }
 prompt {
-	text-color: #eceff1;	
+	text-color: #abb2bf;	
 }
 textbox-prompt-colon {
 	str: ": ";
@@ -43,7 +43,8 @@ element {
     padding: 0px 2px;
 }
 element selected {
-    background-color: #03a9f4;
+    background-color: #61afef;
+    text-color: #282c34;
 }
 
 element-text, element-icon {

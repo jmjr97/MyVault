@@ -10,7 +10,7 @@ zstyle :compinstall filename '/home/john/.config/zsh/.zshrc'
 
 # End of lines added by compinstall
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#03a9f4'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#61afef'
 
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-Z}'
@@ -30,17 +30,18 @@ alias vim="nvim"
 alias zconfig="vim ~/.config/zsh/.zshrc"
 alias bconfig="vim ~/.config/bspwm/bspwmrc"
 alias sconfig="vim ~/.config/sxhkd/sxhkdrc"
-alias vconfig="vim ~/.config/nvim/init.vim"
+alias pconfig="vim ~/.config/polybar/config.ini"
+alias vconfig="vim ~/.config/nvim/init.lua"
 alias vpconfig="vim ~/.config/nvim/vim-plug/plugins.vim"
 alias aconfig="vim ~/.config/awesome/rc.lua"
 alias atconfig="vim ~/.config/awesome/themes/mytheme.lua"
 
 # Prompt
 setopt PROMPT_SUBST
-PROMPT='%F{#ff9800} %~ %f${vcs_info_msg_0_}%F{#ff9800}%f '
-#PROMPT='%F{#ff9800} %~%f ${vcs_info_msg_0_}%F{#ff9800}%f '
+PROMPT='%F{#e06c75} %~ %f${vcs_info_msg_0_}%F{#e06c75}%f '
+#PROMPT='%F{#e06c75} %~%f ${vcs_info_msg_0_}%F{#e06c75}%f '
 
-zstyle ':vcs_info:git:*' formats '%F{#ff9800}%f %F{#03a9f4} %b%u%c%f '
+zstyle ':vcs_info:git:*' formats '%F{#e06c75}%f %F{#61afef} %b%u%c%f '
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr ' %F{#00ff00}ﰚ%f'
 zstyle ':vcs_info:*' unstagedstr ' %F{#ff0000}ﰜ%f'
