@@ -54,5 +54,7 @@ neofetch
 # Plugins
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/john/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# ~/.zshrc
 
+eval "$(starship init zsh)"
 

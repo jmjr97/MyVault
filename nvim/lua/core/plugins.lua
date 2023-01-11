@@ -22,8 +22,8 @@ return require('packer').startup(function(use)
     use 'navarasu/onedark.nvim'
         -- Hex Colors
  --   use 'rrethy/vim-hexokinase'
-            -- use 'norcalli/nvim-colorizer.lua'
-            -- require'colorizer'.setup()
+    use 'norcalli/nvim-colorizer.lua'
+        require'colorizer'.setup()
         -- Fuzzy Finder	
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -54,7 +54,6 @@ return require('packer').startup(function(use)
         require'alpha'.setup(require'alpha.themes.startify'.config)
         end
     }
-    
     use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {

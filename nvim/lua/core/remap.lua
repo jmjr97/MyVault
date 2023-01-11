@@ -14,9 +14,26 @@ vim.keymap.set('n', '<F1>', [[<ESC>]])
 vim.keymap.set('i', '<F1>', [[<ESC>]])
 
 -- Tabs
-vim.keymap.set('n', '<C-h>', vim.cmd.tabp)
-vim.keymap.set('n', '<C-l>', vim.cmd.tabn)
-vim.keymap.set('n', '<C-x>', vim.cmd.tabc)
+vim.keymap.set('n', '<leader>tp', vim.cmd.tabp)
+vim.keymap.set('n', '<leader>tn', vim.cmd.tabn)
+vim.keymap.set('n', '<leader>tc', vim.cmd.tabc)
+
+-- Buffers
+vim.keymap.set('n', '<leader>bp', vim.cmd.bp)
+vim.keymap.set('n', '<leader>bn', vim.cmd.bn)
+vim.keymap.set('n', '<leader>bc', vim.cmd.bc)
+
+-- Paste but keep original yank
+vim.keymap.set('x', '<leader>p', '\'_dP')
+
+-- Delete but not copy
+vim.keymap.set('x', '<leader>d', '\'_d')
+vim.keymap.set('v', '<leader>d', '\'_d')
+
+-- Yank to system clipboard
+vim.keymap.set('n', '<leader>y', '\'_+y')
+vim.keymap.set('v', '<leader>y', '\'_+y')
+vim.keymap.set('n', '<leader>Y', '\'_+Y')
 
 -- Highlight and move
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
