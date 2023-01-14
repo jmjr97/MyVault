@@ -17,6 +17,7 @@ bspc config gapless_monocle      true
 
 bspc rule -a firefox desktop='^5' follow=on focus=on
 bspc rule -a discord desktop='^5'
+bspc rule -a Mailspring state=floating
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off

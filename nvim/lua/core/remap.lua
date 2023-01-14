@@ -21,7 +21,7 @@ vim.keymap.set('n', '<leader>tc', vim.cmd.tabc)
 -- Buffers
 vim.keymap.set('n', '<leader>bp', vim.cmd.bp)
 vim.keymap.set('n', '<leader>bn', vim.cmd.bn)
-vim.keymap.set('n', '<leader>bc', vim.cmd.bc)
+vim.keymap.set('n', '<leader>bd', vim.cmd.bdelete)
 
 -- Paste but keep original yank
 vim.keymap.set('x', '<leader>p', '\'_dP')

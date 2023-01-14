@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
     use 'ThePrimeagen/harpoon'
         -- theme
     use 'navarasu/onedark.nvim'
+        -- vimwiki
+    use 'vimwiki/vimwiki'
         -- Hex Colors
  --   use 'rrethy/vim-hexokinase'
     use 'norcalli/nvim-colorizer.lua'

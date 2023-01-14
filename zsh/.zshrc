@@ -36,6 +36,10 @@ alias vpconfig="vim ~/.config/nvim/vim-plug/plugins.vim"
 alias aconfig="vim ~/.config/awesome/rc.lua"
 alias atconfig="vim ~/.config/awesome/themes/mytheme.lua"
 
+# Audio fix
+alias hdmi1='pactl set-card-profile 41 output:hdmi-stereo'
+alias hdmi2='pactl set-card-profile 41 output:hdmi-stereo-extra1'
+
 # Prompt
 setopt PROMPT_SUBST
 PROMPT='%F{#e06c75} %~ %f${vcs_info_msg_0_}%F{#e06c75}%f '
@@ -52,8 +56,8 @@ bindkey '^[[Z' end-of-line
 neofetch
 
 # Plugins
-source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /home/john/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ~/.zshrc
 
 eval "$(starship init zsh)"

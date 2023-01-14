@@ -32,7 +32,11 @@ super + shift + Return
 
 # file browser
 super + f
-	thunar
+	nemo
+
+# Notes
+super + o
+    obsidian
 
 # -- Window Manipulation -- #
 

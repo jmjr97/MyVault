@@ -2,8 +2,10 @@
 
 # go path
 export PATH=$PATH:/usr/local/go/bin
+export ZDOTDIR=$HOME/.config/zsh
 
 # Autostart
+mailspring --background &
 discord --start-minimized &
 dunst &
 lxsession &
