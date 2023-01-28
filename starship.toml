@@ -21,7 +21,7 @@ truncation_symbol = '…/'
 [character]
 success_symbol = "[❯](#61afef)"
 error_symbol = "[❯](#e06c75)"
-vimcmd_symbol = "[❮](#d19a66)"
+vimcmd_symbol = "[](#d19a66)"
 
 [git_branch]
 format = " [$symbol $branch]($style) "
