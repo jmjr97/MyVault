@@ -25,6 +25,7 @@ alias ll="lsd -Alh"
 alias cat="bat"
 alias cls="clear"
 alias vim="nvim"
+alias modx="chmod +x"
 
 # Config Alias
 alias zconfig="vim ~/.config/zsh/.zshrc"
