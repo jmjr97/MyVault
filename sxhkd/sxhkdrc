@@ -31,14 +31,22 @@ super + shift + Return
 	firefox
 
 # file browser
-super + f
+super + d
 	nemo
 
 # Notes
 super + o
     obsidian
 
+# Mail
+super + m
+    mailspring
+
 # -- Window Manipulation -- #
+
+# Move window to next monitor
+super + ctrl + Return
+    bspc node -m next --follow
 
 # set to tileing
 super + t
