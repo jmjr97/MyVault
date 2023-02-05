@@ -15,4 +15,5 @@ vim.o.incsearch = true
 vim.o.scrolloff = 8
 vim.o.signcolumn = 'yes'
 
+vim.cmd[[autocmd FileType * setlocal formatoptions-=ro]]
 -- vim.g.vimwiki_list = {{path = '/home/john/Dropbox/vimwiki/', markdown, '.md'}}

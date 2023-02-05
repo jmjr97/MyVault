@@ -31,7 +31,7 @@ super + shift + Return
 	firefox
 
 # file browser
-super + d
+super + f
 	nemo
 
 # Notes
@@ -45,8 +45,12 @@ super + m
 # -- Window Manipulation -- #
 
 # Move window to next monitor
-super + ctrl + Return
+super + d
     bspc node -m next --follow
+#
+# Move window to next monitor without follow
+super + ctrl + d
+    bspc node -m next 
 
 # set to tileing
 super + t
