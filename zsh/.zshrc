@@ -22,9 +22,10 @@ precmd() { vcs_info }
 # Alias
 alias ls="ls --color=auto"
 alias ll="lsd -Alh"
+alias lll="clear && lsd -Alh"
 alias cat="bat"
-alias cls="clear"
 alias vim="nvim"
+alias top="bpytop"
 alias modx="chmod +x"
 
 # Config Alias

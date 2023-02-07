@@ -10,4 +10,3 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.setup()
-
