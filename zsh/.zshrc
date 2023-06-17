@@ -28,6 +28,12 @@ alias vim="nvim"
 alias top="bpytop"
 alias modx="chmod +x"
 
+# Git Alias
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m" 
+alias gp="git push origin master"
+
 # Config Alias
 alias zconfig="vim ~/.config/zsh/.zshrc"
 alias bconfig="vim ~/.config/bspwm/bspwmrc"
@@ -36,7 +42,7 @@ alias pconfig="vim ~/.config/polybar/config.ini"
 alias vconfig="vim ~/.config/nvim/init.lua"
 alias vpconfig="vim ~/.config/nvim/vim-plug/plugins.vim"
 alias aconfig="vim ~/.config/awesome/rc.lua"
-alias atconfig="vim ~/.config/awesome/themes/mytheme.lua"
+alias atconfig="vim ~/.config/awesome/theme.lua"
 
 # Audio fix
 alias hdmi1='pactl set-card-profile 41 output:hdmi-stereo'

@@ -49,11 +49,11 @@ super + m
 # -- Window Manipulation -- #
 
 # Move window to next monitor
-super + d
+super + grave
     bspc node -m next --follow
 
 # Move window to next monitor w/o following
-super + shift + d
+super + shift + grave
     bspc node -m next
 
 # set to tileing
