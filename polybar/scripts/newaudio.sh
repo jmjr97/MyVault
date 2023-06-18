@@ -1,8 +1,7 @@
 #!/bin/bash
 
-speakers='alsa_output.pci-0000_07_00.1.hdmi-stereo'
-speakers2='alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1'
-headphones='alsa_output.usb-Logitech_PRO_000000000000-00.pro-output-0'
+speakers='alsa_output.pci-0000_07_00.1.3.hdmi-stereo'
+headphones='alsa_output.usb-Logitech_PRO_000000000000-00.3.analog-stereo'
 
 function main() {
     # Pipewire
@@ -19,9 +18,9 @@ function main() {
         pactl set-sink-mute @DEFAULT_SINK@ toggle
     elif [ "${action}" == "swap" ]; then
         if [ ${SINK} == $headphones ]; then
-            pactl set-default-sink alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1
+            pactl set-default-sink alsa_output.pci-0000_07_00.1.3.hdmi-stereo 
         else 
-            pactl set-default-sink alsa_output.usb-Logitech_PRO_000000000000-00.pro-output-0
+            pactl set-default-sink alsa_output.usb-Logitech_PRO_000000000000-00.3.analog-stereo 
         fi
     else
         if [ ${SINK} == $headphones ]; then

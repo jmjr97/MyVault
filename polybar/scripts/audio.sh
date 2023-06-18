@@ -1,20 +1,17 @@
 #!/bin/bash
 
-speakers='alsa_output.pci-0000_07_00.1.hdmi-stereo'
-speakers2='alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1'
-headphones='alsa_output.usb-Logitech_PRO_000000000000-00.pro-output-0'
+speakers='alsa_output.pci-0000_07_00.1.3.hdmi-stereo'
+headphones='alsa_output.usb-Logitech_PRO_000000000000-00.3.analog-stereo'
 # 蓼
 
 swapOutput(){
-	if [[ $(pactl get-default-sink NAME) == $headphones ]]; then		
-		echo $(pactl set-default-sink alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1)
-
+	if [[ $(pactl get-default-sink) == $headphones ]]; then		
+		echo $(pactl set-default-sink alsa_output.pci-0000_07_00.1.3.hdmi-stereo)
 	else
-		echo $(pactl set-default-sink alsa_output.usb-Logitech_PRO_000000000000-00.pro-output-0)
+		echo $(pactl set-default-sink alsa_output.usb-Logitech_PRO_000000000000-00.3.analog-stereo)
 
 	fi 
 }
 
 
 $1
-
