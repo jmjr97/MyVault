@@ -18,6 +18,15 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+------------------------------------------
+-- My Imports
+
+-- local temperature_widget = require("my-widgets/temperature")
+local audio_source = require("my-widgets/audio_source")
+
+
+naughty.config.defaults['icon_size'] = 80
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -111,6 +120,8 @@ local mytextclock = wibox.widget {
     format = '%a, %B %d  %I:%M %P',
     widget = wibox.widget.textclock
 }
+
+local spacer = wibox.widget.textbox("  ")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -207,9 +218,12 @@ awful.screen.connect_for_each_screen(function(s)
 
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            -- temperature_widget,
+            audio_source,
+            spacer,
             mykeyboardlayout,
+            spacer,
             wibox.widget.systray(),
-            s.mylayoutbox,
         },
     }
 end)
