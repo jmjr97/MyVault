@@ -13,7 +13,7 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # close and kill
-super + {_,shift + }w
+super + {_,shift + }q
 	bspc node -{c,k}
 
 # -- Application Shortcuts -- #
@@ -27,15 +27,15 @@ super + Return
 	alacritty
 
 # web browser
-super + shift + Return
+super + w
 	firefox
 
 # Web browser private mode
-super + shift + ctrl + Return
+super + shift + w
     firefox --private-window
 
 # file browser
-super + f
+super + e
 	nemo
 
 # Notes
@@ -105,7 +105,7 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-4,q,e}
+super + {_,shift + }{1-4,9,0}
 	bspc {desktop -f,node -d} '^{1-6}' --follow
 
 # -- preselect -- #

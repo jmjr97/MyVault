@@ -13,6 +13,7 @@ xsetroot -cursor_name left_ptr &
 mailspring --background &
 discord --start-minimized &
 dropbox &
+spotifyd &
 dunst &
 lxsession &
 nitrogen --restore &
