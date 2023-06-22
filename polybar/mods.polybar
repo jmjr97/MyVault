@@ -64,7 +64,7 @@ icon-default = 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-label-foreground = ${colors.highlight}
+label-foreground = ${colors.secondary}
 
 [module/temperature]
 type = internal/temperature
@@ -218,31 +218,14 @@ menu-0-2 = "⏾ Sleep"
 menu-0-2-exec = systemctl suspend
 menu-0-2-foreground = ${colors.secondary}
 
-; [module/audio]
-; type = custom/ipc
-; label = "%output%"
-; 
-; hook-0 = ~/.config/polybar/scripts/newaudio.sh
-; hook-1 = ~/.config/polybar/scripts/newaudio.sh up
-; hook-2 = ~/.config/polybar/scripts/newaudio.sh down
-; hook-3 = ~/.config/polybar/scripts/newaudio.sh mute
-; hook-4 = ~/.config/polybar/scripts/newaudio.sh swap
-; initial = 1
-; 
-; scroll-up = exec polybar-msg  "#audio.hook.1"
-; scroll-down = exec polybar-msg  "#audio.hook.2"
-; click-left = exec polybar-msg  "#audio.hook.3"
-; click-right = exec polybar-msg  "#audio.hook.4"
-; click-middle = exec pavucontrol &
-
 [module/audio]
 type = custom/script
 label = "%output%"
 label-font = 1
 interval = 2.0
-exec = ~/.config/polybar/scripts/newaudio.sh
+exec = ~/.config/polybar/scripts/audio.sh
 click-right = exec pavucontrol &
-click-left = ~/.config/polybar/scripts/newaudio.sh swap &
+click-left = ~/.config/polybar/scripts/audio.sh swap &
 
 [module/music]
 type = custom/script
