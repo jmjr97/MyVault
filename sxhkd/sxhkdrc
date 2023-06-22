@@ -66,7 +66,7 @@ super + s
         bspc node focused -t floating; \
     else \
         bspc node focused -t tiled; \
-    fI
+    fi
 
 # toggle fullscreen
 super + shift + a

@@ -1,4 +1,4 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
 
 # Import additional configuration files
 #
@@ -827,20 +827,20 @@ colors:
   # Default colors
   primary:
     background: '#282c34'
-    foreground: '#abb2bf'
+    foreground: '#bbc2cf'
 
   # Normal colors
   normal:
     # NOTE: Use '#131613' for the `black` color if you'd like to see
     # black text on the background.
     black: '#282c34'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
+    red: '#ff6c6b'
+    green: '#98be65'
+    yellow: '#ecbe7b'
+    blue: '#51afef'
     magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#abb2bf'
+    cyan: '#46d9ff'
+    white: '#bbc2cf'
 
   # Bright colors
   bright:

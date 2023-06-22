@@ -255,6 +255,7 @@ type = custom/script
 exec = echo "󰐎"
 format = <label>
 click-left = spt pb --toggle
+click-right = ~/.config/polybar/scripts/spotifyd-reload.sh
 format-foreground = ${colors.primary}
 
 [module/spotify-next]
