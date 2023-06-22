@@ -56,7 +56,7 @@ window:
     # Values for `decorations` (macOS only):
     #     - transparent: Title bar, transparent background and title bar buttons
     #     - buttonless: Title bar, transparent background and no title bar buttons
-    #decorations: full
+    # decorations: none
     # Background opacity
     #
     # Window opacity as a floating point number from `0.0` to `1.0`.
@@ -852,4 +852,4 @@ colors:
     magenta: '#c678dd'
     cyan: '#56b6c2'
     white: '#ffffff'
-theme: One-Dark
+theme: doom-one
