@@ -71,6 +71,7 @@ type = internal/temperature
 base-temperature=20
 warn-temperature=75
 format = <ramp> <label>
+format-warn = <ramp> <label-warn>
 label = %temperature-c%
 label-foreground = ${colors.secondary}
 label-warn-foreground = ${colors.alert}

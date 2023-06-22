@@ -1,7 +1,7 @@
 #!/bin/bash
 
-speakers='alsa_output.pci-0000_07_00.1.3.hdmi-stereo'
-headphones='alsa_output.usb-Logitech_PRO_000000000000-00.3.analog-stereo'
+speakers='alsa_output.pci-0000_07_00.1.hdmi-stereo'
+headphones='alsa_output.usb-Logitech_PRO_000000000000-00.analog-stereo'
 
 function main() {
     # Pipewire
