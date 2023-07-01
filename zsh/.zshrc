@@ -25,7 +25,7 @@ alias ll="lsd -Alh"
 alias lll="clear && lsd -Alh"
 alias cat="bat"
 alias vim="nvim"
-alias top="bpytop"
+alias top="btop"
 alias modx="chmod +x"
 
 # Git Alias

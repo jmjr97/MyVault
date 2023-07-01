@@ -1,12 +1,12 @@
 #!/bin/bash
 
-if [ "$(playerctl status)" = "Playing" ]; then
-    artist=`exec playerctl metadata xesam:artist`
-    title=`exec playerctl metadata xesam:title`
+if [ "$(playerctl --player=spotifyd status)" = "Playing" ]; then
+    artist=`exec playerctl --player=spotifyd metadata xesam:artist`
+    title=`exec playerctl --player=spotifyd metadata xesam:title`
     ( echo "$artist - $title" )
-elif [ "$(playerctl status)" = "Paused" ]; then
-    artist=`exec playerctl metadata xesam:artist`
-    title=`exec playerctl metadata xesam:title`
+elif [ "$(playerctl --player=spotifyd status)" = "Paused" ]; then
+    artist=`exec playerctl --player=spotifyd metadata xesam:artist`
+    title=`exec playerctl --player=spotifyd metadata xesam:title`
     ( echo "(PAUSED) $artist - $title" )
 else
     echo ""
