@@ -45,9 +45,9 @@ alias vpconfig="vim ~/.config/nvim/vim-plug/plugins.vim"
 alias aconfig="vim ~/.config/awesome/rc.lua"
 alias atconfig="vim ~/.config/awesome/theme.lua"
 
-# Audio fix
-alias hdmi1='pactl set-card-profile 41 output:hdmi-stereo'
-alias hdmi2='pactl set-card-profile 41 output:hdmi-stereo-extra1'
+# Maintenance Alias
+alias pacmirrors="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
+
 
 # Prompt
 setopt PROMPT_SUBST
