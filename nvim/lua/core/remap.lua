@@ -50,5 +50,5 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Insert line & stay in normal mode
-vim.keymap.set('n', '<C-o>', 'o<esc>0"_D')
-vim.keymap.set('n', '<C-O>', 'O<esc>0"_D')
+vim.keymap.set('n', '<leader>o', 'o<esc>0"_D')
+vim.keymap.set('n', '<leader>O', 'O<esc>0"_D')
