@@ -11,7 +11,7 @@ xsetroot -cursor_name left_ptr &
 
 # Autostart
 mailspring --background &
-discord --start-minimized &
+discord --start-minimized --disable-gpu &
 dropbox &
 spotifyd &
 dunst &

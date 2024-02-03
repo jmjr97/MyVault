@@ -1,0 +1,35 @@
+# theme = "doom-one"
+
+[colors.bright]
+black = "#5c6370"
+blue = "#61afef"
+cyan = "#56b6c2"
+green = "#98c379"
+magenta = "#c678dd"
+red = "#e06c75"
+white = "#ffffff"
+yellow = "#d19a66"
+
+[colors.normal]
+black = "#282c34"
+blue = "#51afef"
+cyan = "#46d9ff"
+green = "#98be65"
+magenta = "#c678dd"
+red = "#ff6c6b"
+white = "#bbc2cf"
+yellow = "#ecbe7b"
+
+[colors.primary]
+background = "#282c34"
+foreground = "#bbc2cf"
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+
+[window.padding]
+x = 5
+y = 5
