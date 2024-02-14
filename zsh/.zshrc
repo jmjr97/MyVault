@@ -19,6 +19,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-Z}'
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
+export EDITOR=nvim
+
 # Alias
 alias ls="ls --color=auto"
 alias ll="lsd -Alh"

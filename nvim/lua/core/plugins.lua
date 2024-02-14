@@ -1,138 +1,99 @@
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+local fn = vim.fn
+
+-- Automatically install packer
+local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+if fn.empty(fn.glob(install_path)) > 0 then
+    PACKER_BOOTSTRAP = fn.system {
+        "git",
+        "clone",
+        "--depth",
+        "1",
+        "https://github.com/wbthomason/packer.nvim",
+        install_path,
+    }
+    print "Installing packer close and reopen Neovim"
     vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
 end
 
-local packer_bootstrap = ensure_packer()
+-- Auto reload plugins after saving this file
+vim.cmd[[
+    augroup packer_user_config
+        autocmd!
+        autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    augroup end
+]]
 
-return require('packer').startup(function(use)
-        -- Plugin Manager
-    use 'wbthomason/packer.nvim'
-        -- Popup Terminal
-    use 'akinsho/toggleterm.nvim'
-        -- Harpoon
-    use 'ThePrimeagen/harpoon'
-        -- theme
-    -- use 'navarasu/onedark.nvim'
-    use({
-    'NTBBloodbath/doom-one.nvim',
-    setup = function()
-        -- Add color to cursor
-		vim.g.doom_one_cursor_coloring = false
-		-- Set :terminal colors
-		vim.g.doom_one_terminal_colors = true
-		-- Enable italic comments
-		vim.g.doom_one_italic_comments = false
-		-- Enable TS support
-		vim.g.doom_one_enable_treesitter = true
-		-- Color whole diagnostic text or only underline
-        vim.g.doom_one_diagnostics_text_color = false
-		-- Enable transparent background
-		vim.g.doom_one_transparent_background = false
+-- Use a protected call so we don't error out on first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+    return
+end
 
-        -- Pumblend transparency
-		vim.g.doom_one_pumblend_enable = false
-		vim.g.doom_one_pumblend_transparency = 20
+-- Packer popup window
+packer.init {
+    display = {
+        open_fn = function()
+            return require("packer.util").float { border = "rounded" }
+        end,
+    },
+}
 
-        -- Plugins integration
-		vim.g.doom_one_plugin_neorg = true
-		vim.g.doom_one_plugin_barbar = false
-		vim.g.doom_one_plugin_telescope = false
-		vim.g.doom_one_plugin_neogit = true
-		vim.g.doom_one_plugin_nvim_tree = true
-		vim.g.doom_one_plugin_dashboard = true
-		vim.g.doom_one_plugin_startify = true
-		vim.g.doom_one_plugin_whichkey = true
-		vim.g.doom_one_plugin_indent_blankline = true
-		vim.g.doom_one_plugin_vim_illuminate = true
-		vim.g.doom_one_plugin_lspsaga = false
-	end,
-	config = function()
-        vim.cmd("colorscheme doom-one")
-    end,
-})
-        -- vimwiki
-    use 'vimwiki/vimwiki'
-        -- Hex Colors
- --   use 'rrethy/vim-hexokinase'
-    use 'norcalli/nvim-colorizer.lua'
-        require'colorizer'.setup()
-        -- Fuzzy Finder	
+-- Install plugins
+return packer.startup(function(use)
+    -- My plugins
+    use "wbthomason/packer.nvim"
+    use "nvim-lua/popup.nvim"
+    use "nvim-lua/plenary.nvim"
+    use "kyazdani42/nvim-web-devicons"
+    use "kyazdani42/nvim-tree.lua"
+    use "akinsho/bufferline.nvim"
+    use "moll/vim-bbye"
+    use "akinsho/toggleterm.nvim"
+    use "norcalli/nvim-colorizer.lua"
+    use 'goolord/alpha-nvim'
+
+    -- CMP plugins
+    use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-cmdline"
+    use "saadparwaiz1/cmp_luasnip"
+    use "hrsh7th/cmp-nvim-lsp"
+
+    -- Snippets
+    use "L3MON4D3/LuaSnip"
+    use "rafamadriz/friendly-snippets"
+
+    -- LSP
+    use "neovim/nvim-lspconfig"
+    use "williamboman/mason.nvim"
+    use "williamboman/mason-lspconfig.nvim"
+
+    -- Treesitter
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        "nvim-treesitter/nvim-treesitter",
     }
-        -- File Explorer
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
-        tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    }
-    require('toggleterm').setup{}
-        -- Treesitter
-    use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
-        -- Dashboard 
 
-    use {
-        'goolord/alpha-nvim',
-        requires = { 'nvim-tree/nvim-web-devicons' },
-        config = function ()
-        require'alpha'.setup(require'alpha.themes.startify'.config)
-        end
-    }
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+    -- Telescope
+    use "nvim-telescope/telescope.nvim"
+    use "nvim-telescope/telescope-media-files.nvim"
 
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
-
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            -- Snippet Collection (Optional)
-            {'rafamadriz/friendly-snippets'},
-        }
+    -- Lualine
+    use {
+        "nvim-lualine/lualine.nvim",
+        requires = { '"nvim-tree/nvim-web-devicons', opt = true }
     }
-    
-    use({
-    "kylechui/nvim-surround",
-    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-    config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
+
+    -- Themes
+    use "folke/tokyonight.nvim"
+    use "lunarvim/darkplus.nvim"
+    use "lunarvim/colorschemes"
+    use "marko-cerovac/material.nvim"
+
+
+    -- Automatically setup config after cloning packer.nvim
+    -- Keep after all plugins if PACKER_BOOTSTRAP then
+    if PACKER_BOOTSTRAP then
+       require("packer").sync()
     end
-    })
-
-  -- My plugins here
-  -- use 'foo2/bar2.nvim'
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
- end
 end)
-

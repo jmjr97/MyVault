@@ -1,19 +1,28 @@
-vim.g.mapleader = ' '
-vim.o.relativenumber = true
-vim.o.number = true
-vim.opt.termguicolors = true
-vim.o.wrap = false
+local options = {
+    -- mapleader = " ",
+    relativenumber = true,
+    number = true,
+    wrap = false,
+    cursorline = true,
+    mouse = "a",
+    clipboard = "unnamedplus",
+    termguicolors = true,
 
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
+	tabstop = 4,
+	softtabstop = 4,
+	shiftwidth = 4,
+	expandtab = true,
 
-vim.o.hlsearch = false
-vim.o.incsearch = true
+	hlsearch = false,
+	incsearch = true,
 
-vim.o.scrolloff = 8
-vim.o.signcolumn = 'yes'
+	scrolloff = 8,
+	sidescrolloff = 8,
+	signcolumn = "yes",
+}
 
-vim.cmd[[autocmd FileType * setlocal formatoptions-=ro]]
--- vim.g.vimwiki_list = {{path = '/home/john/Dropbox/vimwiki/', markdown, '.md'}}
+vim.opt.shortmess:append "c"
+
+for k, v in pairs(options) do
+	vim.opt[k] = v
+end

@@ -1,9 +1,11 @@
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'onedark',
+    theme = 'papercolor_light',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
+    -- section_separators = '',
+    -- component_separators = '',
     disabled_filetypes = {
       statusline = {},
       winbar = {},
@@ -21,7 +23,7 @@ require('lualine').setup {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},
-    lualine_x = {'buffers'},
+    lualine_x = {},
     lualine_y = {'filetype'},
     lualine_z = {'location'}
   },
