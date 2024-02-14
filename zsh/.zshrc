@@ -50,6 +50,9 @@ alias atconfig="vim ~/.config/awesome/theme.lua"
 # Maintenance Alias
 alias pacmirrors="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
 
+# For Fun
+alias typetest="toipe -n 50"
+
 
 # Prompt
 setopt PROMPT_SUBST
