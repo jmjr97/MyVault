@@ -28,6 +28,7 @@ alias lll="clear && lsd -Alh"
 alias cat="bat"
 alias vim="nvim"
 alias top="btop"
+alias r="ranger"
 alias modx="chmod +x"
 
 # Git Alias
@@ -52,6 +53,10 @@ alias pacmirrors="rate-mirrors --allow-root --protocol https arch | sudo tee /et
 
 # For Fun
 alias typetest="toipe -n 50"
+
+# fzf
+alias ff="fzf"
+eval "$(fzf --zsh)"
 
 
 # Prompt

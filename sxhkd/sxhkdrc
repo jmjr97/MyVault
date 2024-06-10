@@ -5,7 +5,7 @@
 # -- System -- #
 
 # quit/restart bspwm
-super + ctrl + {q,r}
+super + ctrl + {BackSpace,r}
 	bspc {quit,wm -r}
 
 # sxhkd config reload
@@ -13,7 +13,7 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # close and kill
-super + {_,shift + }q
+super + ctrl + {_,shift + }q
 	bspc node -{c,k}
     
 # volume down
@@ -94,7 +94,14 @@ super + shift + a
 
 # toggle monocle
 super + a
-	bspc desktop -l next
+    bspc desktop -l next
+
+# # toggle monocle
+# super + a
+# 	for node_i in $(bspc query -N -n '.!focused.window' -d focused);  \
+# 	do \
+# 	bspc node $node_i -g hidden; \
+# 	done
 
 # swap the current node and the biggest window
 super + g
