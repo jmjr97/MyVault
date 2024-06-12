@@ -5,7 +5,7 @@
 # -- System -- #
 
 # quit/restart bspwm
-super + ctrl + {q,r}
+super + ctrl + {BackSpace,r}
 	bspc {quit,wm -r}
 
 # sxhkd config reload
@@ -13,7 +13,7 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # close and kill
-super + {_,shift + }q
+super + ctrl + {_,shift + }q
 	bspc node -{c,k}
     
 # volume down
@@ -94,7 +94,14 @@ super + shift + a
 
 # toggle monocle
 super + a
-	bspc desktop -l next
+    bspc desktop -l next
+
+# # toggle monocle
+# super + a
+# 	for node_i in $(bspc query -N -n '.!focused.window' -d focused);  \
+# 	do \
+# 	bspc node $node_i -g hidden; \
+# 	done
 
 # swap the current node and the biggest window
 super + g
@@ -127,7 +134,7 @@ super + {_,shift + }{1-4,z,x}
 # -- preselect -- #
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
+super + ctrl + shift + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
@@ -153,7 +160,7 @@ super + ctrl + shift + space
 # 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # expand/contract a window
-super + ctrl + shift + {h,j,k,l}
+super + ctrl + {h,j,k,l}
     bspc node -z {left -20 0 || bspc node -z right -20 0, \
                   bottom 0 20 || bspc node -z top 0 20, \
                   top 0 -20 || bspc node -z bottom 0 -20, \
