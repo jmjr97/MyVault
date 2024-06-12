@@ -56,6 +56,7 @@ km("n", "<leader>fa", ":NvimTreeFindFile<CR>", opts)
 km("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 km("n", "<leader>fF", "<cmd>Telescope find_files<cr>", opts)
 km("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+km("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts)
 
 local wk = require("which-key")
 wk.register({
@@ -70,6 +71,7 @@ wk.register({
         f = { "file" },
         F = { "file w/ preview" },
         g = { "Live Grep" },
+        r = { "Recent Files" },
     },
     s = {
         name = "Split",

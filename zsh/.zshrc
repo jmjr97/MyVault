@@ -49,14 +49,26 @@ alias aconfig="vim ~/.config/awesome/rc.lua"
 alias atconfig="vim ~/.config/awesome/theme.lua"
 
 # Maintenance Alias
-alias pacmirrors="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
+alias pacmirrors="sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist"
 
 # For Fun
 alias typetest="toipe -n 50"
 
 # fzf
-alias ff="fzf"
+alias ff="zle -N fzf-cd-widget"
 eval "$(fzf --zsh)"
+
+zle     -N            fzf-cd-widget
+bindkey -M emacs '\C-f' fzf-cd-widget
+bindkey -M vicmd '\C-f' fzf-cd-widget
+bindkey -M viins '\C-f' fzf-cd-widget
+
+TRAPWINCH() {
+  zle && { zle reset-prompt; zle -R }
+}
+
+# Python
+alias py="python"
 
 
 # Prompt
