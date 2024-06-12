@@ -12,9 +12,9 @@ xsetroot -cursor_name left_ptr &
 # Autostart
 mailspring --background &
 discord --start-minimized --disable-gpu &
-dropbox &
 spotifyd &
 dunst &
 lxsession &
 nitrogen --restore &
-picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &
+picom &
+#picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &
