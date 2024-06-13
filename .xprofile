@@ -10,7 +10,7 @@ xrandr --output HDMI-0 --off --output DP-0 --off --output DP-1 --mode 1920x1080 
 xsetroot -cursor_name left_ptr &
 
 # Autostart
-mailspring --background &
+mailspring --background --password-store="gnome-libsecret" &
 discord --start-minimized --disable-gpu &
 spotifyd &
 dunst &

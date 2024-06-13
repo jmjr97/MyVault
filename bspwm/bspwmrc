@@ -28,6 +28,7 @@ bspc config gapless_monocle      true
 bspc rule -a discord desktop='^5'
 bspc rule -a Mailspring state=floating
 bspc rule -a Nitrogen state=floating
+bspc rule -a gnome-calculator state=floating
 bspc rule -a Screenkey manage=off
 
 $HOME/.config/bspwm/autostart.sh
