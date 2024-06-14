@@ -1,6 +1,6 @@
 format = """
 $username\
-[ ](#61afef)\
+[ ](#7aa2f7)\
 $hostname\
 $directory\
 $git_branch\
@@ -12,24 +12,24 @@ $python\
 $character"""
 
 [directory]
-style = "#61afef"
-read_only_style = '#e06c75' 
+style = "#7aa2f7"
+read_only_style = '#f7768e' 
 format = '[$read_only]($read_only_style)[$path]($style)'
 truncation_length = 10
 truncation_symbol = '…/'
 
 [character]
-success_symbol = "[❯](#61afef)"
-error_symbol = "[❯](#e06c75)"
-vimcmd_symbol = "[](#d19a66)"
+success_symbol = "[❯](#7aa2f7)"
+error_symbol = "[❯](#f7768e)"
+vimcmd_symbol = "[](#e0af68)"
 
 [git_branch]
 format = " [$symbol $branch]($style) "
-style = "#c678dd"
+style = "#ad8ee6"
 symbol = ''
 
 [git_status]
-format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](#e06c75) ($ahead_behind$stashed)]($style)"
+format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](#f7768e) ($ahead_behind$stashed)]($style)"
 style = "cyan"
 conflicted = " "
 untracked = "󰜛 " 
@@ -45,7 +45,7 @@ style = "bright-black"
 
 [cmd_duration]
 format = " [$duration]($style) "
-style = "#d19a66"
+style = "#e0af68"
 
 [python]
 format = "[$virtualenv]($style) "
