@@ -12,11 +12,12 @@ setxkbmap -option ctrl:swapcaps
 libinput-gestures-setup start
 
 # Autostart
-mailspring --background &
+mailspring --background --password-store="gnome-libsecret" &
 discord --start-minimized --disable-gpu &
 dropbox &
 spotifyd &
 dunst &
 lxsession &
+xfce4-power-manager &
 nitrogen --restore &
 picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &
