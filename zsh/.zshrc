@@ -1,3 +1,12 @@
+########################## 
+# ███████╗░██████╗██╗░░██╗
+# ╚════██║██╔════╝██║░░██║
+# ░░███╔═╝╚█████╗░███████║
+# ██╔══╝░░░╚═══██╗██╔══██║
+# ███████╗██████╔╝██║░░██║
+# ╚══════╝╚═════╝░╚═╝░░╚═╝
+##########################
+
 # Lines configured by zsh-newuser-install
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 HISTFILE=~/.histfile
@@ -30,6 +39,11 @@ alias vim="nvim"
 alias top="btop"
 alias r="ranger"
 alias modx="chmod +x"
+
+# Archive Alias
+alias maketar="tar -czf"
+alias viewtar="tar -xvzf"
+alias untar="tar -xvzf"
 
 # Git Alias
 alias gs="git status"
