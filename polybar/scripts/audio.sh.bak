@@ -16,9 +16,9 @@ function main() {
         fi
     else
         if [ ${SINK} == $headphones ]; then
-            echo "󰋋"
+            echo "%{T3}%{F#61afef}󰋋%{F-}%{T-}"
         else
-            echo "󰓃"
+            echo "%{T3}%{F#61afef}󰓃%{F-}%{T-}"
         fi
     fi
 }

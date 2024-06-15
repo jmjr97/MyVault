@@ -9,9 +9,9 @@ function main() {
         xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T
     else
         if [ ${CHECK} == "false" ]; then
-            echo "%{T3}%{F#61afef}󰒲%{F-}%{T-}"
+            echo "󰒲"
         else
-            echo "%{T3}%{F#61afef}󰒳%{F-}%{T-}"
+            echo "󰒳"
         fi
     fi
 }

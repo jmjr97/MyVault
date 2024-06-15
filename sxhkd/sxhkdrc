@@ -33,6 +33,10 @@ XF86AudioRaiseVolume
 XF86AudioMute
     pactl set-sink-mute 0 toggle
 
+# keyboard language
+super + ctrl + Return
+    $HOME/myrepo/myscripts/keyboard.sh
+
 # -- Application Shortcuts -- #
 
 # program launcher
