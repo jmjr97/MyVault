@@ -21,6 +21,31 @@ zstyle :compinstall filename '/home/john/.config/zsh/.zshrc'
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#61afef'
 
+# FZF Theme
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  --highlight-line \
+  --info=inline-right \
+  --ansi \
+  --layout=reverse \
+  --border=none
+  --color=bg+:#283457 \
+  --color=bg:#1a1b26 \
+  --color=border:#7aa2f7 \
+  --color=fg:#a9b1d6 \
+  --color=gutter:#32344a \
+  --color=header:#e0af68 \
+  --color=hl+:#7da6ff \
+  --color=hl:#7da6ff \
+  --color=info:#787c99 \
+  --color=marker:#f7768e \
+  --color=pointer:#f7768e \
+  --color=prompt:#7da6ff \
+  --color=query:#a9b1d6:regular \
+  --color=scrollbar:#7aa2f7 \
+  --color=separator:#e0af68 \
+  --color=spinner:#f7768e \
+"
+
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-Z}'
 
