@@ -6,41 +6,17 @@ set ignorecase true
 export EDITOR="nvim"
 
 # Custom Functions
-# cmds/functions
 cmd open ${{
-    case $(file --mime-type "$(readlink -f $f)" -b) in
-	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
-	image/vnd.djvu|application/pdf|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
-        text/*|application/json|inode/x-empty|application/x-subrip) $EDITOR $fx;;
-        text/html+md) lynx -width="$4" -display_charset=utf-8 -dump "$1" ;;
-	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
-	image/svg+xml) display -- $f ;;
-		audio/*|video/x-ms-asf) mpv --audio-display=no $f ;;
-	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
-	application/pdf|application/vnd.djvu|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
-	application/pgp-encrypted) $EDITOR $fx ;;
-	application/vnd.openxmlformats-officedocument.wordprocessingml.document|application/vnd.oasis.opendocument.text|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|application/vnd.oasis.opendocument.spreadsheet|application/vnd.oasis.opendocument.spreadsheet-template|application/vnd.openxmlformats-officedocument.presentationml.presentation|application/vnd.oasis.opendocument.presentation-template|application/vnd.oasis.opendocument.presentation|application/vnd.ms-powerpoint|application/vnd.oasis.opendocument.graphics|application/vnd.oasis.opendocument.graphics-template|application/vnd.oasis.opendocument.formula|application/vnd.oasis.opendocument.database) setsid -f libreoffice $fx >/dev/null 2>&1 ;;
-        application/octet-stream) case ${f##*.} in
-			doc|docx|xls|xlsx|odt|ppt|pptx) setsid -f libreoffice $fx >/dev/null 2>&1 ;;
-			ghw) setsid -f gtkwave $f >/dev/null 2>&1 ;;
-			ts) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
-			*) setsid -f zathura $fx >/dev/null 2>&1 ;;
-	   	esac ;;
-	*) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        application/x-executable) "$f";;
+        *) xdg-open "$f" ;;
     esac
 }}
 
-cmd mkdir ${{
-    printf "Directory Name: "
-    read ans
-    mkdir $ans
-}}
+cmd mkdir %printf "Directory Name: "; read ans; mkdir $ans
 
-cmd mkfile ${{
-    printf "File Name: "
-    read ans
-    touch $ans
-}}
+cmd mkfile %printf "File Name: "; read ans ; touch $ans
 
 cmd fzf_jump ${{
     res="$(find . | fzf --reverse --header='Jump to location')"
@@ -63,14 +39,22 @@ map "'"
 map '"'
 map d
 map i
+map gn
 
 # Keybindings
 map <enter> open
+
 map md mkdir
 map mf mkfile
-map f $vi $(fzf -d)
-map DD delete
+
 map d cut
+map DD delete
+map C clear
+
 map <c-f> :fzf_jump
 
-map o $view "$f"
+# Directory Shortcuts
+map gn cd ~/.config/nvim
+map gr cd ~/myrepo
+map go cd ~/Documents/obsidian-sync
+
