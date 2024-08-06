@@ -78,7 +78,7 @@ alias untar="tar -xvzf"
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m" 
-alias gp="git push origin master"
+alias gp="git push"
 
 # Config Alias
 alias zconfig="vim ~/.config/zsh/.zshrc"
