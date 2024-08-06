@@ -55,6 +55,10 @@ precmd() { vcs_info }
 
 export EDITOR=nvim
 
+# Pacman
+alias check-orphans="pacman -Qdt"
+alias remove-orphans="sudo pacman -Rns $(pacman -Qdtq)"
+
 # Alias
 alias ls="ls --color=auto"
 alias ll="lsd -Alh"
