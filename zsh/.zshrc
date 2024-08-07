@@ -65,6 +65,7 @@ alias ll="lsd -Alh"
 alias lll="clear && lsd -Alh"
 alias cat="bat"
 alias vim="nvim"
+alias vimw="vim -c VimwikiIndex"
 alias top="btop"
 alias r="ranger"
 alias modx="chmod +x"
@@ -91,6 +92,16 @@ alias vpconfig="vim ~/.config/nvim/vim-plug/plugins.vim"
 alias aconfig="vim ~/.config/awesome/rc.lua"
 alias atconfig="vim ~/.config/awesome/theme.lua"
 
+# Yazi
+function fm() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 # Maintenance Alias
 alias pacmirrors="sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist"
 
@@ -113,6 +124,13 @@ TRAPWINCH() {
 # Python
 alias py="python"
 
+
+# lf command
+LFX="$HOME/.config/lf/lfx.sh"
+if [ -f "$LFX" ]; then
+  source "$LFX"
+fi
+alias lf="lfx"
 
 # Prompt
 setopt PROMPT_SUBST

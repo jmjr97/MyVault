@@ -45,7 +45,7 @@ super + space
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty
 
 # web browser
 super + w

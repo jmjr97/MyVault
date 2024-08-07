@@ -1,4 +1,4 @@
-# Basic Settings
+
 set preview true
 set hidden true
 set ignorecase true
@@ -31,6 +31,28 @@ cmd fzf_jump ${{
     fi
 }}
 
+cmd q ${{
+  tmp="/tmp/LF_LAST_DIR_PATH"
+  dir="$(cat "$tmp")"
+  if [ "$PWD" == "$dir" ]; then
+    lf -remote "send $id quit"
+  else
+    echo "Changed directory to ''$dir' from '$PWD'. Use \`q!\` to force quit."
+    read -s -p "Press enter to continue"
+  fi
+}}
+
+cmd q! :{{
+  quit
+}}
+
+cmd wq ${{
+  tmp="/tmp/LF_LAST_DIR_PATH"
+  echo "$PWD" > $tmp
+  lf -remote "send $id quit"
+}}
+
+
 # Remove Default Bindings
 map m
 map o
@@ -40,6 +62,7 @@ map '"'
 map d
 map i
 map gn
+map q
 
 # Keybindings
 map <enter> open
@@ -52,6 +75,9 @@ map DD delete
 map C clear
 
 map <c-f> :fzf_jump
+
+map q wq
+map Q q!
 
 # Directory Shortcuts
 map gn cd ~/.config/nvim

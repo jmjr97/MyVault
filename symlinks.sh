@@ -13,5 +13,7 @@ ln -s /home/john/myrepo/zsh/ /home/john/.config/
 ln -s /home/john/myrepo/starship.toml /home/john/.config/
 ln -s /home/john/myrepo/.xprofile /home/john/
 ln -s /home/john/myrepo/.themes/ /home/john/
+ln -s /home/john/myrepo/kitty/ /home/john/.config/
+ln -s /home/john/myrepo/yazi/ /home/john/.config/
 
 

@@ -59,25 +59,23 @@ km("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 km("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts)
 
 local wk = require("which-key")
-wk.register({
-    b = {
-        name = "Buffer",
-        b = { "Close Buffer" },
-    },
-    f = {
-        name = "Find",
-        a = { "Tree Find File"},
-        e = { "Tree Toggle"},
-        f = { "file" },
-        F = { "file w/ preview" },
-        g = { "Live Grep" },
-        r = { "Recent Files" },
-    },
-    s = {
-        name = "Split",
-        h = { "Horizontal" },
-        q = { "Close" },
-        s = { "Swap" },
-        v = { "Vertical" },
-    }
-}, { prefix = "<leader>" })
+wk.add({
+    -- Buffer
+    { "<leader>b", group = "Buffer" },
+    { "<leader>bb", desc = "Close Buffer" },
+    -- Find
+    { "<leader>f", group = "Find" },
+    { "<leader>fa", desc = "Tree Find File" },
+    { "<leader>fe", desc = "Tree Toggle" },
+    { "<leader>ff", desc = "File" },
+    { "<leader>fF", desc = "File w/ Preview" },
+    { "<leader>fg", desc = "Live Grep" },
+    { "<leader>fr", desc = "Recent Files" },
+    -- Split
+    { "<leader>s", group = "Split" },
+    { "<leader>sh", desc = "Horizontal" },
+    { "<leader>sq", desc = "Close" },
+    { "<leader>ss", desc = "Swap" },
+    { "<leader>sv", desc = "Vertical" },
+})
+

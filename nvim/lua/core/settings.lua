@@ -31,7 +31,7 @@ au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=2
 augroup END
 ]]
 
--- let g:vimwiki_list = [{'path': '~/Documents/vimwiki/'}]
+-- let g:vimwiki_list = [{'path': '~/Documents/obsidian-sync/', 'syntax': 'markdown', 'ext': '.md'}]
 
 for k, v in pairs(options) do
 	vim.opt[k] = v

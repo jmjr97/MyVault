@@ -109,6 +109,12 @@ return packer.startup(function(use)
         requires = { '"nvim-tree/nvim-web-devicons', opt = true }
     }
 
+    -- Vimwiki
+    use "vimwiki/vimwiki"
+
+    -- Neovim Obsidian
+    -- use "epwalsh/obsidian.nvim"
+
     -- Themes
     use "folke/tokyonight.nvim"
     use "lunarvim/darkplus.nvim"
