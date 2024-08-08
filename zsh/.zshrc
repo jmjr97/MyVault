@@ -19,9 +19,106 @@ zstyle :compinstall filename '/home/john/.config/zsh/.zshrc'
 
 # End of lines added by compinstall
 
+###############
+#-- Aliases --#
+###############
+
+#-- Alias
+alias ll="lsd -Alh"
+alias ls="eza -a -l -h --icons=auto"
+alias lll="clear && lsd -Alh"
+alias cat="bat"
+alias vim="nvim"
+alias vimw="vim -c VimwikiIndex"
+alias top="btop"
+alias modx="chmod +x"
+
+#-- Pacman
+alias check-orphans="pacman -Qdt"
+alias remove-orphans="sudo pacman -Rns $(pacman -Qdtq)"
+
+#-- Archive Alias
+alias maketar="tar -czf"
+alias viewtar="tar -xvzf"
+alias untar="tar -xvzf"
+
+#-- Git Alias
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add --all"
+alias gc="git commit -m" 
+alias gp="git push"
+
+#-- Config Alias
+alias zconfig="vim ~/.config/zsh/.zshrc"
+alias bconfig="vim ~/.config/bspwm/bspwmrc"
+alias sconfig="vim ~/.config/sxhkd/sxhkdrc"
+alias pconfig="vim ~/.config/polybar/config.ini"
+alias pmconfig="vim ~/.config/polybar/modules.ini"
+alias vconfig="vim ~/.config/nvim/init.lua"
+alias vpconfig="vim ~/.config/nvim/vim-plug/plugins.vim"
+alias aconfig="vim ~/.config/awesome/rc.lua"
+alias atconfig="vim ~/.config/awesome/theme.lua"
+
+#-- Maintenance Alias
+alias pacmirrors="sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist"
+
+#-- For Fun
+alias typetest="toipe -n 50"
+
+#-- Python
+alias py="python"
+
+###############
+#-- Plugins --#
+###############
+
+source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#61afef'
 
-# FZF Theme
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-Z}'
+
+#################
+#-- Utilities --#
+#################
+
+#-- Yazi
+function fm() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+#-- fzf
+alias ff="zle -N fzf-cd-widget"
+eval "$(fzf --zsh)"
+
+zle     -N            fzf-cd-widget
+bindkey -M emacs '\C-f' fzf-cd-widget
+bindkey -M vicmd '\C-f' fzf-cd-widget
+bindkey -M viins '\C-f' fzf-cd-widget
+
+TRAPWINCH() {
+  zle && { zle reset-prompt; zle -R }
+}
+
+#-- Git
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+export EDITOR=nvim
+
+###############
+#-- Theming --#
+###############
+
+#-- FZF Theme
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
   --info=inline-right \
@@ -46,91 +143,9 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=spinner:#f7768e \
 "
 
-autoload -Uz compinit && compinit
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-Z}'
-
-# Git
-autoload -Uz vcs_info
-precmd() { vcs_info }
-
-export EDITOR=nvim
-
-# Pacman
-alias check-orphans="pacman -Qdt"
-alias remove-orphans="sudo pacman -Rns $(pacman -Qdtq)"
-
-# Alias
-alias ls="ls --color=auto"
-alias ll="lsd -Alh"
-alias lll="clear && lsd -Alh"
-alias cat="bat"
-alias vim="nvim"
-alias vimw="vim -c VimwikiIndex"
-alias top="btop"
-alias r="ranger"
-alias modx="chmod +x"
-
-# Archive Alias
-alias maketar="tar -czf"
-alias viewtar="tar -xvzf"
-alias untar="tar -xvzf"
-
-# Git Alias
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit -m" 
-alias gp="git push"
-
-# Config Alias
-alias zconfig="vim ~/.config/zsh/.zshrc"
-alias bconfig="vim ~/.config/bspwm/bspwmrc"
-alias sconfig="vim ~/.config/sxhkd/sxhkdrc"
-alias pconfig="vim ~/.config/polybar/config.ini"
-alias pmconfig="vim ~/.config/polybar/modules.ini"
-alias vconfig="vim ~/.config/nvim/init.lua"
-alias vpconfig="vim ~/.config/nvim/vim-plug/plugins.vim"
-alias aconfig="vim ~/.config/awesome/rc.lua"
-alias atconfig="vim ~/.config/awesome/theme.lua"
-
-# Yazi
-function fm() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
-
-# Maintenance Alias
-alias pacmirrors="sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist"
-
-# For Fun
-alias typetest="toipe -n 50"
-
-# fzf
-alias ff="zle -N fzf-cd-widget"
-eval "$(fzf --zsh)"
-
-zle     -N            fzf-cd-widget
-bindkey -M emacs '\C-f' fzf-cd-widget
-bindkey -M vicmd '\C-f' fzf-cd-widget
-bindkey -M viins '\C-f' fzf-cd-widget
-
-TRAPWINCH() {
-  zle && { zle reset-prompt; zle -R }
-}
-
-# Python
-alias py="python"
-
-
-# lf command
-LFX="$HOME/.config/lf/lfx.sh"
-if [ -f "$LFX" ]; then
-  source "$LFX"
-fi
-alias lf="lfx"
+##############
+#-- Prompt --#
+##############
 
 # Prompt
 setopt PROMPT_SUBST
@@ -148,8 +163,6 @@ bindkey '^[[Z' end-of-line
 neofetch
 
 # Plugins
-source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ~/.zshrc
 
 eval "$(starship init zsh)"

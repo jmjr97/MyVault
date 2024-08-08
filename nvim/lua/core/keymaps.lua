@@ -58,6 +58,12 @@ km("n", "<leader>fF", "<cmd>Telescope find_files<cr>", opts)
 km("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 km("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts)
 
+-- Nvim Comment
+vim.keymap.set({"n", "v"}, "<leader>/", ":CommentToggle<cr>", opts)
+
+-- Yank to Clipboard
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], opts)
+
 local wk = require("which-key")
 wk.add({
     -- Buffer
@@ -77,5 +83,8 @@ wk.add({
     { "<leader>sq", desc = "Close" },
     { "<leader>ss", desc = "Swap" },
     { "<leader>sv", desc = "Vertical" },
+    -- Yank to Clipboard
+    { "<leader>y", desc = "Yank to Clipboard" },
+    { "<leader>/", desc = "Comment Selected" },
 })
 

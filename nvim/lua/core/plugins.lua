@@ -52,6 +52,10 @@ return packer.startup(function(use)
     use "norcalli/nvim-colorizer.lua"
     use 'goolord/alpha-nvim'
 
+    -- Nvim Comment
+    use "terrortylor/nvim-comment"
+        require('nvim_comment').setup({ create_mappings = false})
+
     -- CMP plugins
     use "hrsh7th/nvim-cmp"
     use "hrsh7th/cmp-buffer"

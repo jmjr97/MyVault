@@ -34,7 +34,7 @@ keymap = [
 
 	# Navigation
 	{ on = "h", run = "leave", desc = "Go back to the parent directory" },
-	{ on = "l", run = "enter", desc = "Enter the child directory" },
+	# { on = "l", run = "enter", desc = "Enter the child directory" },
 
 	{ on = "<Left>",  run = "leave",    desc = "Go back to the parent directory" },
 	{ on = "<Right>", run = "enter",    desc = "Enter the child directory" },
@@ -76,7 +76,7 @@ keymap = [
 	{ on = "S",         run = "search rg",                   desc = "Search files by content using ripgrep" },
 	{ on = "<C-s>",     run = "search none",                 desc = "Cancel the ongoing search" },
 	{ on = "z",         run = "plugin zoxide",               desc = "Jump to a directory using zoxide" },
-	{ on = "Z",         run = "plugin fzf",                  desc = "Jump to a directory or reveal a file using fzf" },
+	{ on = "f",         run = "plugin fzf",                  desc = "Jump to a directory or reveal a file using fzf" },
 
 	# Linemode
 	{ on = [ "m", "s" ], run = "linemode size",        desc = "Set linemode to size" },
@@ -93,7 +93,7 @@ keymap = [
 	{ on = [ "c", "n" ], run = "copy name_without_ext", desc = "Copy the filename without extension" },
 
 	# Filter
-	{ on = "f", run = "filter --smart", desc = "Filter files" },
+	{ on = "F", run = "filter --smart", desc = "Filter files" },
 
 	# Find
 	{ on = "/", run = "find --smart",            desc = "Find next file" },
@@ -300,3 +300,7 @@ keymap = [
 	{ on = "f", run = "filter", desc = "Apply a filter for the help items" },
 ]
 
+[[manager.prepend_keymap]]
+on   = "<Enter>"
+run  = "plugin --sync smart-enter"
+desc = "Enter the child directory, or open the file"
