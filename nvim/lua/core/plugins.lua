@@ -110,14 +110,16 @@ return packer.startup(function(use)
     -- Lualine
     use {
         "nvim-lualine/lualine.nvim",
-        requires = { '"nvim-tree/nvim-web-devicons', opt = true }
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
     -- Vimwiki
     use "vimwiki/vimwiki"
 
-    -- Neovim Obsidian
-    -- use "epwalsh/obsidian.nvim"
+    use {
+        'folke/noice.nvim',
+        requires = { 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify'}
+    }
 
     -- Themes
     use "folke/tokyonight.nvim"

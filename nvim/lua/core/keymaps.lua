@@ -4,9 +4,11 @@ local term_opts = { silent = true }
 
 local km = vim.api.nvim_set_keymap
 
--- Remove F1 Help
+-- Remove Dumb Stuff
 km("n", "<F1>", [[<ESC>]], opts)
 km("i", "<F1>", [[<ESC>]], opts)
+km("n", "Q", "q", opts)
+km("n", "q", "<Nop>", opts)
 
 -- Setup Leader
 km("", "<Space>", "<Nop>", opts)
@@ -43,6 +45,7 @@ km("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 km("n", "<S-l>", ":bnext<CR>", opts)
 km("n", "<S-h>", ":bprevious<CR>", opts)
 km("n", "<leader>bb", ":bdelete<CR>", opts)
+km("n", "<leader>bd", ":bdelete!<CR>", opts)
 
 -- Indent Mode
 km("v", "<", "<gv", opts)
@@ -69,6 +72,7 @@ wk.add({
     -- Buffer
     { "<leader>b", group = "Buffer" },
     { "<leader>bb", desc = "Close Buffer" },
+    { "<leader>bd", desc = "Close Buffer w/o Saving" },
     -- Find
     { "<leader>f", group = "Find" },
     { "<leader>fa", desc = "Tree Find File" },

@@ -24,9 +24,7 @@ zstyle :compinstall filename '/home/john/.config/zsh/.zshrc'
 ###############
 
 #-- Alias
-alias ll="lsd -Alh"
-alias ls="eza -a -l -h --icons=auto"
-alias lll="clear && lsd -Alh"
+alias ls="eza -a -l -h -s=type --icons=auto"
 alias cat="bat"
 alias vim="nvim"
 alias vimw="vim -c VimwikiIndex"
