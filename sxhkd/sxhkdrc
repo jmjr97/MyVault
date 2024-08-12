@@ -43,6 +43,14 @@ super + ctrl + Return
 super + space
     rofi -show drun -drun-display-format \{name\}
 
+# rofi file search
+super + r
+    rofi-finder.sh
+
+# rofi calculator
+super + KP_Add
+    rofi -show calc -no-show-match -no-sort
+
 # terminal emulator
 super + Return
 	kitty
@@ -59,17 +67,9 @@ super + shift + w
 super + e
 	nemo
     
-# email
-super + r
-    thunderbird
-
 # Notes
 super + o
     obsidian
-
-# Mail
-super + m
-    mailspring
 
 # -- Window Manipulation -- #
 

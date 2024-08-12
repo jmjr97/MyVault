@@ -34,7 +34,6 @@ km("n", "<leader>sh", ":horizontal split<CR>", opts)
 km("n", "<leader>ss", "<C-w>x", opts)
 km("n", "<leader>sq", "<C-w>q", opts)
 
-
 -- Resize with Arrows
 km("n", "<C-Up>", ":resize +2<CR>", opts)
 km("n", "<C-Down>", ":resize -2<CR>", opts)
@@ -87,6 +86,15 @@ wk.add({
     { "<leader>sq", desc = "Close" },
     { "<leader>ss", desc = "Swap" },
     { "<leader>sv", desc = "Vertical" },
+    -- LSP Handler
+    { "<leader>h", group = "LSP Handler" },
+    { "<leader>hd", desc = "Definition" },
+    { "<leader>hD", desc = "Declaration" },
+    { "<leader>hk", desc = "Info" },
+    { "<leader>ho", desc = "Diagnostics Open" },
+    { "<leader>hn", desc = "Diagnostics Next" },
+    { "<leader>hp", desc = "Diagnostics Previous" },
+    { "<leader>hl", desc = "Diagnostics List" },
     -- Yank to Clipboard
     { "<leader>y", desc = "Yank to Clipboard" },
     { "<leader>/", desc = "Comment Selected" },
