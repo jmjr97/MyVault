@@ -77,6 +77,8 @@ source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#61afef'
 
+bindkey '^ ' autosuggest-accept
+
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-Z}'
 
@@ -85,7 +87,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-Z}'
 #################
 
 #-- Yazi
-function fm() {
+function f() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then

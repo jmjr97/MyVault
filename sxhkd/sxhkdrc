@@ -33,10 +33,6 @@ XF86AudioRaiseVolume
 XF86AudioMute
     pactl set-sink-mute 0 toggle
 
-# keyboard language
-super + ctrl + Return
-    $HOME/myrepo/myscripts/keyboard.sh
-
 # -- Application Shortcuts -- #
 
 # program launcher
@@ -54,6 +50,11 @@ super + KP_Add
 # terminal emulator
 super + Return
 	kitty
+
+# terminal scratchpad
+super + {_,ctrl +}Return
+	{kitty, bspc rule -a \* -o state=floating sticky=on layer=above rectangle=1280x720+320+26 && kitty}
+
 
 # web browser
 super + w
