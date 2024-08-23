@@ -53,7 +53,11 @@ super + Return
 
 # terminal scratchpad
 super + {_,ctrl +}Return
-	{kitty, bspc rule -a \* -o state=floating sticky=on layer=above rectangle=1280x720+320+26 && kitty}
+    tdrop -am -w 70% -h 60% -y 28 -x 15% kitty
+
+# terminal scratchpad
+# super + {_,ctrl +}Return
+# 	{kitty, bspc rule -a \* -o state=floating sticky=on layer=above rectangle=1280x720+320+26 && kitty}
 
 
 # web browser
@@ -67,7 +71,15 @@ super + shift + w
 # file browser
 super + e
 	nemo
-    
+
+# terminal file browser
+super + ctrl + e
+    kitty -e yazi
+
+# neovim
+super + n
+    kitty -e nvim
+
 # Notes
 super + o
     obsidian

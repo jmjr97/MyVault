@@ -4,8 +4,9 @@ if not status_ok then
 end
 
 configs.setup {
-    ensure_installed = "all",
+    ensure_installed = { "c", "lua", "javascript", "markdown", "markdown_inline" },
     sync_install = false,
+    auto_install = false,
     ignore_install = { "" },
     highlight = {
         enable = true,

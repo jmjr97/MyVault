@@ -161,10 +161,13 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 #zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
 
 bindkey '^[[Z' end-of-line
-neofetch
+fastfetch
 
 # Plugins
 # ~/.zshrc
 
 eval "$(starship init zsh)"
 
+
+# Created by `pipx` on 2024-08-23 05:13:04
+export PATH="$PATH:/home/john/.local/bin"
