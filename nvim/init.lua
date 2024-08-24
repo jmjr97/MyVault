@@ -1,0 +1,13 @@
+require("settings")
+require("keymaps")
+require("config.lazy")
+
+require("config.bufferline")
+require("config.lualine")
+require("config.nvim-tree")
+require("config.alpha")
+require("config.noice")
+require("config.colorizer")
+require("config.toggleterm")
+require("config.telescope")
+require("config.which-key")
