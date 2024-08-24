@@ -124,24 +124,25 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
   --info=inline-right \
   --ansi \
+  --ansi \
   --layout=reverse \
   --border=none
-  --color=bg+:#283457 \
-  --color=bg:#1a1b26 \
-  --color=border:#7aa2f7 \
-  --color=fg:#a9b1d6 \
-  --color=gutter:#32344a \
-  --color=header:#e0af68 \
-  --color=hl+:#7da6ff \
-  --color=hl:#7da6ff \
-  --color=info:#787c99 \
-  --color=marker:#f7768e \
-  --color=pointer:#f7768e \
-  --color=prompt:#7da6ff \
-  --color=query:#a9b1d6:regular \
-  --color=scrollbar:#7aa2f7 \
-  --color=separator:#e0af68 \
-  --color=spinner:#f7768e \
+  --color=bg+:#2d3f76 \
+  --color=bg:#1e2030 \
+  --color=border:#589ed7 \
+  --color=fg:#c8d3f5 \
+  --color=gutter:#1e2030 \
+  --color=header:#ff966c \
+  --color=hl+:#65bcff \
+  --color=hl:#65bcff \
+  --color=info:#545c7e \
+  --color=marker:#ff007c \
+  --color=pointer:#ff007c \
+  --color=prompt:#65bcff \
+  --color=query:#c8d3f5:regular \
+  --color=scrollbar:#589ed7 \
+  --color=separator:#ff966c \
+  --color=spinner:#ff007c \
 "
 
 ##############
@@ -171,3 +172,6 @@ eval "$(starship init zsh)"
 
 # Created by `pipx` on 2024-08-23 05:13:04
 export PATH="$PATH:/home/john/.local/bin"
+
+eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
