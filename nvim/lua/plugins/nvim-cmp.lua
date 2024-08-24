@@ -19,7 +19,7 @@ return {
 
     local check_backspace = function()
       local col = vim.fn.col "." -1
-      return col == 0 or nvim.fn.getline("."):sub(col, col):match "%s"
+      return col == 0 or vim.fn.getline("."):sub(col, col):match "$s"
     end
 
     cmp.setup({
@@ -32,6 +32,7 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
+        ["<Tab>"] = cmp.mapping.select_next_item(),
         ["<C-k>"] = cmp.mapping.select_prev_item(),
         ["<C-j>"] = cmp.mapping.select_next_item(),
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -53,8 +54,8 @@ return {
             fallback()
           end
         end, {
-            "i",
-            "s",
+          "i",
+          "s",
         }),
         ["<S-Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
