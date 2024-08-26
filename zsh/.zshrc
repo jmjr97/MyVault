@@ -25,6 +25,7 @@ zstyle :compinstall filename '/home/john/.config/zsh/.zshrc'
 
 #-- Alias
 alias ls="eza -a -l -h -s=type --icons=auto"
+alias lss="clear; eza -a -l -h -s=type --icons=auto"
 alias ..="cd .."
 alias cat="bat"
 alias vim="nvim"
@@ -163,6 +164,7 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
 bindkey '^[[Z' end-of-line
 fastfetch
+~/myrepo/myscripts/chuck
 
 # Plugins
 # ~/.zshrc

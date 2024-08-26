@@ -10,7 +10,7 @@ local options = {
 	tabstop = 2,
 	shiftwidth = 2,
 	expandtab = true,
-    autoindent = true,
+  autoindent = true,
 
 	hlsearch = false,
 	incsearch = true,
@@ -20,6 +20,7 @@ local options = {
 	signcolumn = "yes",
 }
 
+vim.g.python_recommended_style = 0
 vim.opt.shortmess:append "c"
 
 vim.cmd[[

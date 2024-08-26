@@ -7,11 +7,21 @@ km("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Insert Move Movement
+km("i", "<C-k>", [[<Up>]], opts)
+km("i", "<C-j>", [[<Down>]], opts)
+km("i", "<C-h>", [[<Left>]], opts)
+km("i", "<C-l>", [[<Right>]], opts)
+
 -- Remove Dumb Stuff
 km("n", "<F1>", [[<ESC>]], opts)
 km("i", "<F1>", [[<ESC>]], opts)
 km("n", "Q", "q", opts)
 km("n", "q", "<Nop>", opts)
+
+-- Remap redo
+km("n", "U", ":redo<CR>", opts)
+km("n", "<C-r>", "<Nop>", opts)
 
 -- Centered 1/2 Page
 km("n", "<C-d>", "<C-d>zz", opts)
@@ -27,6 +37,10 @@ km("n", "<C-j>", "<C-w>j", opts)
 km("n", "<C-k>", "<C-w>k", opts)
 km("n", "<C-l>", "<C-w>l", opts)
 
+-- Splits
+km("n", "<leader>bm", "<C-w>_", opts)
+km("n", "<leader>br", "<C-w>=", opts)
+
 -- Buffers
 km("n", "<S-l>", ":bnext<CR>", opts)
 km("n", "<S-h>", ":bprevious<CR>", opts)
@@ -36,6 +50,9 @@ km("n", "<leader>bd", ":bdelete!<CR>", opts)
 -- Indent Mode
 km("v", "<", "<gv", opts)
 km("v", ">", ">gv", opts)
+
+-- Yank to Clipboard
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], opts)
 
 -- Nvim-tree
 km("n", "<leader>fe", ":NvimTreeToggle<CR>", opts)

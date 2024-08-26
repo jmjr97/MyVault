@@ -4,10 +4,8 @@ wk.add({
   { "<leader>b", group = "Buffers" },
   { "<leader>bb", desc = "Close Buffer" },
   { "<leader>bd", desc = "Close Buffer w/o Saving" },
-  { "<leader>bh", desc = "Horizontal" },
-  { "<leader>bq", desc = "Close" },
-  { "<leader>bs", desc = "Swap" },
-  { "<leader>bv", desc = "Vertical" },
+  { "<leader>bm", desc = "Max Vertical Split" },
+  { "<leader>br", desc = "Reset Split" },
   -- Find
   { "<leader>f", group = "File" },
   { "<leader>fa", desc = "Tree Find File" },
