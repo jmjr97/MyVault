@@ -20,6 +20,12 @@ return {
       updateevents = "TextChanged, TextChangedI",
     }
 
+    vim.keymap.set({ "i", "s" }, "<C-'>", function()
+      if luasnip.expandable() then
+        luasnip.expand()
+      end
+    end, { silent = true  })
+
     vim.keymap.set({ "i", "s" }, "<C-.>", function()
       if luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
@@ -51,7 +57,7 @@ return {
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
         ["<C-o>"] = cmp.mapping.abort(),
-        ["<C-i>"] = cmp.mapping.confirm({ select = false }),
+        ["<C-i>"] = cmp.mapping.confirm({ select = true }),
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({

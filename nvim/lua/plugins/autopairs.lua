@@ -1,8 +1,27 @@
 return {
-    'altermo/ultimate-autopair.nvim',
-    event={'InsertEnter','CmdlineEnter'},
-    branch='v0.6', --recommended as each new version will have breaking changes
-    opts={
-        --Config goes here
+  'windwp/nvim-autopairs',
+  event = 'InsertEnter',
+  config = true,
+  -- use opts = {} for passing setup options
+  -- this is equivalent to setup({}) function
+  opts = {
+    disable_filetype = { "TelescopePrompt" },
+    disable_in_macro = true,
+    disable_in_visualblock = false,
+    disable_in_replace_mode = true,
+
+    fast_wrap = {
+      map = "<C-e>",
+      chars = { '{', '[', '(', '"', "'" },
+      offset = 0,
+      end_key = '$',
+      keys = 'asdfghjkl;',
+      check_comma = true,
+      highlight = 'PmenuSel',
+      highlight_grey = 'LineNr',
     },
+
+  },
 }
+
+
