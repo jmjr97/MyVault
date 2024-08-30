@@ -9,6 +9,7 @@ xrandr --output eDP-1 --mode 1920x1200
 
 xsetroot -cursor_name left_ptr &
 setxkbmap -option ctrl:swapcaps
+xcape -e 'Control_L=Escape'
 libinput-gestures-setup start
 
 # Autostart
