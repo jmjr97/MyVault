@@ -32,6 +32,7 @@ alias vim="nvim"
 alias vimw="vim -c VimwikiIndex"
 alias top="btop"
 alias modx="chmod +x"
+alias se="sudoedit"
 
 #-- Pacman
 alias check-orphans="pacman -Qdt"
