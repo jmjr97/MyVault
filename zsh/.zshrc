@@ -29,8 +29,11 @@ alias lss="clear; eza -a -l -h -s=type --icons=auto"
 alias ..="cd .."
 alias cat="bat"
 alias vim="nvim"
+alias v="nvim ."
 alias vimw="vim -c VimwikiIndex"
 alias top="btop"
+alias spot="spotify_player"
+alias spotr=~/myrepo/myscripts/spot.sh
 alias modx="chmod +x"
 alias se="sudoedit"
 
@@ -87,6 +90,10 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-Z}'
 #################
 #-- Utilities --#
 #################
+
+#-- Zoxide
+eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 #-- Yazi
 function f() {
@@ -175,6 +182,3 @@ eval "$(starship init zsh)"
 
 # Created by `pipx` on 2024-08-23 05:13:04
 export PATH="$PATH:/home/john/.local/bin"
-
-eval "$(zoxide init zsh)"
-eval "$(zoxide init --cmd cd zsh)"

@@ -1,5 +1,4 @@
 local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
 local km = vim.api.nvim_set_keymap
 
 -- Setup Leader
@@ -31,6 +30,13 @@ km("n", "<C-u>", "<C-u>zz", opts)
 km("n", "n", "nzzzv", opts)
 km("n", "N", "Nzzzv", opts)
 
+-- Visual Move
+km("v", "J", ":m '>+1<CR>gv=gv", opts)
+km("v", "K", ":m '<-2<CR>gv=gv", opts)
+
+-- Paste No Copy
+km("x", "<C-p>", "\"_dP", opts)
+
 -- Window Navigation
 km("n", "<C-h>", "<C-w>h", opts)
 km("n", "<C-j>", "<C-w>j", opts)
@@ -53,6 +59,9 @@ km("v", ">", ">gv", opts)
 
 -- Yank to Clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], opts)
+
+-- Noice
+km("n", "<leader>d", ":Noice dismiss<CR>", opts)
 
 -- Nvim-tree
 km("n", "<leader>fe", ":NvimTreeToggle<CR>", opts)

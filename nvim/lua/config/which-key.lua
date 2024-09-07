@@ -17,6 +17,7 @@ wk.add({
   { "<leader>sg", desc = "Live Grep" },
   { "<leader>sr", desc = "Recent Files" },
   { "<leader>sh", desc = "Help" },
+  { "<leader>sm", desc = "max" },
   -- Window
   { "<leader>v", group = "Wiki" },
   -- LSP Handler
@@ -32,4 +33,6 @@ wk.add({
   { "<leader>lk", desc = "Hover Documentation" },
   -- Yank to Clipboard
   { "<leader>y", desc = "Yank to Clipboard" },
+  -- Noice
+  { "<leader>d", desc = "Dismiss Notifications" },
 })

@@ -12,3 +12,4 @@ require("config.toggleterm")
 require("config.telescope")
 require("config.which-key")
 require("config.luasnip")
+
