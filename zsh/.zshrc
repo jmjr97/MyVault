@@ -33,13 +33,12 @@ alias v="nvim ."
 alias vimw="vim -c VimwikiIndex"
 alias top="btop"
 alias spot="spotify_player"
-alias spotr=~/myrepo/myscripts/spot.sh
+alias spotr='~/myrepo/myscripts/spot.sh'
 alias modx="chmod +x"
 alias se="sudoedit"
 
 #-- Pacman
-alias check-orphans="pacman -Qdt"
-alias remove-orphans="sudo pacman -Rns $(pacman -Qdtq)"
+alias pacclean="~/myrepo/myscripts/pacclean.sh"
 
 #-- Archive Alias
 alias maketar="tar -czf"
