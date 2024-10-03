@@ -11,8 +11,8 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor DP-3 -d 1 2 3 4 
-bspc monitor DP-1 -d z x c
+bspc monitor DP-3 -d z x c v 
+bspc monitor DP-1 -d m , .
 
 bspc config border_width         1
 bspc config window_gap           8

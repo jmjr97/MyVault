@@ -12,4 +12,4 @@ require("config.toggleterm")
 require("config.telescope")
 require("config.which-key")
 require("config.luasnip")
-
+require("config.nvim-ts-autotag")

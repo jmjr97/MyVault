@@ -76,13 +76,9 @@ super + e
 super + ctrl + e
     kitty -e yazi
 
-# neovim
-super + n
-    kitty -e nvim
-
 # Notes
-super + o
-    obsidian
+# super + o
+#     obsidian
 
 # -- Window Manipulation -- #
 
@@ -136,21 +132,21 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the next/previous desktop in the current monitor
-super + {comma,period}
-	bspc desktop -f {prev,next}.local
+# super + {comma,period}
+# 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
 super + Tab
 	bspc monitor -f next
 
 # focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+# super + {o,i}
+# 	bspc wm -h off; \
+# 	bspc node {older,newer} -f; \
+# 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-4,z,x,c}
+super + {_,shift + }{z,x,c,v,m,comma,period}
 	bspc {desktop -f,node -d} '^{1-7}' --follow
 
 # -- preselect -- #
