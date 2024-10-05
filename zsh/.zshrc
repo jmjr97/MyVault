@@ -172,7 +172,6 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
 bindkey '^[[Z' end-of-line
 fastfetch
-~/myrepo/myscripts/chuck
 
 # Plugins
 # ~/.zshrc

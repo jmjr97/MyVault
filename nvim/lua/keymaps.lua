@@ -63,13 +63,12 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], opts)
 -- Noice
 km("n", "<leader>d", ":Noice dismiss<CR>", opts)
 
--- Nvim-tree
-km("n", "<leader>fe", ":NvimTreeToggle<CR>", opts)
-km("n", "<leader>fa", ":NvimTreeFindFile<CR>", opts)
+-- Oil
+km("n", "-", "<CMD>Oil --float<CR>", opts)
 
 -- Telescope
-km("n", "<leader>sf", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-km("n", "<leader>sF", "<cmd>Telescope find_files<cr>", opts)
-km("n", "<leader>sg", "<cmd>Telescope live_grep<cr>", opts)
-km("n", "<leader>sr", "<cmd>Telescope oldfiles<cr>", opts)
-km("n", "<leader>sh", "<cmd>Telescope help_tags<cr>", opts)
+km("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+km("n", "<leader>fF", "<cmd>Telescope find_files<cr>", opts)
+km("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+km("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts)
+km("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)

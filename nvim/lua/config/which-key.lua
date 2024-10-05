@@ -7,15 +7,13 @@ wk.add({
   { "<leader>bm", desc = "Max Vertical Split" },
   { "<leader>br", desc = "Reset Split" },
   -- Find
-  { "<leader>f", group = "File" },
-  { "<leader>fa", desc = "Tree Find File" },
-  { "<leader>fe", desc = "Tree Toggle" },
+  { "<leader>f", group = "Find" },
+  { "<leader>ff", desc = "File" },
+  { "<leader>fF", desc = "File w/ Preview" },
+  { "<leader>fg", desc = "Live Grep" },
+  { "<leader>fr", desc = "Recent Files" },
   -- Search
   { "<leader>s", group = "Search" },
-  { "<leader>sf", desc = "File" },
-  { "<leader>sF", desc = "File w/ Preview" },
-  { "<leader>sg", desc = "Live Grep" },
-  { "<leader>sr", desc = "Recent Files" },
   { "<leader>sh", desc = "Help" },
   { "<leader>sm", desc = "max" },
   -- Window
