@@ -18,6 +18,7 @@ local options = {
 	scrolloff = 8,
 	sidescrolloff = 8,
 	signcolumn = "yes",
+  conceallevel = 1,
 }
 
 vim.g.python_recommended_style = 0
