@@ -4,6 +4,14 @@ local t = ls.text_node
 local i = ls.insert_node
 local fmt = require('luasnip.extras.fmt').fmt
 
+-- bash
+
+ls.add_snippets('sh', {
+  s('bang', {
+    t('#!/bin/bash')
+  })
+})
+
 -- lua snippets
 
 ls.add_snippets('lua', {

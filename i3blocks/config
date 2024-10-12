@@ -1,0 +1,73 @@
+#############################################################
+#██╗██████╗░██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗░██████╗#
+#██║╚════██╗██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝██╔════╝#
+#██║░█████╔╝██████╦╝██║░░░░░██║░░██║██║░░╚═╝█████═╝░╚█████╗░#
+#██║░╚═══██╗██╔══██╗██║░░░░░██║░░██║██║░░██╗██╔═██╗░░╚═══██╗#
+#██║██████╔╝██████╦╝███████╗╚█████╔╝╚█████╔╝██║░╚██╗██████╔╝#
+#╚═╝╚═════╝░╚═════╝░╚══════╝░╚════╝░░╚════╝░╚═╝░░╚═╝╚═════╝░#
+#############################################################
+
+
+separator_block_width=15
+
+[caps]
+interval=once
+command=xset -q | grep Caps | awk '{ print $2, $4 }'
+signal=10
+color=#77aaff
+
+[music-previous]
+interval=once
+command=scripts/music-prev.sh
+color=#77aaff
+separator=false
+
+[music-play]
+interval=once
+command=scripts/music-play.sh
+color=#77aaff
+separator=false
+
+[music-next]
+interval=once
+command=scripts/music-next.sh
+color=#77aaff
+
+[audio]
+interval=once
+command=scripts/audio.sh
+color=#77aaff
+separator=false
+
+[volume]
+interval=once
+command=scripts/volume.sh
+signal=11
+label=󱄠 
+color=#77aaff
+
+[time]
+command=date '+%a, %b %d. %I:%M'
+color=#77aaff
+interval=5
+
+[pad]
+interval=once
+command=echo
+
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
