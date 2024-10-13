@@ -8,7 +8,7 @@
 #############################################################
 
 
-separator_block_width=15
+separator_block_width=20
 
 [caps]
 interval=once

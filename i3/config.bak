@@ -7,11 +7,6 @@
 #╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░░░░░╚═╝#
 ######################################
 
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id dex --autostart --environment i3
-
-font pango:Hack Nerd Font Mono 8
-
 set $mod Mod4
 floating_modifier $mod
 tiling_drag modifier titlebar
@@ -19,14 +14,27 @@ hide_edge_borders smart
 mouse_warping none
 default_border pixel 1
 
-focus_follows_mouse no
-gaps inner 10px
-smart_gaps on
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:Hack Nerd Font Mono 8
 
-##################
-#### Keybinds ####
-##################
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
+exec --no-startup-id dex --autostart --environment i3
 
+# The combination of xss-lock, nm-applet and pactl is a popular choice, so
+# they are included here as an example. Modify as you see fit.
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+
+# move tiling windows via drag & drop by left-clicking into the title bar,
+# or left-clicking anywhere into the window while holding the floating modifier.
+
+### Keybinds ###
 bindsym $mod+Control+q kill
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+10 i3blocks
 
@@ -48,11 +56,13 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
+### Preselect New Window ###
+
 # split in horizontal orientation
-bindsym $mod+Control+k split h
+bindsym $mod+Control+j split h
 
 # split in vertical orientation
-bindsym $mod+Control+j split v
+bindsym $mod+Control+k split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+a fullscreen toggle
@@ -73,6 +83,11 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+Control+space focus mode_toggle
 
 # focus the child container
+
+focus_follows_mouse no
+gaps inner 10px
+# gaps outer 5px
+smart_gaps on
 
 #### Monitors & workspaces ####
 set $main "DP-3"
@@ -151,9 +166,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#######################
 #### Themes & Bars ####
-#######################
 
 # Window decoration colors
 # class                 border  backgr. text    indicator child_border
@@ -176,7 +189,7 @@ bar {
         colors {
           background $background
           separator $yellow
-          focused_workspace $background $blue $background
+          focused_workspace $blue $background $blue
           active_workspace $background $background $blue
           inactive_workspace $background $background $white
         }
@@ -192,16 +205,14 @@ bar {
         colors {
           background $background
           separator $yellow
-          focused_workspace $background $blue $background
+          focused_workspace $blue $background $blue
           active_workspace $background $background $blue
           inactive_workspace $background $background $white
         }
 }
 
-################
-#### Starup ####
-################
 
+# Starup 
 exec --no-startup-id dunst &
 exec --no-startup-id lxsession &
 exec --no-startup-id picom &
