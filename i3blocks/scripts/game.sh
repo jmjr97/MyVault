@@ -17,7 +17,7 @@ case "$(pidof xcape | wc -l)" in
   exit 33
   ;;
 1)
-  echo "Type"
+  echo "Game"
   exit 0
   ;;
 esac

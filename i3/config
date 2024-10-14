@@ -179,6 +179,7 @@ bar {
           focused_workspace $background $blue $background
           active_workspace $background $background $blue
           inactive_workspace $background $background $white
+          urgent_workspace $background $background $red
         }
 }
 

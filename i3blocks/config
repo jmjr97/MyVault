@@ -8,12 +8,20 @@
 #############################################################
 
 
-separator_block_width=20
+separator_block_width=15
+markup=pango
+
+[game]
+interval=once
+command=scripts/game.sh
+color=#77aaff
 
 [caps]
 interval=once
-command=xset -q | grep Caps | awk '{ print $2, $4 }'
+command=scripts/caps.sh
+# command=xset -q | grep Caps | awk '{ print $2, $4 }'
 signal=10
+full_text=Caps
 color=#77aaff
 
 [music-previous]

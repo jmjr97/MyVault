@@ -17,7 +17,6 @@ case $BLOCK_BUTTON in
       pkill -SIGRTMIN+11 i3blocks
     fi
     ;;
-
   3)
     pavucontrol
     ;;
