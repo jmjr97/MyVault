@@ -19,7 +19,6 @@ color=#77aaff
 [caps]
 interval=once
 command=scripts/caps.sh
-# command=xset -q | grep Caps | awk '{ print $2, $4 }'
 signal=10
 full_text=Caps
 color=#77aaff

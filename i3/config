@@ -29,10 +29,10 @@ smart_gaps on
 
 bindsym $mod+Control+q kill
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+10 i3blocks
-
-bindsym $mod+space exec rofi -show drun -drun-display-format \{name\}
+bindsym $mod+space exec --no-startup-id rofi -show drun -drun-display-format \{name\}
 bindsym $mod+Return exec kitty
 bindsym $mod+w exec firefox
+bindsym $mod+Control+w exec firefox --private-window
 bindsym $mod+e exec nemo
 
 # change focus
@@ -198,6 +198,8 @@ bar {
           inactive_workspace $background $background $white
         }
 }
+
+# exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 ################
 #### Starup ####
