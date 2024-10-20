@@ -33,4 +33,9 @@ wk.add({
   { "<leader>y", desc = "Yank to Clipboard" },
   -- Noice
   { "<leader>d", desc = "Dismiss Notifications" },
+  -- Obsidian
+  { "<leader>o", group = "Obsidian" },
+  { "<leader>oh", desc = "Home" },
+  { "<leader>ot", desc = "ToC" },
+  { "<leader>on", desc = "New File" },
 })

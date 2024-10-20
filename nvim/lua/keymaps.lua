@@ -59,12 +59,18 @@ km("v", ">", ">gv", opts)
 
 -- Yank to Clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], opts)
+vim.keymap.set({"n", "v"}, "<leader>p", [["+p]], opts)
 
 -- Noice
 km("n", "<leader>d", ":Noice dismiss<CR>", opts)
 
 -- Oil
 km("n", "-", "<CMD>Oil --float<CR>", opts)
+
+-- Obsidian
+km("n", "<leader>oh", ":e ~/Documents/obsidian-sync/readme.md<CR>", opts)
+km("n", "<leader>ot", ":ObsidianTOC<CR>", opts)
+km("n", "<leader>on", ":ObsidianNew<CR>", opts)
 
 -- Telescope
 km("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)

@@ -1,23 +1,23 @@
 #!/bin/bash
 
-sink=$(pactl get-default-sink NAME)
-
+# Click and Scroll actions on block
 case $BLOCK_BUTTON in
   1)
-    pactl set-sink-mute $sink toggle
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
     ;;
   4)
-    pactl set-sink-volume $sink +5%
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
     ;;
   5)
-    pactl set-sink-volume $sink -5%
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
     ;;
 esac
 
 mute="$(pactl get-sink-mute @DEFAULT_SINK@)"
 
+# Change display depending on Mute
 if [[ $mute == "Mute: yes" ]]; then
   echo "mute"
 else
-  echo $(pactl get-sink-volume $sink | awk '{print $5}')
+  echo $(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')
 fi

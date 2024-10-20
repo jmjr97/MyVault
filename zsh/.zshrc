@@ -30,6 +30,7 @@ alias ..="cd .."
 alias cat="bat"
 alias vim="nvim"
 alias v="nvim ."
+alias vn="nvim ~/Documents/obsidian-sync/readme.md"
 alias e="emacs -nw"
 alias vimw="vim -c VimwikiIndex"
 alias top="btop"
@@ -107,7 +108,7 @@ function f() {
 }
 
 #-- fzf
-alias ff="zle -N fzf-cd-widget"
+alias ff="zle --exclude '.steam' -N fzf-cd-widget"
 eval "$(fzf --zsh)"
 
 zle     -N            fzf-cd-widget
