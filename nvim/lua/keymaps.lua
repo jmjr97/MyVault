@@ -71,6 +71,8 @@ km("n", "-", "<CMD>Oil --float<CR>", opts)
 km("n", "<leader>oh", ":e ~/Documents/obsidian-sync/readme.md<CR>", opts)
 km("n", "<leader>ot", ":ObsidianTOC<CR>", opts)
 km("n", "<leader>on", ":ObsidianNew<CR>", opts)
+km("n", "<leader>og", ":ObsidianSearch<CR>", opts)
+km("n", "<leader>os", ":ObsidianQuickSwitch<CR>", opts)
 
 -- Telescope
 km("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)

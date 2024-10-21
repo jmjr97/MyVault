@@ -35,7 +35,9 @@ wk.add({
   { "<leader>d", desc = "Dismiss Notifications" },
   -- Obsidian
   { "<leader>o", group = "Obsidian" },
+  { "<leader>og", desc = "Grep" },
   { "<leader>oh", desc = "Home" },
-  { "<leader>ot", desc = "ToC" },
   { "<leader>on", desc = "New File" },
+  { "<leader>os", desc = "Switch" },
+  { "<leader>ot", desc = "ToC" },
 })
