@@ -17,6 +17,9 @@ case $BLOCK_BUTTON in
       pkill -SIGRTMIN+11 i3blocks
     fi
     ;;
+  2)
+    systemctl --user restart pipewire
+    ;;
   3)
     pavucontrol
     ;;
