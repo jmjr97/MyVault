@@ -81,10 +81,10 @@
     "tooltip": false
   },
   "cpu": {
-    "format": "{usage}% <span foreground='#e0af68'></span>",
+    "format": "{usage}% <span foreground='#e0af68'> </span>",
   },
   "memory": {
-    "format": "{used}GB <span foreground='#e0af68'></span>",
+    "format": "{used}GB <span foreground='#e0af68'> </span>",
     "tooltip": false
   },
   "disk": {
@@ -97,7 +97,7 @@
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} ({signalStrength}%) <span foreground='#e0af68'></span>",
+    "format-wifi": "{essid} ({signalStrength}%) <span foreground='#e0af68'> </span>",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
@@ -109,7 +109,7 @@
         "warning": 30,
         "critical": 15
     },
-    "format": "{capacity}% <span foreground='#e0af68'>{icon}</span>",
+    "format": "{capacity}% <span foreground='#e0af68'>{icon} </span>",
     "format-full": "{capacity}% {icon}",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
