@@ -43,10 +43,6 @@ km("n", "<C-j>", "<C-w>j", opts)
 km("n", "<C-k>", "<C-w>k", opts)
 km("n", "<C-l>", "<C-w>l", opts)
 
--- Splits
-km("n", "<leader>bm", "<C-w>_", opts)
-km("n", "<leader>br", "<C-w>=", opts)
-
 -- Buffers
 km("n", "<S-l>", ":bnext<CR>", opts)
 km("n", "<S-h>", ":bprevious<CR>", opts)
@@ -73,6 +69,9 @@ km("n", "<leader>ot", ":ObsidianTOC<CR>", opts)
 km("n", "<leader>on", ":ObsidianNew<CR>", opts)
 km("n", "<leader>og", ":ObsidianSearch<CR>", opts)
 km("n", "<leader>os", ":ObsidianQuickSwitch<CR>", opts)
+
+-- Maximizer
+km("n", "<leader>m", ":MaximizerToggle<CR>", opts)
 
 -- Telescope
 km("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)

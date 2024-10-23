@@ -4,8 +4,6 @@ wk.add({
   { "<leader>b", group = "Buffers" },
   { "<leader>bb", desc = "Close Buffer" },
   { "<leader>bd", desc = "Close Buffer w/o Saving" },
-  { "<leader>bm", desc = "Max Vertical Split" },
-  { "<leader>br", desc = "Reset Split" },
   -- Find
   { "<leader>f", group = "Find" },
   { "<leader>ff", desc = "File" },
@@ -34,6 +32,8 @@ wk.add({
   { "<leader>p", desc = "Paste from Clipboard" },
   -- Noice
   { "<leader>d", desc = "Dismiss Notifications" },
+  -- Maximizer
+  { "<leader>m", desc = "Toggle Max Split" },
   -- Obsidian
   { "<leader>o", group = "Obsidian" },
   { "<leader>og", desc = "Grep" },
