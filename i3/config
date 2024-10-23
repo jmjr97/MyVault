@@ -125,8 +125,9 @@ bindsym $mod+Shift+F5 move container to workspace number $ws8; workspace number 
 bindsym $mod+Control+r restart
 bindsym $mod+Control+BackSpace exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-set $background #1a1b26
+set $background #222436
 set $foreground #c8d3f5
+set $black #1a1b26
 set $red #f7768e
 set $green #9ece6a
 set $yellow #e0af68
