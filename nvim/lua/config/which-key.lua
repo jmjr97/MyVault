@@ -29,8 +29,9 @@ wk.add({
   { "<leader>ln", desc = "Diagnostics Next" },
   { "<leader>lp", desc = "Diagnostics Previous" },
   { "<leader>lk", desc = "Hover Documentation" },
-  -- Yank to Clipboard
+  -- Clipboard
   { "<leader>y", desc = "Yank to Clipboard" },
+  { "<leader>p", desc = "Paste from Clipboard" },
   -- Noice
   { "<leader>d", desc = "Dismiss Notifications" },
   -- Obsidian

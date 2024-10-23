@@ -65,6 +65,7 @@ alias vpconfig="vim ~/.config/nvim/vim-plug/plugins.vim"
 alias aconfig="vim ~/.config/awesome/rc.lua"
 alias atconfig="vim ~/.config/awesome/theme.lua"
 alias iconfig="vim ~/.config/i3/config"
+alias hconfig="vim ~/.config/hypr/hyprland.conf"
 
 #-- Maintenance Alias
 alias pacmirrors="sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist"
