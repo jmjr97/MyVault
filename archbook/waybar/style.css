@@ -6,8 +6,7 @@
 
 window#waybar {
     color: #c8d3f5;
-    /* background: rgba(0, 0, 0, 0); */
-    background-color: #1a1b26;
+    background-color: #222436;
     border-bottom: 1px solid #7aa2f7;
 }
 
