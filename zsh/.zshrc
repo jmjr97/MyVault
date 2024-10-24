@@ -36,7 +36,7 @@ alias spot="spotify_player"
 alias spotr='~/myrepo/myscripts/spot.sh'
 alias modx="chmod +x"
 alias se="sudoedit"
-alias tm="tmux attach -t main"
+alias tm="tmux attach"
 
 #-- Pacman
 alias pacclean="~/myrepo/myscripts/pacclean.sh"
