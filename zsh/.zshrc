@@ -53,6 +53,7 @@ alias ga="git add"
 alias gaa="git add --all"
 alias gc="git commit -m" 
 alias gp="git push"
+alias lg="lazygit"
 
 #-- Config Alias
 alias zconfig="vim ~/.config/zsh/.zshrc"
