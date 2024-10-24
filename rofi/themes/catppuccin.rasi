@@ -1,0 +1,97 @@
+* {
+    text-color:  #cad3f5;
+    background-color:  #24273a;
+    dark: #1c1c1c;
+
+    black:       #494d64;
+    lightblack:  #5b6078;
+
+    red:         #ed8796;
+    lightred:    #ed8796;
+
+    green:       #a6da95;
+    lightgreen:  #a6da95;
+
+    yellow:      #eed49f;
+    lightyellow:     #eed49f;
+
+    blue:      #8aadf4;
+    lightblue:     #8aadf4;
+
+    magenta:      #f5bde6;
+    lightmagenta:     #f5bde6;
+
+    cyan:      #8bd5ca;
+    lightcyan:     #8bd5ca;
+
+    white:      #b8c0e0;
+    lightwhite:     #a5adcb;
+    //
+    // Bold, Italic, Underline
+    highlight:     bold #ffffff;
+}
+window {
+    height:   100%;
+    width: 30em;
+    location: west;
+    anchor:   west;
+    border:  0px 2px 0px 0px;
+    text-color: @lightwhite;
+}
+button selected {
+    border-color: @lightgreen;
+    text-color: @lightgreen;
+}
+inputbar {
+    background-color: @lightblack;
+    text-color: @lightgreen;
+    padding: 4px;
+    border: 0px 0px 2px 0px;
+}
+mainbox {
+    expand: true;
+    background-color: #1c1c1cee;
+    spacing: 1em;
+}
+listview {
+    padding: 0em 0.4em 0em 1em;
+    dynamic: false;
+    lines: 0;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element selected  normal {
+    background-color: @blue;
+}
+element normal active {
+    text-color: @lightblue;
+}
+element normal urgent {
+    text-color: @lightred;
+}
+element alternate normal {
+}
+element alternate active {
+    text-color: @lightblue;
+}
+element alternate urgent {
+    text-color: @lightred;
+}
+element selected active {
+    background-color: @lightblue;
+    text-color: @dark;
+}
+element selected urgent {
+    background-color: @lightred;
+    text-color: @dark;
+}
+error-message {
+    expand: true;
+    background-color: red;
+    border-color: darkred;
+    border: 2px;
+    padding: 1em;
+}
+

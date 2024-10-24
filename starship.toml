@@ -1,5 +1,6 @@
 format = """
 $jobs\
+$hostname\
 [ ](#7aa2f7)\
 $directory\
 $git_branch\
@@ -9,6 +10,10 @@ $cmd_duration\
 $line_break\
 $python\
 $character"""
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol](#7aa2f7)[$hostname](#7aa2f7) '
 
 [directory]
 style = '#7aa2f7'
@@ -20,7 +25,7 @@ truncation_symbol = '…/'
 [character]
 success_symbol = '[❯](#7aa2f7)'
 error_symbol = '[❯](#f7768e)'
-vimcmd_symbol = '[](#e0af68)'
+vimcmd_symbol = '[❮](#e0af68)'
 
 [git_branch]
 format = ' [$symbol $branch]($style) '

@@ -31,13 +31,12 @@ alias cat="bat"
 alias vim="nvim"
 alias v="nvim ."
 alias oh="nvim ~/Documents/obsidian-sync/readme.md"
-alias e="emacs -nw"
-alias vimw="vim -c VimwikiIndex"
 alias top="btop"
 alias spot="spotify_player"
 alias spotr='~/myrepo/myscripts/spot.sh'
 alias modx="chmod +x"
 alias se="sudoedit"
+alias tm="tmux attach -t main"
 
 #-- Pacman
 alias pacclean="~/myrepo/myscripts/pacclean.sh"
@@ -175,7 +174,6 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 #zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
 
 bindkey '^[[Z' end-of-line
-fastfetch
 
 # Plugins
 # ~/.zshrc

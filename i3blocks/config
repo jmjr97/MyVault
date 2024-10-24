@@ -14,36 +14,36 @@ markup=pango
 [game]
 interval=once
 command=scripts/game.sh
-color=#77aaff
+color=#8aadf4
 
 [caps]
 interval=once
 command=scripts/caps.sh
 signal=10
 full_text=Caps
-color=#77aaff
+color=#8aadf4
 
 [music-previous]
 interval=once
 command=scripts/music-prev.sh
-color=#77aaff
+color=#8aadf4
 separator=false
 
 [music-play]
 interval=once
 command=scripts/music-play.sh
-color=#77aaff
+color=#8aadf4
 separator=false
 
 [music-next]
 interval=once
 command=scripts/music-next.sh
-color=#77aaff
+color=#8aadf4
 
 [audio]
 interval=once
 command=scripts/audio.sh
-color=#77aaff
+color=#8aadf4
 separator=false
 
 [volume]
@@ -51,11 +51,11 @@ interval=once
 command=scripts/volume.sh
 signal=11
 label=󱄠 
-color=#77aaff
+color=#8aadf4
 
 [time]
 command=date '+%a, %b %d. %I:%M'
-color=#77aaff
+color=#8aadf4
 interval=5
 
 [pad]
