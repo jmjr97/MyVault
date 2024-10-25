@@ -26,7 +26,7 @@ count_selected = { fg = "#24273a", bg = "#8aadf4" }
 
 # Border
 border_symbol = "│"
-border_style  = { fg = "#8087a2" }
+border_style  = { fg = "#8aadf4" }
 
 # Highlighting
 syntect_theme = "~/.config/yazi/Catppuccin-macchiato.tmTheme"
