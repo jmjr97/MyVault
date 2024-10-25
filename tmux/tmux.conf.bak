@@ -1,0 +1,70 @@
+#######################################
+#████████╗███╗░░░███╗██╗░░░██╗██╗░░██╗#
+#╚══██╔══╝████╗░████║██║░░░██║╚██╗██╔╝#
+#░░░██║░░░██╔████╔██║██║░░░██║░╚███╔╝░#
+#░░░██║░░░██║╚██╔╝██║██║░░░██║░██╔██╗░#
+#░░░██║░░░██║░╚═╝░██║╚██████╔╝██╔╝╚██╗#
+#░░░╚═╝░░░╚═╝░░░░░╚═╝░╚═════╝░╚═╝░░╚═╝#
+#######################################
+
+set -g prefix C-f
+set -g prefix2 C-m
+unbind r
+bind r source-file ~/.config/tmux/tmux.conf
+
+set-option -g status-position top
+set -g base-index 1
+
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+set -g default-terminal xterm-256color
+
+# Plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'MunifTanjim/tmux-mode-indicator'
+
+# Colors
+# bg "#24273a"
+# fg "#cad3d5"
+# dark "#1e2030"
+#
+# black "#494d64"
+# red "#ed8796"
+# green "#a6da95"
+# yellow "#eed49f"
+# blue "#8aadf4"
+# magenta "#f5bde6"
+# cyan "#8bd5ca"
+# white "#b8c0e0" 
+
+set -g @mode_indicator_prefix_prompt ' WAIT '
+set -g @mode_indicator_copy_prompt ' COPY '
+set -g @mode_indicator_sync_prompt ' SYNC '
+set -g @mode_indicator_empty_prompt ' TMUX '
+
+set -g @mode_indicator_prefix_mode_style 'bg=#eed49f,fg=black'
+set -g @mode_indicator_copy_mode_style 'bg=yellow,fg=black'
+set -g @mode_indicator_sync_mode_style 'bg=red,fg=black'
+set -g @mode_indicator_empty_mode_style 'bg=#8aadf4,fg=#24273a'
+
+# Theming
+set -g status-bg '#1e2030'
+set -g status-fg '#cad3d5'
+
+set -g status-left-length 50
+set -g status-left '#{tmux_mode_indicator} '
+
+set -g status-right-length 50
+set -g status-right "#[bg=#8aadf4,fg=#1e2030,bold]  #[bg=#363a4f,fg=#8aadf4,nobold][#S]#[bg=#1e2030]#[bg=#1e2030] #[bg=#8aadf4,fg=#1e2030,bold] %H "
+
+set-option -ag message-style fg=#a6da95,blink
+set-option -ag message-style bg=#1e2030
+
+set-window-option -g window-status-current-style fg='#1e2030',bg='#eed49f'
+set-window-option -g window-status-style fg='#cad3d5',bg='#363a4f'
+
+run '~/.config/tmux/plugins/tpm/tpm'
