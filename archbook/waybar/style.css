@@ -5,42 +5,39 @@
 }
 
 window#waybar {
-    color: #c8d3f5;
-    background-color: #222436;
-    border-bottom: 1px solid #7aa2f7;
+    color: #cad3f5;
+    background-color: #24273a;
+    border-bottom: 1px solid #8aadf4;
 }
 
 tooltip {
-  background: #1a1b26;
-  border: 1px solid #7aa2f7;
+  background: #494d64;
+  border: 1px solid #8aadf4;
   border-radius: 5px;
 }
 
 tooltip label {
-  color: #c8d3f5;
+  color: #cad3f5;
 }
 
 #workspaces button {
-  color: #c8d3f5;
+  color: #cad3f5;
   padding: 2;
+  border-radius: 0;
 }
 
 #workspaces button.active {
-  color: #1a1b26;
-  background: #7aa2f7;
-}
-
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+  color: #494d64;
+  background: #8aadf4;
 }
 
 #custom-power {
-  color: #7aa2f7;
+  color: #8aadf4;
 }
 
 #idle_inhibitor {
   padding: 0 8px;
-  color: #e0af68;
+  color: #eed49f;
 }
 
 #custom-pacman,
@@ -56,7 +53,7 @@ tooltip label {
 #tray,
 #mpd {
   padding: 0 8px;
-  color: #7aa2f7;
+  color: #8aadf4;
 }
 
 #window,
@@ -93,7 +90,7 @@ tooltip label {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
+    background-color: #ed8796;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -107,56 +104,49 @@ label:focus {
 }
 
 #network.disconnected {
-    color: #f7758e;
+    color: #ed8796;
     border-radius: 8px;
 }
 
 #temperature.critical {
-    color: #f7758e;
+    color: #ed8796;
 }
 
 #tray {
-    background-color: #7aa2f7;
-    color: #1a1b26;
-    border-radius: 8px;
+    background-color: #8aadf4;
+    color: #494d64;
 }
 
 #tray > .passive {
     -gtk-icon-effect: dim;
-    border-radius: 8px;
 }
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #f7758e;
-    color: #1a1b26;
-    border-radius: 8px;
+    background-color: #ed8796;
+    color: #494d64;
 }
 
 #idle_inhibitor.activated {
-    color: #f7758e;
+    color: #ed8796;
 }
 
 #mpd {
-    background-color: #7aa2f7;
-    color: #1a1b26;
-    border-radius: 8px;
+    background-color: #8aadf4;
+    color: #494d64;
 }
 
 #mpd.disconnected {
-    background-color: #7aa2f7;
-    color: #1a1b26;
-    border-radius: 8px;
+    background-color: #8aadf4;
+    color: #494d64;
 }
 
 #mpd.stopped {
-    background-color: #7aa2f7;
-    color: #1a1b26;
-    border-radius: 8px;
+    background-color: #8aadf4;
+    color: #494d64;
 }
 
 #mpd.paused {
-    background-color: #7aa2f7;
-    color: #1a1b26;
-    border-radius: 8px;
+    background-color: #8aadf4;
+    color: #494d64;
 }
