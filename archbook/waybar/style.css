@@ -1,13 +1,13 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Hack Nerd Font, Helvetica, Arial, sans-serif;
-    font-size: 14px;
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: Hack Nerd Font, Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
 
 window#waybar {
-    color: #cad3f5;
-    background-color: #24273a;
-    border-bottom: 1px solid #8aadf4;
+  color: #cad3f5;
+  background-color: #24273a;
+  border-bottom: 1px solid #8aadf4;
 }
 
 tooltip {
@@ -33,6 +33,8 @@ tooltip label {
 
 #custom-power {
   color: #8aadf4;
+  background-color: #181926;
+  border-bottom: 1px solid #8aadf4;
 }
 
 #idle_inhibitor {
@@ -56,14 +58,19 @@ tooltip label {
   color: #8aadf4;
 }
 
+#clock {
+  background-color: #181926;
+  border-bottom: 1px solid #8aadf4;
+}
+
 #window,
 #workspaces {
-    margin: 0 4px;
+  margin: 0 4px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
@@ -74,7 +81,7 @@ tooltip label {
 /* Right modules */
 
 #pulseaudio.muted {
-    color: red;
+  color: red;
 }
 
 #battery.charging, #battery.plugged {
@@ -82,71 +89,72 @@ tooltip label {
 }
 
 @keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #ed8796;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  background-color: #ed8796;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 label:focus {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 #network.disconnected {
-    color: #ed8796;
-    border-radius: 8px;
+  color: #ed8796;
+  border-radius: 8px;
 }
 
 #temperature.critical {
-    color: #ed8796;
+  color: #ed8796;
 }
 
 #tray {
-    background-color: #8aadf4;
-    color: #494d64;
+  color: #494d64;
+  background-color: #181926;
+  border-bottom: 1px solid #8aadf4;
 }
 
 #tray > .passive {
-    -gtk-icon-effect: dim;
+  -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #ed8796;
-    color: #494d64;
+  -gtk-icon-effect: highlight;
+  background-color: #ed8796;
+  color: #494d64;
 }
 
 #idle_inhibitor.activated {
-    color: #ed8796;
+  color: #ed8796;
 }
 
 #mpd {
-    background-color: #8aadf4;
-    color: #494d64;
+  background-color: #8aadf4;
+  color: #494d64;
 }
 
 #mpd.disconnected {
-    background-color: #8aadf4;
-    color: #494d64;
+  background-color: #8aadf4;
+  color: #494d64;
 }
 
 #mpd.stopped {
-    background-color: #8aadf4;
-    color: #494d64;
+  background-color: #8aadf4;
+  color: #494d64;
 }
 
 #mpd.paused {
-    background-color: #8aadf4;
-    color: #494d64;
+  background-color: #8aadf4;
+  color: #494d64;
 }

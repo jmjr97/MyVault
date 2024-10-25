@@ -120,7 +120,8 @@
   },
   "tray": {
     // "icon-size": 21,
-    "spacing": 10
+    "spacing": 10,
+    "show-passive-items": true
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -130,7 +131,7 @@
     }
   },
   "custom/power": {
-    "format" : " ⏻  ",
+    "format" : "  ⏻  ",
     "on-click": "wlogout -b 5"
   }
 }
