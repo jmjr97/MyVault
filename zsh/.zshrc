@@ -28,17 +28,20 @@ alias ls="eza -a -l -h -s=type --icons=auto"
 alias lss="clear; eza -a -l -h -s=type --icons=auto"
 alias ..="cd .."
 alias cat="bat"
-alias vim="nvim"
-alias v="nvim ."
-alias oh="nvim ~/Documents/obsidian-sync/readme.md"
 alias top="btop"
 alias spot="spotify_player"
-alias spotr='~/myrepo/myscripts/spot.sh'
 alias modx="chmod +x"
 alias se="sudoedit"
 alias tm="tmux attach"
 
-#-- Pacman
+#-- Neovim
+alias vim="nvim"
+alias v="nvim ."
+alias oh="nvim ~/Documents/obsidian-sync/readme.md"
+alias orn="nvim ~/Documents/obsidian-sync/Notes/_random.md"
+
+#-- My Scripts
+alias spotr='~/myrepo/myscripts/spot.sh'
 alias pacclean="~/myrepo/myscripts/pacclean.sh"
 
 #-- Archive Alias
