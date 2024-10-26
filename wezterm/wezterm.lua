@@ -17,6 +17,11 @@ config.window_padding = {
   bottom = 2,
 }
 
+config.use_fancy_tab_bar = false
+
+local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
+local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
+
 -- Keybinds
 config.disable_default_key_bindings = true
 config.leader = { key = ';', mods = 'CTRL', timeout_milliseconds = 1000 }
