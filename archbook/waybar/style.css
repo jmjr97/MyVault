@@ -136,7 +136,8 @@ label:focus {
 }
 
 #idle_inhibitor.activated {
-  color: #ed8796;
+  color: #24273a;
+  background-color: #ed8796;
 }
 
 #mpd {
