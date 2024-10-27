@@ -4,23 +4,35 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+-- Modify theme tab colors
+local scheme_name = "Catppuccin Macchiato"
+local scheme = wezterm.color.get_builtin_schemes()[scheme_name]
+config.colors = scheme
+
+scheme.tab_bar = {
+  active_tab = {
+    bg_color = '#8aadf4',
+    fg_color = '#24273a'
+  },
+  inactive_tab = {
+    bg_color = '#24273a',
+    fg_color = '#8aadf4'
+  },
+}
+
 -- Look and Feel
-config.color_scheme = "Catppuccin Macchiato"
+config.color_scheme = scheme_name
 config.font = wezterm.font('Hack Nerd Font')
 config.font_size = 13
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
+config.use_fancy_tab_bar = false
 config.window_padding = {
   left = 5,
   right = 5,
   top = 2,
   bottom = 2,
 }
-
-config.use_fancy_tab_bar = false
-
-local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
-local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
 
 -- Keybinds
 config.disable_default_key_bindings = true
