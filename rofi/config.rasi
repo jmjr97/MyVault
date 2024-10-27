@@ -1,10 +1,12 @@
-//@theme "~/.config/rofi/themes/dmenu.rasi"
-//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
-//@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"
-//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
-//@theme "/home/john/.config/rofi/themes/material.rasi"
-//@theme "/usr/share/rofi/themes/Paper.rasi"
-//@theme "/usr/share/rofi/themes/arthur.rasi"
-//@theme "/usr/share/rofi/themes/arthur.rasi"
-//@theme "/home/john/.config/rofi/themes/mytheme.rasi"
 @theme "/home/john/.config/rofi/themes/custom.rasi"
+configuration {
+  modes: "drun,filebrowser";
+  filebrowser {
+    directory: "/home/john/";
+    sorting-method: "name";
+    directories-first: true;
+    show-hidden: true;
+    cancel-returns-1: true;
+    command: "xdg-open";
+  }
+}
