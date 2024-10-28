@@ -24,6 +24,7 @@ zstyle :compinstall filename '/home/john/.config/zsh/.zshrc'
 ###############
 
 #-- Alias
+alias so='source ~/.config/zsh/.zshrc'
 alias ls="eza -a -l -h -s=type --icons=auto"
 alias lss="clear; eza -a -l -h -s=type --icons=auto"
 alias ..="cd .."
@@ -78,8 +79,11 @@ alias typetest="toipe -n 50"
 
 #-- Python
 alias py="python"
-alias pyenv#"python -m venv .env"
+alias pyenv="~/myrepo/myscripts/pyenv.sh"
 alias pyact="source .env/bin/activate"
+
+#-- Python Scripts
+alias stopwatch='/home/john/Code/python/learning/stopwatch/stopwatch.py'
 
 ###############
 #-- Plugins --#
