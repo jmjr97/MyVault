@@ -78,6 +78,8 @@ alias typetest="toipe -n 50"
 
 #-- Python
 alias py="python"
+alias pyenv#"python -m venv .env"
+alias pyact="source .env/bin/activate"
 
 ###############
 #-- Plugins --#

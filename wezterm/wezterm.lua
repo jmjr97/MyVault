@@ -108,6 +108,16 @@ config.keys = {
     mods = 'ALT',
     action = wezterm.action.ActivateTabRelative(1),
   },
+  {
+    key = 'c',
+    mods = 'LEADER',
+    action = wezterm.action.CopyTo 'Clipboard',
+  },
+  {
+    key = 'v',
+    mods = 'LEADER',
+    action = wezterm.action.PasteFrom 'Clipboard',
+  },
 }
 
 return config
