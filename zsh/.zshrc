@@ -41,9 +41,17 @@ alias v="nvim ."
 alias oh="nvim ~/Documents/obsidian-sync/readme.md"
 alias orn="nvim ~/Documents/obsidian-sync/Notes/_random.md"
 
-#-- My Scripts
-alias spotr='~/myrepo/myscripts/spot.sh'
-alias pacclean="~/myrepo/myscripts/pacclean.sh"
+#-- Python
+alias py="python"
+alias pyenv="~/myrepo/myscripts/pyenv.sh"
+alias pyact="source .env/bin/activate"
+
+#-- Python Scripts
+alias stopwatch='/home/john/Code/python/learning/stopwatch/stopwatch.py'
+
+#-- Bash Scripts
+alias spotr='~/myrepo/myscripts/bash/spot.sh'
+alias pacclean="~/myrepo/myscripts/bash/pacclean.sh"
 
 #-- Archive Alias
 alias maketar="tar -czf"
@@ -76,14 +84,6 @@ alias pacmirrors="sudo reflector --latest 200 --sort rate --save /etc/pacman.d/m
 
 #-- For Fun
 alias typetest="toipe -n 50"
-
-#-- Python
-alias py="python"
-alias pyenv="~/myrepo/myscripts/pyenv.sh"
-alias pyact="source .env/bin/activate"
-
-#-- Python Scripts
-alias stopwatch='/home/john/Code/python/learning/stopwatch/stopwatch.py'
 
 ###############
 #-- Plugins --#

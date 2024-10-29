@@ -39,10 +39,10 @@ ls.add_snippets('javascript', {
 ls.add_snippets('html', {
   s('doc', fmt(
     [[
-    <!DOCTYPE html>
+    <!doctype html>
       <html lang='en'>
         <head>
-          <meta charset='UTF-8'>
+          <meta charset='utf-8'>
           <meta name='viewport' content='width=device-width, initial-scale=1'>
           <title>{}</title>
           <link href='style.css' rel='stylesheet'>
@@ -51,6 +51,26 @@ ls.add_snippets('html', {
         
         </body>
       </html>
+    ]], { i(1)}
+  ))
+})
+
+-- desktop template
+
+ls.add_snippets('desktop', {
+  s('desktop', fmt(
+    [[
+    [desktop entry]
+
+    Type=Application
+    Version=1.0
+    Name={}
+    Comment=
+    Path=
+    Exec=
+    Icon=
+    Terminal=false
+    Categories=Education;
     ]], { i(1)}
   ))
 })
