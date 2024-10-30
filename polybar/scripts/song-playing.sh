@@ -9,5 +9,5 @@ elif [ "$(playerctl --player=spotifyd status)" = "Paused" ]; then
     title=`exec playerctl --player=spotifyd metadata xesam:title`
     ( echo "(PAUSED) $artist - $title" )
 else
-    echo ""
+    echo " "
 fi
