@@ -11,18 +11,18 @@ function main() {
   if [ "${action}" == "swap" ]; then
     if [ ${SINK} == $headphones ]; then
       pactl set-default-sink $speakers 
-      echo "󰓃"
+      echo 󰓃
     else 
       pactl set-default-sink $headphones 
-      echo "󰋋"
+      echo 󰋋
     fi
   fi
 
   if [ "${action}" == "" ]; then
     if [ ${SINK} == $headphones ]; then
-      echo "󰋋"
+      echo 󰋋
     else 
-      echo "󰓃"
+      echo 󰓃
     fi
   fi
 
