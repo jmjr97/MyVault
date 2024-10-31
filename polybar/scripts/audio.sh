@@ -2,11 +2,20 @@
 
 speakers='alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1'
 headphones='alsa_output.usb-Logitech_PRO_000000000000-00.analog-stereo'
+SINK=$(pactl get-default-sink NAME)
 
 function main() {
   action=$1
 
-  SINK=$(pactl get-default-sink NAME)
+  if [ "${action}" == "get" ]; then
+    if [ $(pactl get-default-sink) == $headphones ]; then
+      echo 󰋋
+    fi
+
+    if [ $(pactl get-default-sink) == $speakers ]; then
+      echo 󰓃
+    fi
+  fi
 
   if [ "${action}" == "swap" ]; then
     if [ ${SINK} == $headphones ]; then
@@ -18,12 +27,8 @@ function main() {
     fi
   fi
 
-  if [ "${action}" == "" ]; then
-    if [ ${SINK} == $headphones ]; then
-      echo 󰋋
-    else 
-      echo 󰓃
-    fi
+  if [ "${action}" == "reset" ]; then
+    systemctl --user restart pipewire
   fi
 
 }
