@@ -11,11 +11,6 @@
 separator_block_width=15
 markup=pango
 
-[game]
-interval=once
-command=scripts/game.sh
-color=#8aadf4
-
 [caps]
 interval=once
 command=scripts/caps.sh

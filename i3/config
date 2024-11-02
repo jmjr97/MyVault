@@ -29,12 +29,21 @@ smart_gaps on
 
 bindsym $mod+Control+q kill
 bindsym --release Caps_Lock exec --no-startup-id pkill -SIGRTMIN+10 i3blocks
-bindsym $mod+space exec --no-startup-id rofi -show drun -drun-display-format \{name\}
-bindsym $mod+f exec --no-startup-id rofi -show filebrowser
+bindsym $mod+space exec --no-startup-id rofi -m -1 -show drun -drun-display-format \{name\}
+bindsym $mod+d exec --no-startup-id ~/myrepo/myscripts/bash/rofi/mymenu.sh
 bindsym $mod+Return exec --no-startup-id wezterm
 bindsym $mod+w exec firefox
 bindsym $mod+Control+w exec firefox --private-window
 bindsym $mod+e exec thunar
+
+# media keys
+bindsym XF86AudioPlay exec --no-startup-id spotify_player playback play-pause
+bindsym XF86AudioNext exec --no-startup-id spotify_player playback next
+bindsym XF86AudioPrev exec --no-startup-id spotify_player playback previous
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl -- set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 # change focus
 bindsym $mod+h focus left
@@ -123,10 +132,10 @@ bindsym $mod+Shift+F3 move container to workspace number $ws6; workspace number 
 bindsym $mod+Shift+F4 move container to workspace number $ws7; workspace number $ws7
 bindsym $mod+Shift+F5 move container to workspace number $ws8; workspace number $ws8
 
-bindsym $mod+Control+r restart
-bindsym $mod+Control+BackSpace exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Control+BackSpace restart
+bindsym $mod+Control+Delete exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-set $background #24273a
+set $background #181926
 set $foreground #cad3f5
 set $black #494d64
 set $red #ed8796
@@ -173,11 +182,11 @@ client.background       $background
 #         position top
 #         tray_output primary
 #         tray_padding 5
-#         font pango:Hack Nerd Font Mono 12
+#         font pango:Hack Nerd Font Mono 14
 #         # tray_padding 0
 #         colors {
 #           background $background
-#           separator $yellow
+#           separator $black
 #           focused_workspace $background $blue $background
 #           active_workspace $background $background $blue
 #           inactive_workspace $background $background $white
@@ -191,10 +200,10 @@ client.background       $background
 #         status_command i3blocks -c ~/.config/i3blocks/config-right.conf
 #         position top
 #         tray_output none
-#         font pango:Hack Nerd Font Mono 12
+#         font pango:Hack Nerd Font Mono 14
 #         colors {
 #           background $background
-#           separator $yellow
+#           separator $black
 #           focused_workspace $background $blue $background
 #           active_workspace $background $background $blue
 #           inactive_workspace $background $background $white
@@ -212,6 +221,7 @@ exec --no-startup-id lxsession &
 exec --no-startup-id picom &
 exec --no-startup-id nitrogen --restore &
 exec --no-startup-id xfce4-power-manager &
+exec --no-startup-id spotify_player -d &
 exec --no-startup-id flameshot &
 exec --no-startup-id discord --start-minimized &
 exec --no-startup-id numlockx on
