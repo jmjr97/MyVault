@@ -1,12 +1,12 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: Hack Nerd Font, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 window#waybar {
   color: #cad3f5;
-  background-color: #24273a;
+  background-color: #181926;
   border-bottom: 1px solid #8aadf4;
 }
 
@@ -21,14 +21,18 @@ tooltip label {
 }
 
 #workspaces button {
-  color: #cad3f5;
-  padding: 2;
+  color: #494d64;
+  padding: 0 8;
   border-radius: 0;
 }
 
+#workspaces button label {
+  font-size: 28px;
+}
+
 #workspaces button.active {
-  color: #494d64;
-  background: #8aadf4;
+  color: #8aadf4;
+  font-size: 20px;
 }
 
 #custom-power {
@@ -39,7 +43,21 @@ tooltip label {
 
 #idle_inhibitor {
   padding: 0 8px;
-  color: #eed49f;
+  color: #8aadf4;
+}
+
+#custom-firefox,
+#custom-obsidian,
+#custom-files {
+  color: #8aadf4;
+  font-size: 24px;
+  padding: 0 7;
+}
+
+#custom-divider {
+  padding: 0;
+  color: #494d64;
+  font-size: 20px;
 }
 
 #custom-pacman,
@@ -55,17 +73,17 @@ tooltip label {
 #tray,
 #mpd {
   padding: 0 8px;
-  color: #8aadf4;
+  color: #f5a97f;
 }
 
 #clock {
-  background-color: #181926;
   border-bottom: 1px solid #8aadf4;
 }
 
 #window,
 #workspaces {
   margin: 0 4px;
+  font-size: 20px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
