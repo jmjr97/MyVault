@@ -10,6 +10,8 @@ menu() {
   printf "4. Notes\n"
   printf "5. Spotify\n"
   printf "6. VM Network\n"
+  printf "7. arch-xfce VM\n"
+  printf "8. win11 VM\n"
 }
 
 main() {
@@ -38,6 +40,16 @@ main() {
       ;;
     6)
       pkexec virsh net-start default
+      break
+      ;;
+    7)
+      virsh --connect qemu:///system start "arch-xfce"
+      virt-manager --connect qemu:///system --show-domain-console "arch-xfce"
+      break
+      ;;
+    8)
+      virsh --connect qemu:///system start "win11"
+      virt-manager --connect qemu:///system --show-domain-console "win11"
       break
       ;;
   esac
