@@ -23,6 +23,11 @@ zstyle :compinstall filename '/home/john/.config/zsh/.zshrc'
 #-- Aliases --#
 ###############
 
+alias ps="sudo pacman -S"
+alias pss="pacman -Ss"
+alias pu="sudo pacman -Syu"
+alias pr="sudo pacman -Rns"
+
 #-- Alias
 alias so='source ~/.config/zsh/.zshrc'
 alias ls="eza -a -l -h -s=type --icons=auto"

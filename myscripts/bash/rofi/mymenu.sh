@@ -9,6 +9,7 @@ menu() {
   printf "3. LazyGit\n"
   printf "4. Notes\n"
   printf "5. Spotify\n"
+  printf "6. VM Network\n"
 }
 
 main() {
@@ -33,6 +34,10 @@ main() {
       ;;
     5)
       $HOME/myrepo/myscripts/bash/rofi/spotify.sh
+      break
+      ;;
+    6)
+      pkexec virsh net-start default
       break
       ;;
   esac
