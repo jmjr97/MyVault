@@ -32,9 +32,10 @@ bindsym --release Caps_Lock exec --no-startup-id pkill -SIGRTMIN+10 i3blocks
 bindsym $mod+space exec --no-startup-id rofi -m -1 -show drun -drun-display-format \{name\}
 bindsym $mod+d exec --no-startup-id ~/myrepo/myscripts/bash/rofi/mymenu.sh
 bindsym $mod+Return exec --no-startup-id wezterm
-bindsym $mod+w exec firefox
+bindsym $mod+w exec zen-browser
 bindsym $mod+Control+w exec firefox --private-window
-bindsym $mod+e exec thunar
+bindsym $mod+e exec nemo
+bindsym $mod+n exec --no-startup-id wezterm start -e nvim $HOME/Documents/obsidian-sync/Notes/_quick.md
 
 # media keys
 bindsym XF86AudioPlay exec --no-startup-id spotify_player playback play-pause
@@ -221,7 +222,6 @@ exec --no-startup-id lxsession &
 exec --no-startup-id picom &
 exec --no-startup-id nitrogen --restore &
 exec --no-startup-id xfce4-power-manager &
-exec --no-startup-id spotify_player -d &
 exec --no-startup-id flameshot &
 exec --no-startup-id discord --start-minimized &
 exec --no-startup-id numlockx on

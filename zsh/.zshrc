@@ -56,7 +56,7 @@ alias stopwatch='/home/john/Code/python/learning/stopwatch/stopwatch.py'
 
 #-- Bash Scripts
 alias spotr='~/myrepo/myscripts/bash/spot.sh'
-alias pacclean="~/myrepo/myscripts/bash/pacclean.sh"
+alias pc="~/myrepo/myscripts/bash/pacclean.sh"
 
 #-- Archive Alias
 alias maketar="tar -czf"

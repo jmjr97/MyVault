@@ -36,6 +36,3 @@
 #### Misc. ####
 # ln -s /home/john/myrepo/.xprofile /home/john/
 # ln -s /home/john/myrepo/.themes/ /home/john/
-
-
-
