@@ -1,3 +1,8 @@
+
+
+
+# See dunst(5) for all configuration options
+
 [global]
     ### Display ###
 
@@ -28,10 +33,10 @@
     height = (0, 300)
 
     # Position the notification in the top right corner
-    origin = top-right
+    origin = top
 
     # Offset from the origin
-    offset = (50, 50)
+    offset = (10, 100)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -317,6 +322,22 @@
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
 
+    frame_color = "#494d64"
+     separator_color= frame
+
+  [urgency_low]
+    background = "#24273a"
+    foreground = "#cad3f5"
+
+  [urgency_normal]
+    background = "#24273a"
+    foreground = "#cad3f5"
+
+  [urgency_critical]
+    background = "#24273a"
+    foreground = "#cad3f5"
+    frame_color = "#f5a97f"
+
 # Experimental features that may or may not work correctly. Do not expect them
 # to have a consistent behaviour across releases.
 [experimental]
@@ -327,21 +348,7 @@
     # where there are multiple screens with very different dpi values.
     per_monitor_dpi = false
 
-
-    [global]
-      frame_color = "#494d64"
-      background = "#181926"
-      separator_color= frame
-
-    [urgency_low]
-      foreground = "#cad3f5"
-
-    [urgency_normal]
-      foreground = "#cad3f5"
-
-    [urgency_critical]
-      foreground = "#cad3f5"
-      frame_color = "#f5a97f"
+# [global]
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
