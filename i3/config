@@ -30,7 +30,7 @@ smart_gaps on
 bindsym $mod+Control+q kill
 bindsym --release Caps_Lock exec --no-startup-id pkill -SIGRTMIN+10 i3blocks
 bindsym $mod+space exec --no-startup-id rofi -m -1 -show drun -drun-display-format \{name\}
-bindsym $mod+d exec --no-startup-id ~/myrepo/myscripts/bash/rofi/mymenu.sh
+bindsym $mod+Control+space exec --no-startup-id ~/myrepo/myscripts/bash/rofi/mymenu.sh
 bindsym $mod+Return exec --no-startup-id wezterm
 bindsym $mod+w exec zen-browser
 bindsym $mod+Control+w exec firefox --private-window

@@ -2,7 +2,8 @@
 
 menu() {
   printf "1. Arch XFCE\n"
-  printf "2. Window 11\n"
+  printf "2. Nixos\n"
+  printf "3. Window 11\n"
 }
 
 main() {
@@ -15,6 +16,11 @@ main() {
       break
       ;;
     2)
+      virsh --connect qemu:///system start "nixos"
+      virt-manager --connect qemu:///system --show-domain-console "nixos"
+      break
+      ;;
+    3)
       virsh --connect qemu:///system start "win11"
       virt-manager --connect qemu:///system --show-domain-console "win11"
       break
