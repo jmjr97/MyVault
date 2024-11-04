@@ -5,7 +5,7 @@
     "clock",
     "hyprland/workspaces",
     "custom/divider",
-    "custom/firefox",
+    "custom/web",
     "custom/obsidian",
     "custom/files",
   ],
@@ -42,8 +42,8 @@
   "custom/divider": {
     "format": "⏽",
   },
-  "custom/firefox": {
-    "format": "",
+  "custom/web": {
+    "format": "󰖟",
     "on-click": "firefox",
   },
   "custom/obsidian": {
