@@ -170,7 +170,7 @@ for_window [class="kitty" instance="kitty"] move position center
 
 # spotify window
 for_window [class="__spotify" instance="__spotify"] floating enabled
-for_window [class="__spotify" instance="__spotify"] resize set 960 540
+for_window [class="__spotify" instance="__spotify"] resize set 1280 720
 for_window [class="__spotify" instance="__spotify"] move position center
 
 # notes window

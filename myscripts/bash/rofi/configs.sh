@@ -6,7 +6,8 @@ menu() {
   printf "2. Neovim\n"
   printf "3. Polybar\n"
   printf "4. Polybar Modules\n"
-  printf "5. ZSH\n"
+  printf "5. Wezterm\n"
+  printf "6. ZSH\n"
 }
 
 main() {
@@ -14,23 +15,27 @@ main() {
 
   case $choice in
     1)
-      wezterm start -e nvim $HOME/.config/i3/config
+      wezterm start -e nvim $HOME/myrepo/i3/config
       break
       ;;
     2)
-      wezterm start -e nvim $HOME/.config/nvim/init.lua
+      wezterm start -e nvim $HOME/myrepo/nvim/init.lua
       break
       ;;
     3)
-      wezterm start -e nvim $HOME/.config/polybar/config.ini
+      wezterm start -e nvim $HOME/myrepo/polybar/config.ini
       break
       ;;
     4)
-      wezterm start -e nvim $HOME/.config/polybar/modules.ini
+      wezterm start -e nvim $HOME/myrepo/polybar/modules.ini
       break
       ;;
     5)
-      wezterm start -e nvim $HOME/.config/zsh/.zshrc
+      wezterm start -e nvim $HOME/myrepo/wezterm/wezterm.lua
+      break
+      ;;
+    6)
+      wezterm start -e nvim $HOME/myrepo/zsh/.zshrc
       break
       ;;
   esac
