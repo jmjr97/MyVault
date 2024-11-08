@@ -1,7 +1,7 @@
 format = """
 $jobs\
 $hostname\
-[  ](#7aa2f7)\
+[\uf07c  ](#7aa2f7)\
 $directory\
 $git_branch\
 $git_state\

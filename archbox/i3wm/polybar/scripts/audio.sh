@@ -29,6 +29,7 @@ function main() {
 
   if [ "${action}" == "reset" ]; then
     systemctl --user restart pipewire
+    i3-msg restart
   fi
 
 }

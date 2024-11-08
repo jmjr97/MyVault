@@ -30,8 +30,7 @@ smart_gaps on
 
 bindsym $mod+Control+q kill
 bindsym --release Caps_Lock exec --no-startup-id pkill -SIGRTMIN+10 i3blocks
-bindsym $mod+space exec --no-startup-id rofi -m -1 -show drun -drun-display-format \{name\}
-bindsym $mod+Control+space exec --no-startup-id ~/myrepo/myscripts/bash/rofi/mymenu.sh
+bindsym $mod+space exec --no-startup-id rofi -m -primary -show drun -drun-display-format \{name\}
 bindsym $mod+Return exec --no-startup-id wezterm
 bindsym $mod+Control+Return exec --no-startup-id kitty
 bindsym $mod+w exec zen-browser
@@ -173,6 +172,11 @@ for_window [class="kitty" instance="kitty"] move position center
 for_window [class="__spotify" instance="__spotify"] floating enabled
 for_window [class="__spotify" instance="__spotify"] resize set 1280 720
 for_window [class="__spotify" instance="__spotify"] move position center
+
+# btop window
+for_window [class="__btop" instance="__btop"] floating enabled
+for_window [class="__btop" instance="__btop"] resize set 1280 720
+for_window [class="__btop" instance="__btop"] move position center
 
 # notes window
 for_window [class="__notes" instance="__notes"] floating enabled

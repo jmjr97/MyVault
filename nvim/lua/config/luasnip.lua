@@ -60,15 +60,13 @@ ls.add_snippets('html', {
 ls.add_snippets('desktop', {
   s('desktop', fmt(
     [[
-    [desktop entry]
+    [Desktop Entry]
 
     Type=Application
     Version=1.0
     Name={}
     Comment=
-    Path=
     Exec=
-    Icon=
     Terminal=false
     Categories=Education;
     ]], { i(1)}
