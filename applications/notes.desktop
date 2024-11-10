@@ -1,0 +1,10 @@
+[Desktop Entry]
+
+Type=Application
+Version=1.0
+Name=Notes
+Comment=Notes Menu
+Exec=/home/john/myrepo/myscripts/bash/rofi/notes.sh
+Icon=
+Terminal=false
+Categories=Utility;

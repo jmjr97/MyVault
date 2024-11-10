@@ -3,7 +3,8 @@
 main () {
   case $@ in
     lazygit)
-      wezterm start --always-new-process lazygit -p ~/myrepo/
+      kitty --class="__lazygit" lazygit -p ~/myrepo/
+      # wezterm start --always-new-process lazygit -p ~/myrepo/
       ;;
     btop)
       kitty  --class="__btop" btop

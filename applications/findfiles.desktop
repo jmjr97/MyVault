@@ -1,0 +1,10 @@
+[Desktop Entry]
+
+Type=Application
+Version=1.0
+Name=Finder
+Comment=Search for files
+Exec=/home/john/myrepo/myscripts/bash/rofi/finder.sh
+Icon=
+Terminal=false
+Categories=Utility;

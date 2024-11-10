@@ -178,6 +178,11 @@ for_window [class="__btop" instance="__btop"] floating enabled
 for_window [class="__btop" instance="__btop"] resize set 1280 720
 for_window [class="__btop" instance="__btop"] move position center
 
+# btop window
+for_window [class="__lazygit" instance="__lazygit"] floating enabled
+for_window [class="__lazygit" instance="__lazygit"] resize set 1280 720
+for_window [class="__lazygit" instance="__lazygit"] move position center
+
 # notes window
 for_window [class="__notes" instance="__notes"] floating enabled
 for_window [class="__notes" instance="__notes"] resize set 800 600

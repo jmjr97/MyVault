@@ -1,0 +1,10 @@
+[Desktop Entry]
+
+Type=Application
+Version=1.0
+Name=Btop
+Comment=Btop Tui
+Exec=/home/john/myrepo/myscripts/bash/rofi/launcher.sh btop
+Icon=
+Terminal=false
+Categories=Utility;

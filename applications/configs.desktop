@@ -1,0 +1,10 @@
+[Desktop Entry]
+
+Type=Application
+Version=1.0
+Name=Configs
+Comment=Edit Configs
+Exec=/home/john/myrepo/myscripts/bash/rofi/configs.sh
+Icon=
+Terminal=false
+Categories=Utility;
