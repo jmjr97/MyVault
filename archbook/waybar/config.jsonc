@@ -64,7 +64,7 @@
     "format": "{:%a, %b %d - %I:%M}",
   },
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
+    "scroll-step": 5, // %, can be a float
     "format": "{volume}% <span foreground='#8aadf4'>{icon}</span>",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
@@ -72,8 +72,6 @@
     "format-source-muted": "",
     "format-icons": {
         "headphone": "",
-        "hands-free": "",
-        "headset": "",
         "default": [" ", " ", " "]
     },
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
