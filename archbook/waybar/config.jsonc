@@ -116,11 +116,9 @@
     },
     "format": "{capacity}% <span foreground='#8aadf4'>{icon} </span>",
     "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
+    "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
+    "format-alt": "{time} <span foreground='#8aadf4'>{icon} </span>",
     "format-icons": ["", "", "", "", ""]
   },
   "tray": {
