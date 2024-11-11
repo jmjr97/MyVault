@@ -119,6 +119,25 @@ config.keys = {
     mods = 'LEADER',
     action = wezterm.action.PasteFrom 'Clipboard',
   },
+  {
+    key = 'h',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.AdjustPaneSize { "Left", 5 }
+  },
+  {
+    key = 'l',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.AdjustPaneSize { "Right", 5 }
+  },
+  {
+    key = 'k',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.AdjustPaneSize { "Up", 1 }
+  },
+  {
+    key = 'j',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.AdjustPaneSize { "Down", 1 }
+  },
 }
-
 return config
