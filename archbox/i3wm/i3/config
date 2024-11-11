@@ -185,7 +185,7 @@ for_window [class="__lazygit" instance="__lazygit"] move position center
 
 # notes window
 for_window [class="__notes" instance="__notes"] floating enabled
-for_window [class="__notes" instance="__notes"] resize set 800 600
+for_window [class="__notes" instance="__notes"] resize set 1024 768
 for_window [class="__notes" instance="__notes"] move position center
 
 #######################
