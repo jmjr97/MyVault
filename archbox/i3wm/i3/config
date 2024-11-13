@@ -183,6 +183,10 @@ for_window [class="__lazygit" instance="__lazygit"] floating enabled
 for_window [class="__lazygit" instance="__lazygit"] resize set 1280 720
 for_window [class="__lazygit" instance="__lazygit"] move position center
 
+# bluetui window
+for_window [class="__bluetui" instance="__bluetui"] floating enabled
+for_window [class="__bluetui" instance="__bluetui"] resize set 1024 768
+for_window [class="__bluetui" instance="__bluetui"] move position center
 # notes window
 for_window [class="__notes" instance="__notes"] floating enabled
 for_window [class="__notes" instance="__notes"] resize set 1024 768

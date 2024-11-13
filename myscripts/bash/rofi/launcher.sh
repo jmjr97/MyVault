@@ -9,6 +9,9 @@ main () {
     btop)
       kitty  --class="__btop" btop
       ;;
+    bluetui)
+      kitty  --class="__bluetui" bluetui
+      ;;
   esac
 }
 
