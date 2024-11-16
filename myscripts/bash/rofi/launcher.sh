@@ -12,6 +12,9 @@ main () {
     bluetui)
       kitty  --class="__bluetui" bluetui
       ;;
+    nmtui)
+      kitty  --class="__nmtui" nmtui
+      ;;
   esac
 }
 

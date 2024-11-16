@@ -44,7 +44,7 @@
   },
   "custom/web": {
     "format": "󰖟",
-    "on-click": "firefox",
+    "on-click": "zen-browser",
   },
   "custom/obsidian": {
     "format": "",

@@ -8,4 +8,4 @@ selection=$(fd . --type file $HOME/Documents/obsidian-sync/ 2>/dev/null | \
     sed "s;\~;$HOME/Documents/obsidian-sync/;"
 )
 
-wezterm start nvim "$selection"
+xdg-open "$selection" 
