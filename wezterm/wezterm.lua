@@ -139,5 +139,12 @@ config.keys = {
     mods = 'CTRL|ALT',
     action = wezterm.action.AdjustPaneSize { "Down", 1 }
   },
+  {
+    key = 'o',
+    mods = 'LEADER',
+    action = wezterm.action.PaneSelect {
+      mode = 'SwapWithActive',
+    }
+  },
 }
 return config

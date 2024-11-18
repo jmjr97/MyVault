@@ -20,6 +20,14 @@ ls.add_snippets('lua', {
   })
 })
 
+-- rust snippets
+
+ls.add_snippets('rust', {
+  s('rust', {
+    t('#![allow(non_snake_case)]')
+  })
+})
+
 -- javascript snippets
 
 ls.add_snippets('javascript', {

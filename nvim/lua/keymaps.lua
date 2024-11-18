@@ -43,6 +43,12 @@ km("n", "<C-j>", "<C-w>j", opts)
 km("n", "<C-k>", "<C-w>k", opts)
 km("n", "<C-l>", "<C-w>l", opts)
 
+-- Terminal Navigation
+-- km("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
+km("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
+km("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
+-- km("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
+
 -- Buffers
 km("n", "<S-l>", ":bnext<CR>", opts)
 km("n", "<S-h>", ":bprevious<CR>", opts)
