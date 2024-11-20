@@ -1,6 +1,10 @@
 dotfiles/zsh/.zcompdump
 dotfiles/alacritty/*.bak
 dotfiles/i3wm/polybar/config.ini.bak
+<<<<<<< HEAD
 dotfiles/bspwm/polybar/config.ini.bak
+=======
+dotfiles/bwpwm/polybar/config.ini.bak
+>>>>>>> refs/remotes/origin/master
 dotfiles/nvim/lazy-lock.json
 dotfiles/btop/btop.log
