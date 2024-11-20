@@ -28,6 +28,7 @@ alias pss="pacman -Ss"
 alias pu="sudo pacman -Syu"
 alias pr="sudo pacman -Rns"
 alias pq="pacman -Qs"
+alias pqe="pacman -Qe"
 
 #-- Alias
 alias so='source ~/.config/zsh/.zshrc'
