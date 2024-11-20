@@ -50,7 +50,7 @@ alias orn="nvim ~/Documents/obsidian-sync/Notes/_random.md"
 #-- Python
 alias py="python"
 alias pyenv="~/myrepo/myscripts/bash/pyenv.sh"
-alias pyact="source .env/bin/activate"
+alias pya="source .env/bin/activate"
 
 #-- Python Scripts
 alias stopwatch='/home/john/Code/python/learning/stopwatch/stopwatch.py'

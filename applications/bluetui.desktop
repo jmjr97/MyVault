@@ -1,0 +1,10 @@
+[Desktop Entry]
+
+Type=Application
+Version=1.0
+Name=BlueTui
+Comment=A Bluetooth Tui
+Exec=/home/john/myrepo/myscripts/bash/rofi/launcher.sh bluetui
+Icon=
+Terminal=false
+Categories=Utility;

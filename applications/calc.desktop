@@ -1,0 +1,10 @@
+[Desktop Entry]
+
+Type=Application
+Version=1.0
+Name=Calc
+Comment=Rofi Calc
+Exec=rofi -show calc -modi calc -m -primary -no-show-match -no-sort
+Icon=
+Terminal=false
+Categories=Utility;
