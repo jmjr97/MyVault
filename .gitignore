@@ -1,5 +1,6 @@
-zsh/.zcompdump
-alacritty/*.bak
-polybar/config.ini.bak
-nvim/lazy-lock.json
-btop/btop.log
+dotfiles/zsh/.zcompdump
+dotfiles/alacritty/*.bak
+dotfiles/i3wm/polybar/config.ini.bak
+dotfiles/bspwm/polybar/config.ini.bak
+dotfiles/nvim/lazy-lock.json
+dotfiles/btop/btop.log
