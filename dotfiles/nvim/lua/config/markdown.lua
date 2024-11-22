@@ -19,5 +19,9 @@ require('render-markdown').setup({
     highlight = 'RenderMarkdownCode',
     highlight_inline = 'RenderMarkdownCodeInline',
     highlight_language = nil,
-  }
+  },
+  file_types = {
+    'markdown',
+    'vimwiki',
+  },
 })

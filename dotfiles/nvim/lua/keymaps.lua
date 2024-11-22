@@ -6,6 +6,12 @@ km("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Run Code
+km("n", "<leader>rp", "<cmd>TermExec cmd='python %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Python
+km("n", "<leader>rr", "<cmd>TermExec dir=%:p:h cmd='cargo run'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Rust
+km("n", "<leader>rg", "<cmd>TermExec dir=%:p:h cmd='go run %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
+km("n", "<leader>rs", "<cmd>TermExec dir=%:p:h cmd='sh %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Bash
+
 -- Insert Move Movement
 km("i", "<C-k>", [[<Up>]], opts)
 km("i", "<C-j>", [[<Down>]], opts)
@@ -43,8 +49,12 @@ km("n", "<C-j>", "<C-w>j", opts)
 km("n", "<C-k>", "<C-w>k", opts)
 km("n", "<C-l>", "<C-w>l", opts)
 
+-- ToggleTerm
+-- km("n", "<C-/>", ":ToggleTerm dir=%:p:h<CR>", opts)
+
 -- Terminal Navigation
 -- km("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
+km("t", "<C-n>", [[<C-\><C-n>]], opts)
 km("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
 km("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
 -- km("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
@@ -80,8 +90,8 @@ km("n", "<leader>os", ":ObsidianQuickSwitch<CR>", opts)
 km("n", "<leader>m", ":MaximizerToggle<CR>", opts)
 
 -- Telescope
-km("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-km("n", "<leader>fF", "<cmd>Telescope find_files<cr>", opts)
+km("n", "<leader>ff", "<cmd>Telescope find_files theme=dropdown<cr>", opts)
+km("n", "<leader>fF", "<cmd>Telescope find_files cwd=~/ theme=dropdown<cr>", opts)
 km("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
-km("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts)
+km("n", "<leader>fr", "<cmd>Telescope oldfiles theme=dropdown<cr>", opts)
 km("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)

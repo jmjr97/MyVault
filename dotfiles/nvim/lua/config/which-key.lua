@@ -7,13 +7,8 @@ wk.add({
   -- Find
   { "<leader>f", group = "Find" },
   { "<leader>ff", desc = "File" },
-  { "<leader>fF", desc = "File w/ Preview" },
   { "<leader>fg", desc = "Live Grep" },
   { "<leader>fr", desc = "Recent Files" },
-  -- Search
-  { "<leader>s", group = "Search" },
-  { "<leader>sh", desc = "Help" },
-  { "<leader>sm", desc = "max" },
   -- Window
   { "<leader>v", group = "Wiki" },
   -- LSP Handler

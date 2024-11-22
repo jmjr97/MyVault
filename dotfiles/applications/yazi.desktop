@@ -1,0 +1,10 @@
+[Desktop Entry]
+
+Type=Application
+Version=1.0
+Name=Yazi
+Comment=A Tui File Manager
+Exec=wezterm start yazi
+Icon=
+Terminal=false
+Categories=Utility;

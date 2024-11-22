@@ -7,13 +7,13 @@ main () {
       # wezterm start --always-new-process lazygit -p ~/myrepo/
       ;;
     btop)
-      kitty  --class="__btop" btop
+      kitty --class="__btop" btop
       ;;
     bluetui)
-      kitty  --class="__bluetui" bluetui
+      kitty --class="__bluetui" bluetui
       ;;
     nmtui)
-      kitty  --class="__nmtui" nmtui
+      kitty --class="__nmtui" nmtui
       ;;
   esac
 }

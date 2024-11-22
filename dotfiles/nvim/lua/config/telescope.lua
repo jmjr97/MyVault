@@ -14,6 +14,23 @@ telescope.setup {
     selection_caret = " ",
     path_display = { "smart" },
 
+    file_ignore_patterns = {
+      '^.cache/',
+      '^.cargo/',
+      '^.config/',
+      '^.fonts/',
+      '^.icons/',
+      '^.local/',
+      '^.mozilla/',
+      '^.npm/',
+      '^.nv/',
+      '^.pki/',
+      '^.ssh/',
+      '^.steam/',
+      '^.themes/ -> /home/john/myrepo/dotfiles/.themes/',
+      '^.zen/',
+    },
+
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,

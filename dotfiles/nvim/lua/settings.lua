@@ -19,8 +19,10 @@ local options = {
 	sidescrolloff = 8,
 	signcolumn = "yes",
   guibg = none,
+
 }
 
+vim.treesitter.language.register('markdown', 'vimwiki')
 vim.g.python_recommended_style = 0
 vim.opt.shortmess:append "c"
 
