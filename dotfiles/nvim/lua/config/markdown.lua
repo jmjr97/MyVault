@@ -20,6 +20,12 @@ require('render-markdown').setup({
     highlight_inline = 'RenderMarkdownCodeInline',
     highlight_language = nil,
   },
+  win_options = {
+    conceallevel = {
+      default = vim.api.nvim_get_option_value('conceallevel', {}),
+      rendered = 2,
+    },
+  },
   file_types = {
     'markdown',
     'vimwiki',

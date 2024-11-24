@@ -18,8 +18,6 @@ local options = {
 	scrolloff = 8,
 	sidescrolloff = 8,
 	signcolumn = "yes",
-  guibg = none,
-
 }
 
 vim.treesitter.language.register('markdown', 'vimwiki')

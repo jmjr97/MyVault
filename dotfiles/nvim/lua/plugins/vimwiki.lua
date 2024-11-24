@@ -16,6 +16,7 @@ return {
 		-- Disable header levels keybindings so oil.nvim will work
 		vim.g.vimwiki_key_mappings = {
 			headers = 0,
+      all_maps = 0,
 		}
 
 		-- Syntax highlighting for code blocks
