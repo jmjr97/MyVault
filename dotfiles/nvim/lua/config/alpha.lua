@@ -19,7 +19,7 @@ dashboard.section.header.val = {
  dashboard.section.buttons.val = {
    dashboard.button("e", " New file", ":ene <BAR> start <CR>"),
    dashboard.button("f", " Find file", ":Telescope find_files theme=ivy<CR>"),
-   dashboard.button("o", " Search notes", ":ObsidianQuickSwitch<CR>"),
+   dashboard.button("o", " Notes", ":Telescope find_files cwd=~/Documents/obsidian-sync/ theme=ivy prompt_title=Notes<cr>"),
    dashboard.button("r", " Recently used files", ":Telescope oldfiles theme=ivy<CR>"),
    dashboard.button("t", " Find text", ":Telescope live_grep <CR>"),
    dashboard.button("c", " Configuration", ":e ~/.config/nvim/init.lua<CR>"),

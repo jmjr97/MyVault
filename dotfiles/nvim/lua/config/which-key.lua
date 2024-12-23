@@ -14,7 +14,8 @@ wk.add({
   { "<leader>fb", desc = "Buffers" },
   { "<leader>fg", desc = "Live Grep" },
   { "<leader>fh", desc = "Help Tags" },
-  { "<leader>fn", desc = "Notes" },
+  { "<leader>fm", desc = "Marks" },
+  { "<leader>fo", desc = "Notes" },
   { "<leader>fr", desc = "Recent Files" },
   { "<leader>fs", desc = "Git Status" },
   -- LSP Handler

@@ -87,13 +87,6 @@ vim.keymap.set({"n", "v"}, "<leader>p", [["+p]], opts)
 -- Oil
 km("n", "-", "<CMD>Oil --float<CR>", opts)
 
--- Notes
-km("n", "<leader>oh", ":e ~/Documents/obsidian-sync/readme.md<CR>", opts)
-km("n", "<leader>ot", ":ObsidianTOC<CR>", opts)
-km("n", "<leader>on", ":ObsidianNew<CR>", opts)
-km("n", "<leader>og", ":ObsidianSearch<CR>", opts)
-km("n", "<leader>os", ":ObsidianQuickSwitch<CR>", opts)
-
 -- Telescope
 km("n", "<leader>ff", "<cmd>Telescope find_files theme=ivy<cr>", opts)
 km("n", "<leader>fa", "<cmd>Telescope find_files cwd=~/ theme=ivy prompt_title=All-Files<cr>", opts)
@@ -101,7 +94,7 @@ km("n", "<leader>fb", "<cmd>Telescope buffers theme=dropdown preview=false<cr><e
 km("n", "<leader>fg", "<cmd>Telescope live_grep theme=ivy<cr>", opts)
 km("n", "<leader>fh", "<cmd>Telescope help_tags theme=ivy<cr>", opts)
 km("n", "<leader>fm", "<cmd>Telescope marks theme=dropdown<cr><escape>", opts)
-km("n", "<leader>fn", "<cmd>Telescope find_files cwd=~/Documents/obsidian-sync/ theme=ivy prompt_title=Notes<cr>", opts)
+km("n", "<leader>fo", "<cmd>Telescope find_files cwd=~/Documents/obsidian-sync/ theme=ivy prompt_title=Notes<cr>", opts)
 km("n", "<leader>fr", "<cmd>Telescope oldfiles theme=ivy<cr>", opts)
 km("n", "<leader>fs", "<cmd>Telescope git_status theme=ivy<cr>", opts)
 
