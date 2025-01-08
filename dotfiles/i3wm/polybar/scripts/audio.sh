@@ -1,6 +1,7 @@
 #!/bin/bash
 
-speakers='alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1'
+# speakers='alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1'
+speakers='alsa_output.pci-0000_09_00.4.analog-stereo'
 headphones='alsa_output.usb-Logitech_PRO_000000000000-00.analog-stereo'
 SINK=$(pactl get-default-sink NAME)
 

@@ -7,7 +7,8 @@ main () {
       # wezterm start --always-new-process lazygit -p ~/myrepo/
       ;;
     btop)
-      kitty --class="__btop" btop
+      # kitty --class="__btop" btop
+      wezterm --config-file ~/.config/wezterm/wezterm-float.lua start --class="__btop" btop
       ;;
     bluetui)
       kitty --class="__bluetui" bluetui
