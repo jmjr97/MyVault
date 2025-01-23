@@ -18,7 +18,7 @@ ln -s /home/john/myrepo/dotfiles/archbook/wlogout/ /home/john/.config/
 # ln -s /home/john/myrepo/dotfiles/bspwm/polybar/ /home/john/.config/
 
 #### Apps ####
-ln -s /home/john/myrepo/dotfiles/kitty/ /home/john/.config/
+# ln -s /home/john/myrepo/dotfiles/kitty/ /home/john/.config/
 ln -s /home/john/myrepo/dotfiles/wezterm/ /home/john/.config/
 ln -s /home/john/myrepo/dotfiles/nvim/ /home/john/.config/
 ln -s /home/john/myrepo/dotfiles/rofi/ /home/john/.config/

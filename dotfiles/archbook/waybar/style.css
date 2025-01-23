@@ -60,6 +60,11 @@ tooltip label {
   font-size: 20px;
 }
 
+#tray {
+  padding: 0 10px;
+  font-size: 20px;
+}
+
 #custom-pacman,
 #clock,
 #battery,
@@ -68,9 +73,7 @@ tooltip label {
 #disk,
 #temperature,
 #backlight,
-#network,
 #pulseaudio,
-#tray,
 #mpd {
   padding: 0 8px;
   color: #f5a97f;
@@ -126,11 +129,6 @@ tooltip label {
 
 label:focus {
   background-color: #000000;
-}
-
-#network.disconnected {
-  color: #ed8796;
-  border-radius: 8px;
 }
 
 #temperature.critical {
