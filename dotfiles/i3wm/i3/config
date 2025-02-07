@@ -9,7 +9,6 @@
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xrandr --output HDMI-0 --off --output DP-0 --off --output DP-1 --mode 1920x1080 --rate 75 --pos 1920x0 --rotate normal --output DP-2 --off --output DP-3 --primary --mode 1920x1080 --rate 75 --pos 0x0 --rotate normal --output DP-4 --off --output DP-5 --off
 
 font pango:Hack Nerd Font Mono 8
 
@@ -24,29 +23,13 @@ focus_follows_mouse no
 gaps inner 10px
 smart_gaps on
 
-################
-#### Starup ####
-################
-
-exec --no-startup-id steam -silent &
-exec --no-startup-id dunst &
-exec --no-startup-id lxsession &
-exec --no-startup-id picom &
-exec --no-startup-id nitrogen --restore &
-exec --no-startup-id xfce4-power-manager &
-exec --no-startup-id flameshot &
-exec --no-startup-id discord --start-minimized &
-exec --no-startup-id numlockx on
-
-exec --no-startup-id setxkbmap -layout us,de &
-  
 ##################
 #### Keybinds ####
 ##################
 
 bindsym $mod+Control+q kill
 bindsym --release Caps_Lock exec --no-startup-id pkill -SIGRTMIN+10 i3blocks
-bindsym $mod+space exec --no-startup-id rofi -m -4 -show drun -drun-display-format \{name\}
+bindsym $mod+space exec --no-startup-id rofi -m -1 -show drun -drun-display-format {name}
 bindsym $mod+Return exec --no-startup-id wezterm
 bindsym $mod+Control+Return exec --no-startup-id kitty
 bindsym $mod+w exec firefox
@@ -263,5 +246,21 @@ client.background       $background
 #         }
 # }
 
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+################
+#### Starup ####
+################
 
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id xrandr --output HDMI-0 --off --output DP-0 --off --output DP-1 --mode 1920x1080 --rate 75 --pos 1920x0 --rotate normal --off --output DP-2 --off --output DP-3 --primary --mode 1920x1080 --rate 75 --pos 0x0 --rotate normal --output DP-4 --off --output DP-5 --off
+
+exec --no-startup-id steam -silent &
+exec --no-startup-id dunst &
+exec --no-startup-id lxsession &
+exec --no-startup-id picom &
+exec --no-startup-id nitrogen --restore &
+exec --no-startup-id xfce4-power-manager &
+exec --no-startup-id flameshot &
+exec --no-startup-id discord --start-minimized &
+
+exec --no-startup-id setxkbmap -layout us,de &
+  
