@@ -43,7 +43,7 @@
   },
   "custom/web": {
     "format": "󰖟",
-    "on-click": "zen-browser",
+    "on-click": "firefox",
   },
   "custom/obsidian": {
     "format": "",

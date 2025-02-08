@@ -21,6 +21,7 @@ scheme.tab_bar = {
 }
 
 -- Look and Feel
+config.enable_wayland = false
 config.color_scheme = scheme_name
 config.font = wezterm.font('Hack Nerd Font')
 config.font_size = 13
