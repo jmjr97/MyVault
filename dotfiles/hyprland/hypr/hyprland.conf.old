@@ -1,0 +1,265 @@
+####################################################################
+#██╗░░██╗██╗░░░██╗██████╗░██████╗░██╗░░░░░░█████╗░███╗░░██╗██████╗░#
+#██║░░██║╚██╗░██╔╝██╔══██╗██╔══██╗██║░░░░░██╔══██╗████╗░██║██╔══██╗#
+#███████║░╚████╔╝░██████╔╝██████╔╝██║░░░░░███████║██╔██╗██║██║░░██║#
+#██╔══██║░░╚██╔╝░░██╔═══╝░██╔══██╗██║░░░░░██╔══██║██║╚████║██║░░██║#
+#██║░░██║░░░██║░░░██║░░░░░██║░░██║███████╗██║░░██║██║░╚███║██████╔╝#
+#╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░╚══╝╚═════╝░#
+####################################################################
+
+#################
+### autostart ###
+#################
+
+exec-once = waybar &
+exec-once = hyprpaper &
+exec-once = swaync &
+exec-once = hypridle &
+
+################
+### monitors ###
+################
+
+monitor=,1920x1080,auto,1
+
+#########################
+### program variables ###
+#########################
+
+# Set programs that you use
+$terminal = wezterm
+$fileManager = nemo
+$menu = rofi -show drun
+
+#############################
+### environment variables ###
+#############################
+
+env = XCURSOR_SIZE,24
+env = HYPRCURSOR_SIZE,24
+
+#####################
+### look and feel ###
+#####################
+
+general {
+    gaps_in = 5
+    gaps_out = 10
+    border_size = 1
+    col.active_border = rgb(8aadf4)
+    resize_on_border = false
+    allow_tearing = false
+    layout = master
+}
+
+decoration {
+    rounding = 10
+
+    active_opacity = 1.0
+    inactive_opacity = 1.0
+
+    shadow  {
+        enabled = true
+        range = 2
+        render_power = 3
+        color = rgba(1a1a1aee)
+    }
+
+    blur {
+        enabled = true
+        size = 3
+        passes = 1
+
+        vibrancy = 0.1696
+    }
+}
+
+animations {
+    enabled = true
+
+    bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+
+    animation = windows, 1, 7, myBezier
+    animation = windowsOut, 1, 7, default, popin 80%
+    animation = border, 1, 10, default
+    animation = borderangle, 1, 8, default
+    animation = fade, 1, 7, default
+    animation = workspaces, 1, 6, default
+}
+
+master {
+    new_status = slave
+    # no_gaps_when_only = 1
+    mfact = 0.50
+}
+
+misc {
+    force_default_wallpaper = 0 # Set to 0 or 1 to disable the anime mascot wallpapers
+    disable_hyprland_logo = true # If true disables the random hyprland logo / anime girl background. :(
+}
+
+#############
+### input ###
+#############
+
+input {
+    kb_layout = us
+    kb_variant =
+    kb_model =
+    kb_options =
+    kb_rules =
+
+    follow_mouse = 1
+
+    force_no_accel = false
+    accel_profile = flat 
+
+    touchpad {
+        natural_scroll = false
+        scroll_factor = .4
+        clickfinger_behavior = true
+    }
+
+}
+
+gestures {
+    workspace_swipe = true
+}
+
+cursor {
+  no_hardware_cursors = true
+}
+
+device {
+    name = logi-m240-mouse
+    sensitivity = -0.3
+}
+
+device {
+  name = asup1411:00-093a:200b-touchpad
+  sensitivity = -0.1
+}
+
+###################
+### keybindings ###
+###################
+
+$mainMod = SUPER # Sets "Windows" key as main modifier
+
+# System
+bind = $mainMod, M, exit,
+bind = $mainMod Control, Q, killactive,
+bind = $mainMod Control, backspace, exec, /home/john/.config/hypr/scripts/reset-bar.sh
+
+# Applications
+bind = $mainMod, space, exec, $menu
+bind = $mainMod, O, exec, ~/myrepo/myscripts/bash/rofi/archbook/mymenu.sh
+bind = $mainMod, return, exec, $terminal
+bind = $mainMod Control, return, exec, kitty --class="__scratchpad"
+bind = $mainMod, E, exec, $fileManager
+bind = $mainMod, W, exec, zen-browser
+bind = $mainMod, N, exec, kitty --class="__notes" -e nvim "+hi Normal guibg=1e1e2e" $HOME/Documents/obsidian-sync/Notes/_quick.md
+
+# Window control
+
+bind = $mainMod, S, togglefloating,
+bind = $mainMod, A, fullscreen, 1
+
+# Move focus with mainMod + arrow keys
+bind = $mainMod, h, movefocus, l
+bind = $mainMod, l, movefocus, r
+bind = $mainMod, k, movefocus, u
+bind = $mainMod, j, movefocus, d
+
+# Move window with focus
+bind = $mainMod CONTROL, h, movewindow, l
+bind = $mainMod CONTROL, j, movewindow, d
+bind = $mainMod CONTROL, k, movewindow, u
+bind = $mainMod CONTROL, l, movewindow, r
+
+# Switch workspaces with mainMod + [0-9]
+bind = $mainMod, 1, workspace, 1
+bind = $mainMod, 2, workspace, 2
+bind = $mainMod, 3, workspace, 3
+bind = $mainMod, 4, workspace, 4
+bind = $mainMod, 5, workspace, 5
+bind = $mainMod, 6, workspace, 6
+bind = $mainMod, 7, workspace, 7
+bind = $mainMod, 8, workspace, 8
+bind = $mainMod, 9, workspace, 9
+bind = $mainMod, 0, workspace, 10
+
+# Move active window to a workspace with mainMod + SHIFT + [0-9]
+bind = $mainMod SHIFT, 1, movetoworkspace, 1
+bind = $mainMod SHIFT, 2, movetoworkspace, 2
+bind = $mainMod SHIFT, 3, movetoworkspace, 3
+bind = $mainMod SHIFT, 4, movetoworkspace, 4
+bind = $mainMod SHIFT, 5, movetoworkspace, 5
+bind = $mainMod SHIFT, 6, movetoworkspace, 6
+bind = $mainMod SHIFT, 7, movetoworkspace, 7
+bind = $mainMod SHIFT, 8, movetoworkspace, 8
+bind = $mainMod SHIFT, 9, movetoworkspace, 9
+bind = $mainMod SHIFT, 0, movetoworkspace, 10
+
+# Example special workspace (scratchpad)
+# bind = $mainMod, S, togglespecialworkspace, magic
+# bind = $mainMod SHIFT, S, movetoworkspace, special:magic
+
+# Scroll through existing workspaces with mainMod + scroll
+bind = $mainMod, mouse_down, workspace, e+1
+bind = $mainMod, mouse_up, workspace, e-1
+
+# Move/resize windows with mainMod + LMB/RMB and dragging
+bindm = $mainMod, mouse:272, movewindow
+bindm = $mainMod, mouse:273, resizewindow
+
+# Laptop multimedia keys for volume and LCD brightness
+bindel = ,XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+bindel = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindel = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindel = ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+bindel = ,XF86MonBrightnessUp, exec, brightnessctl s 10%+
+bindel = ,XF86MonBrightnessDown, exec, brightnessctl s 10%-
+
+# Requires playerctl
+bindl = , XF86AudioNext, exec, playerctl next
+bindl = , XF86AudioPause, exec, playerctl play-pause
+bindl = , XF86AudioPlay, exec, playerctl play-pause
+bindl = , XF86AudioPrev, exec, playerctl previous
+
+##############################
+### windows and workspaces ###
+##############################
+
+workspace = w[tv1], gapsout:0, gapsin:0
+workspace = f[1], gapsout:0, gapsin:0
+windowrulev2 = bordersize 0, floating:0, onworkspace:w[tv1]
+windowrulev2 = rounding 0, floating:0, onworkspace:w[tv1]
+windowrulev2 = bordersize 0, floating:0, onworkspace:f[1]
+windowrulev2 = rounding 0, floating:0, onworkspace:f[1]
+
+# Scratchpad
+windowrule = float, ^(__scratchpad)$
+windowrule = size 960 540, ^(__scratchpad)$
+
+# Spotify
+windowrule = float, ^(__spotify)$
+windowrule = size 1280 720, ^(__spotify)$
+
+# Btop Window
+windowrule = float, ^(__btop)$
+windowrule = size 1280 720, ^(__btop)$
+
+# Lazygit
+windowrule = float, ^(__lazygit)$
+windowrule = size 1280 720, ^(__lazygit)$
+
+# Qucik Note
+windowrule = float, ^(__notes)$
+windowrule = size 800 600, ^(__notes)$
+
+# Ignore maximize requests from apps. You'll probably like this.
+windowrulev2 = suppressevent maximize, class:.*
+
+# Fix some dragging issues with XWayland
+windowrulev2 = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
