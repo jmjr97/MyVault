@@ -77,7 +77,7 @@ bindsym $mod+Shift+p focus child
 bindsym $mod+s floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+Shift+s focus mode_toggle
+bindsym $mod+d focus mode_toggle
 
 #### Monitors & workspaces ####
 set $main "DP-3"
@@ -251,16 +251,4 @@ client.background       $background
 ################
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id xrandr --output HDMI-0 --off --output DP-0 --off --output DP-1 --mode 1920x1080 --rate 75 --pos 1920x0 --rotate normal --off --output DP-2 --off --output DP-3 --primary --mode 1920x1080 --rate 75 --pos 0x0 --rotate normal --output DP-4 --off --output DP-5 --off
-
-exec --no-startup-id steam -silent &
-exec --no-startup-id dunst &
-exec --no-startup-id lxsession &
-exec --no-startup-id picom &
-exec --no-startup-id nitrogen --restore &
-exec --no-startup-id xfce4-power-manager &
-exec --no-startup-id flameshot &
-exec --no-startup-id discord --start-minimized &
-
-exec --no-startup-id setxkbmap -layout us,de &
-  
+exec --no-startup-id ~/.config/i3/startup.sh

@@ -41,6 +41,7 @@ alias spot="~/myrepo/myscripts/bash/rofi/spotify.sh"
 alias modx="chmod +x"
 alias se="sudoedit"
 alias tm="tmux attach"
+alias ff="fastfetch"
 
 #-- Neovim
 alias vim="nvim"
@@ -125,7 +126,7 @@ function f() {
 }
 
 #-- fzf
-alias ff="zle --exclude '.steam' -N fzf-cd-widget"
+alias fff="zle --exclude '.steam' -N fzf-cd-widget"
 eval "$(fzf --zsh)"
 
 zle     -N            fzf-cd-widget
