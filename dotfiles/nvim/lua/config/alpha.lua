@@ -21,8 +21,8 @@ dashboard.section.header.val = {
    dashboard.button("f", " Find file", ":Telescope find_files theme=ivy<CR>"),
    dashboard.button("o", " Notes", ":Telescope find_files cwd=~/Documents/obsidian-sync/ theme=ivy prompt_title=Notes<cr>"),
    dashboard.button("r", " Recently used files", ":Telescope oldfiles theme=ivy<CR>"),
-   dashboard.button("t", " Find text", ":Telescope live_grep <CR>"),
-   dashboard.button("c", " Configuration", ":e ~/.config/nvim/init.lua<CR>"),
+   dashboard.button("t", " Find text", ":Telescope live_grep<CR>"),
+   dashboard.button("c", " Configuration", ":Telescope find_files cwd=~/.config/nvim/ theme=ivy prompt_title=Notes<cr>"),
    dashboard.button("q", "󰩈 Quit Neovim", ":qa<CR>"),
 }
 

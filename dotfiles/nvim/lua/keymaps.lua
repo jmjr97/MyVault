@@ -5,6 +5,8 @@ local km = vim.api.nvim_set_keymap
 -- House Keeping --
 -------------------
 
+km("n", "-", ':lua MiniFiles.open()<CR>', opts)
+
 -- Setup Leader
 km("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
@@ -85,7 +87,7 @@ vim.keymap.set({"n", "v"}, "<leader>p", [["+p]], opts)
 -------------------------
 
 -- Oil
-km("n", "-", "<CMD>Oil --float<CR>", opts)
+-- km("n", "!", "<CMD>Oil --float<CR>", opts)
 
 -- Telescope
 km("n", "<leader>ff", "<cmd>Telescope find_files theme=ivy<cr>", opts)
@@ -101,11 +103,9 @@ km("n", "<leader>fs", "<cmd>Telescope git_status theme=ivy<cr>", opts)
 --------------
 ---- Code ----
 --------------
-
 -- Run Code
 km("n", "<leader>rp", "<cmd>TermExec cmd='python %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Python
 km("n", "<leader>rl", "<cmd>TermExec cmd='lua %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Python
 km("n", "<leader>rr", "<cmd>TermExec dir=%:p:h cmd='cargo run'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Rust
-km("n", "<leader>rg", "<cmd>TermExec dir=%:p:h cmd='go run %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
+km("n", "<leader>rg", "<cmd>TermExec dir=%:p cmd='go run %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
 km("n", "<leader>rs", "<cmd>TermExec dir=%:p:h cmd='sh %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Bash
-

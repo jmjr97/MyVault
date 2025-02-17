@@ -25,7 +25,7 @@ config.enable_wayland = false
 config.color_scheme = scheme_name
 -- config.font = wezterm.font('Hack Nerd Font')
 config.font = wezterm.font_with_fallback {
-  'Hack Nerd Font',
+  'Firacode Nerd Font',
   'JetBrains Mono',
 }
 config.font_size = 13

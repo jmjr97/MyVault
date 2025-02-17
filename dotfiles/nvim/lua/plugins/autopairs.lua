@@ -11,7 +11,7 @@ return {
     disable_in_replace_mode = true,
 
     fast_wrap = {
-      map = "<C-;>",
+      map = "<C-'>",
       chars = { '{', '[', '(', '"', "'" },
       offset = 0,
       end_key = '$',
@@ -23,5 +23,3 @@ return {
 
   },
 }
-
-

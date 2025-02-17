@@ -23,7 +23,7 @@ scheme.tab_bar = {
 -- Look and Feel
 config.enable_wayland = false
 config.color_scheme = scheme_name
-config.font = wezterm.font('Hack Nerd Font')
+config.font = wezterm.font('Firacode Nerd Font')
 config.font_size = 13
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true

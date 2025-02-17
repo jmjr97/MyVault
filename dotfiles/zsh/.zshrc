@@ -20,6 +20,12 @@ zstyle :compinstall filename '/home/john/.config/zsh/.zshrc'
 # End of lines added by compinstall
 
 ###############
+#--  Paths  --#
+###############
+
+export PATH=$PATH:~/.cargo/bin
+
+###############
 #-- Aliases --#
 ###############
 
@@ -126,7 +132,7 @@ function f() {
 }
 
 #-- fzf
-alias fff="zle --exclude '.steam' -N fzf-cd-widget"
+alias fff="zle --border --exclude '.cache' -N fzf-cd-widget"
 eval "$(fzf --zsh)"
 
 zle     -N            fzf-cd-widget
@@ -156,23 +162,11 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --ansi \
   --layout=reverse \
   --border=none
-  --color=bg+:#2d3f76 \
-  --color=bg:#1e2030 \
-  --color=border:#589ed7 \
-  --color=fg:#c8d3f5 \
-  --color=gutter:#1e2030 \
-  --color=header:#ff966c \
-  --color=hl+:#65bcff \
-  --color=hl:#65bcff \
-  --color=info:#545c7e \
-  --color=marker:#ff007c \
-  --color=pointer:#ff007c \
-  --color=prompt:#65bcff \
-  --color=query:#c8d3f5:regular \
-  --color=scrollbar:#589ed7 \
-  --color=separator:#ff966c \
-  --color=spinner:#ff007c \
-"
+  --color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
+  --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
+  --color=marker:#b7bdf8,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796 \
+  --color=selected-bg:#494d64 \
+  --multi"
 
 ##############
 #-- Prompt --#
