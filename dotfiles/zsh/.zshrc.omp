@@ -168,14 +168,11 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=selected-bg:#494d64 \
   --multi"
 
-############
-#-- Misc --#
-############
+##############
+#-- Prompt --#
+##############
+
+# Prompt
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmy.toml)"
 
 bindkey '^[[Z' end-of-line
-
-eval "$(starship init zsh)"
-export STARSHIP_CONFIG=~/.config/zsh/starship.toml
-
-# Created by `pipx` on 2024-08-23 05:13:04
-export PATH="$PATH:/home/john/.local/bin"

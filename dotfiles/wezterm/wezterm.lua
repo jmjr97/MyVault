@@ -5,7 +5,8 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- Modify theme tab colors
-local scheme_name = "Catppuccin Macchiato"
+local scheme_name = "Catppuccin Mocha"
+-- local scheme_name = "Catppuccin Macchiato"
 local scheme = wezterm.color.get_builtin_schemes()[scheme_name]
 config.colors = scheme
 
@@ -28,6 +29,7 @@ config.font = wezterm.font_with_fallback {
   'Firacode Nerd Font',
   'JetBrains Mono',
 }
+config.max_fps = 120
 config.font_size = 13
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true

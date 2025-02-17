@@ -46,6 +46,7 @@ return {
       -- Run Code
       { "<leader>r", group = "Run Code" },
       { "<leader>rg", desc = "Go" },
+      { "<leader>rbg", desc = "Go build" },
       { "<leader>rl", desc = "Lua" },
       { "<leader>rp", desc = "Python" },
       { "<leader>rr", desc = "Rust" },

@@ -1,7 +1,7 @@
 format = """
 $jobs\
 $hostname\
-[\uf07c  ](#7aa2f7)\
+[\uf07c  ](#8aadf4)\
 $directory\
 $git_branch\
 $git_state\
@@ -13,32 +13,33 @@ $character"""
 
 [hostname]
 ssh_only = false
-format = '[$ssh_symbol](#7aa2f7)[$hostname](#7aa2f7) '
+format = '[$ssh_symbol](#8aadf4)[$hostname](#8aadf4) '
 
 [directory]
-style = '#7aa2f7'
-read_only_style = '#f7768e' 
+style = '#8aadf4'
+read_only_style = '#ed8796' 
 format = '[$read_only]($read_only_style)[$path]($style)'
 truncation_length = 10
 truncation_symbol = '…/'
 
 [character]
-success_symbol = '[❯](#7aa2f7)'
-error_symbol = '[❯](#f7768e)'
-vimcmd_symbol = '[❮](#e0af68)'
+success_symbol = '[❯](#8aadf4)'
+error_symbol = '[❯](#ed8796)'
+vimcmd_symbol = '[❮](#eed49f)'
 
 [git_branch]
 format = ' [$symbol $branch]($style) '
-style = '#ad8ee6'
-symbol = ''
+style = '#f5bde6'
+symbol = '󰊢'
+# symbol = ''
 
 [git_status]
-format = '[[($conflicted$untracked$modified$staged$renamed$deleted)](#f7768e) ($ahead_behind$stashed)]($style)'
-style = 'cyan'
+format = '[[($conflicted$untracked$modified$staged$renamed$deleted)](#ed8796)($ahead_behind$stashed)]($style)'
+style = '#8aadf4'
 conflicted = ' '
-untracked = '󰜛 ' 
-modified = '󰜜 '
-staged = '󰜘 '
+untracked = '󰰩 ' 
+modified = '󰰑 '
+staged = '󰰣 '
 renamed = '​'
 deleted = '​'
 stashed = '≡ '
@@ -49,7 +50,7 @@ style = 'bright-black'
 
 [cmd_duration]
 format = ' [$duration]($style) '
-style = '#e0af68'
+style = '#eed49f'
 
 [python]
 format = '[$virtualenv]($style) '
@@ -57,6 +58,6 @@ style = 'bright-black'
 
 [jobs]
 symbol = ' '
-style = '#f7768e'
+style = '#ed8796'
 number_threshold = 1
 format = '[$symbol]($style)'

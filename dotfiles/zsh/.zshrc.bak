@@ -168,14 +168,29 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=selected-bg:#494d64 \
   --multi"
 
-############
-#-- Misc --#
-############
+##############
+#-- Prompt --#
+##############
+
+# Prompt
+setopt PROMPT_SUBST
+PROMPT='%F{#e06c75} %~ %f${vcs_info_msg_0_}%F{#e06c75}%f '
+#PROMPT='%F{#e06c75} %~%f ${vcs_info_msg_0_}%F{#e06c75}%f '
+
+zstyle ':vcs_info:git:*' formats '%F{#e06c75}%f %F{#61afef} %b%u%c%f '
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' stagedstr ' %F{#00ff00}ﰚ%f'
+zstyle ':vcs_info:*' unstagedstr ' %F{#ff0000}ﰜ%f'
+zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
+#zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
 
 bindkey '^[[Z' end-of-line
 
+# Plugins
+# ~/.zshrc
+
 eval "$(starship init zsh)"
-export STARSHIP_CONFIG=~/.config/zsh/starship.toml
+
 
 # Created by `pipx` on 2024-08-23 05:13:04
 export PATH="$PATH:/home/john/.local/bin"

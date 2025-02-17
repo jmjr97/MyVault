@@ -108,4 +108,5 @@ km("n", "<leader>rp", "<cmd>TermExec cmd='python %'<CR>:wincmd j<CR>:sleep 1<CR>
 km("n", "<leader>rl", "<cmd>TermExec cmd='lua %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Python
 km("n", "<leader>rr", "<cmd>TermExec dir=%:p:h cmd='cargo run'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Rust
 km("n", "<leader>rg", "<cmd>TermExec dir=%:p cmd='go run %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
+km("n", "<leader>rbg", "<cmd>TermExec dir=%:p cmd='go build %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
 km("n", "<leader>rs", "<cmd>TermExec dir=%:p:h cmd='sh %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Bash
