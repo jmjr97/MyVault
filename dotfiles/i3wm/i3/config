@@ -193,6 +193,10 @@ for_window [class="__notes" instance="__notes"] floating enabled
 for_window [class="__notes" instance="__notes"] resize set 1024 768
 for_window [class="__notes" instance="__notes"] move position center
 
+# go apps
+for_window [class="Hello" instance="Hello"] floating enabled
+for_window [class="Wild Magic Table" instance="Wild Magic Table"] floating enabled
+
 # misc rules
 assign [class="discord"] output nonprimary
 assign [class="steam_app_230410"] output primary

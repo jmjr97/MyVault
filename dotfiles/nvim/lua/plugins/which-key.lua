@@ -22,6 +22,7 @@ return {
       { "<leader>ff", desc = "File" },
       { "<leader>fa", desc = "File from ~" },
       { "<leader>fb", desc = "Buffers" },
+      { "<leader>fb", desc = "Neovim Configs" },
       { "<leader>fg", desc = "Live Grep" },
       { "<leader>fh", desc = "Help Tags" },
       { "<leader>fm", desc = "Marks" },
@@ -45,12 +46,14 @@ return {
       { "<leader>d", desc = "Dismiss Notifications" },
       -- Run Code
       { "<leader>r", group = "Run Code" },
-      { "<leader>rg", desc = "Go" },
-      { "<leader>rbg", desc = "Go build" },
       { "<leader>rl", desc = "Lua" },
       { "<leader>rp", desc = "Python" },
       { "<leader>rr", desc = "Rust" },
       { "<leader>rs", desc = "Shell Script" },
+      { "<leader]rg", group = "Go"},
+      { "<leader>rgb", desc = "Go Build" },
+      { "<leader>rgr", desc = "Go Run" },
+      { "<leader>rgd", desc = "Go Run 'debug'" },
       -- Window
       { "<leader>v", group = "Wiki" },
     })

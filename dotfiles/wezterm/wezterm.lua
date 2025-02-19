@@ -32,6 +32,7 @@ config.font = wezterm.font_with_fallback {
 config.max_fps = 120
 config.font_size = 13
 config.enable_tab_bar = true
+config.tab_bar_at_bottom = true
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 config.initial_cols = 120
@@ -108,12 +109,22 @@ config.keys = {
     action = wezterm.action.ShowLauncher,
   },
   {
-    key = ',',
+    key = 'w',
+    mods = 'LEADER',
+    action = wezterm.action.ActivateTabRelative(-1),
+  },
+  {
+    key = 'w',
     mods = 'ALT',
     action = wezterm.action.ActivateTabRelative(-1),
   },
   {
-    key = '.',
+    key = 'e',
+    mods = 'LEADER',
+    action = wezterm.action.ActivateTabRelative(1),
+  },
+  {
+    key = 'e',
     mods = 'ALT',
     action = wezterm.action.ActivateTabRelative(1),
   },

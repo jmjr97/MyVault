@@ -93,6 +93,7 @@ vim.keymap.set({"n", "v"}, "<leader>p", [["+p]], opts)
 km("n", "<leader>ff", "<cmd>Telescope find_files theme=ivy<cr>", opts)
 km("n", "<leader>fa", "<cmd>Telescope find_files cwd=~/ theme=ivy prompt_title=All-Files<cr>", opts)
 km("n", "<leader>fb", "<cmd>Telescope buffers theme=dropdown preview=false<cr><escape>", opts)
+km("n", "<leader>fc", "<cmd>Telescope find_files cwd=~/.config/nvim/ theme=ivy prompt_title=All-Files<cr>", opts)
 km("n", "<leader>fg", "<cmd>Telescope live_grep theme=ivy<cr>", opts)
 km("n", "<leader>fh", "<cmd>Telescope help_tags theme=ivy<cr>", opts)
 km("n", "<leader>fm", "<cmd>Telescope marks theme=dropdown<cr><escape>", opts)
@@ -107,6 +108,7 @@ km("n", "<leader>fs", "<cmd>Telescope git_status theme=ivy<cr>", opts)
 km("n", "<leader>rp", "<cmd>TermExec cmd='python %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Python
 km("n", "<leader>rl", "<cmd>TermExec cmd='lua %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Python
 km("n", "<leader>rr", "<cmd>TermExec dir=%:p:h cmd='cargo run'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Rust
-km("n", "<leader>rg", "<cmd>TermExec dir=%:p cmd='go run %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
-km("n", "<leader>rbg", "<cmd>TermExec dir=%:p cmd='go build %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
+km("n", "<leader>rgr", "<cmd>TermExec dir=%:p cmd='go run %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
+km("n", "<leader>rgb", "<cmd>TermExec dir=%:p cmd='go build %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
+km("n", "<leader>rgd", "<cmd>TermExec dir=%:p cmd='go run -tags debug %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
 km("n", "<leader>rs", "<cmd>TermExec dir=%:p:h cmd='sh %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Bash
