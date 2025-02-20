@@ -44,6 +44,11 @@ return {
       { "<leader>m", desc = "Toggle Max Split" },
       -- Noice
       { "<leader>d", desc = "Dismiss Notifications" },
+      -- Obsidian
+      { "<leader>o", group = "Obsidian" },
+      { "<leader>oo", desc = "Open Note" },
+      { "<leader>ot", desc = "Note ToC" },
+      { "<leader>og", desc = "Grep Notes" },
       -- Run Code
       { "<leader>r", group = "Run Code" },
       { "<leader>rl", desc = "Lua" },
