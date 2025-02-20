@@ -22,7 +22,7 @@ return {
       { "<leader>ff", desc = "File" },
       { "<leader>fa", desc = "File from ~" },
       { "<leader>fb", desc = "Buffers" },
-      { "<leader>fb", desc = "Neovim Configs" },
+      { "<leader>fc", desc = "Neovim Configs" },
       { "<leader>fg", desc = "Live Grep" },
       { "<leader>fh", desc = "Help Tags" },
       { "<leader>fm", desc = "Marks" },
@@ -54,6 +54,7 @@ return {
       { "<leader>rgb", desc = "Go Build" },
       { "<leader>rgr", desc = "Go Run" },
       { "<leader>rgd", desc = "Go Run 'debug'" },
+      { "<leader>rgm", desc = "Go Run 'mobile'" },
       -- Window
       { "<leader>v", group = "Wiki" },
     })

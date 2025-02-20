@@ -22,6 +22,10 @@ scheme.tab_bar = {
 }
 
 -- Look and Feel
+config.colors = {
+  cursor_bg = '#8aadf4',
+  cursor_fg = '#1e1e2e',
+}
 config.enable_wayland = false
 config.color_scheme = scheme_name
 -- config.font = wezterm.font('Hack Nerd Font')

@@ -87,7 +87,15 @@ vim.keymap.set({"n", "v"}, "<leader>p", [["+p]], opts)
 -------------------------
 
 -- Oil
--- km("n", "!", "<CMD>Oil --float<CR>", opts)
+vim.keymap.set("n", "-", function()
+  local oil = require("oil")
+  local util = require("oil.util")
+  oil.open_float()
+  util.run_after_load(0, function()
+    oil.open_preview()
+	end)
+end, opts)
+-- km("n", "-", "<CMD>Oil --float <CR>", opts)
 
 -- Telescope
 km("n", "<leader>ff", "<cmd>Telescope find_files theme=ivy<cr>", opts)
@@ -106,9 +114,10 @@ km("n", "<leader>fs", "<cmd>Telescope git_status theme=ivy<cr>", opts)
 --------------
 -- Run Code
 km("n", "<leader>rp", "<cmd>TermExec cmd='python %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Python
-km("n", "<leader>rl", "<cmd>TermExec cmd='lua %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Python
+km("n", "<leader>rl", "<cmd>TermExec cmd='lua %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Lua
 km("n", "<leader>rr", "<cmd>TermExec dir=%:p:h cmd='cargo run'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Rust
 km("n", "<leader>rgr", "<cmd>TermExec dir=%:p cmd='go run %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
-km("n", "<leader>rgb", "<cmd>TermExec dir=%:p cmd='go build %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
-km("n", "<leader>rgd", "<cmd>TermExec dir=%:p cmd='go run -tags debug %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go
+km("n", "<leader>rgb", "<cmd>TermExec dir=%:p cmd='go build %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go build
+km("n", "<leader>rgd", "<cmd>TermExec dir=%:p cmd='go run -tags debug %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go fyne debug
+km("n", "<leader>rgm", "<cmd>TermExec dir=%:p cmd='go run -tags mobile %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Go fyne mobile
 km("n", "<leader>rs", "<cmd>TermExec dir=%:p:h cmd='sh %'<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>", opts) -- Bash
