@@ -24,6 +24,7 @@ zstyle :compinstall filename '/home/john/.config/zsh/.zshrc'
 ###############
 
 export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:~/go/bin
 
 ###############
 #-- Aliases --#
