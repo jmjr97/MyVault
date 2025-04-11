@@ -7,7 +7,7 @@
 #╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░░░░░╚═╝#
 ######################################
 
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i $HOME/myrepo/Wallpapers/2monitors/streaks.png --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i $HOME/myrepo/Wallpapers/2monitors/streaks.png --nofork
 exec --no-startup-id dex --autostart --environment i3
 
 font pango:Hack Nerd Font Mono 8
@@ -168,6 +168,11 @@ bindsym $mod+r mode "resize"
 ######################
 #### Window Rules ####
 ######################
+
+# nitrogen window
+for_window [class="Nitrogen" instance="nitrogen"] floating enabled
+for_window [class="Nitrogen" instance="nitrogen"] resize set 1280 720
+for_window [class="Nitrogen" instance="nitrogen"] move position center
 
 # spotify window
 for_window [class="__spotify" instance="__spotify"] floating enabled
