@@ -24,6 +24,18 @@ main() {
       spotify_player
     fi
   fi
+
+  if [ "${action}" == "play" ]; then
+    spotify_player playback play-pause
+  fi
+
+  if [ "${action}" == "next" ]; then
+    spotify_player playback next
+  fi
+
+  if [ "${action}" == "prev" ]; then
+    spotify_player playback previous
+  fi
 }
 
 main $@

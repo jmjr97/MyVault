@@ -19,6 +19,13 @@ return {
       })
     })
 
+    -- go
+    ls.add_snippets('go', {
+      s('clear',{
+        t('fmt.Print("\033[H\033[2J")')
+      })
+    })
+
     -- lua snippets
 
     ls.add_snippets('lua', {

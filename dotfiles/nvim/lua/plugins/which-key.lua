@@ -60,8 +60,6 @@ return {
       { "<leader>rgr", desc = "Go Run" },
       { "<leader>rgd", desc = "Go Run 'debug'" },
       { "<leader>rgm", desc = "Go Run 'mobile'" },
-      -- Window
-      { "<leader>v", group = "Wiki" },
     })
   end,
 }
