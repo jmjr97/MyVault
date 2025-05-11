@@ -8,9 +8,12 @@ local options = {
 	termguicolors = true,
 
 	tabstop = 2,
+	softtabstop = 2,
 	shiftwidth = 2,
-	expandtab = true,
+	expandtab = false,
   autoindent = true,
+
+  undofile = true,
 
 	hlsearch = false,
 	incsearch = true,

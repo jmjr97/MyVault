@@ -1,13 +1,13 @@
 [manager]
-cwd = { fg = "#8bd5ca" }
+cwd = { fg = "#c6a0f6" }
 
 # Hovered
-hovered         = { fg = "#24273a", bg = "#8aadf4" }
-preview_hovered = { underline = true }
+hovered         = { fg = "#24273a", bg = "#c6a0f6" }
+preview_hovered = { underline = false }
 
 # Find
-find_keyword  = { fg = "#eed49f", italic = true }
-find_position = { fg = "#f5bde6", bg = "reset", italic = true }
+find_keyword  = { fg = "#24273a", bg = "#eed49f", italic = true }
+find_position = { fg = "#c6a0f6", bg = "reset", italic = true }
 
 # Marker
 marker_copied   = { fg = "#a6da95", bg = "#a6da95" }
@@ -15,7 +15,7 @@ marker_cut      = { fg = "#ed8796", bg = "#ed8796" }
 marker_selected = { fg = "#8aadf4", bg = "#8aadf4" }
 
 # Tab
-tab_active   = { fg = "#24273a", bg = "#cad3f5" }
+tab_active   = { fg = "#24273a", bg = "#c6a0f6" }
 tab_inactive = { fg = "#cad3f5", bg = "#494d64" }
 tab_width    = 1
 
@@ -26,7 +26,7 @@ count_selected = { fg = "#24273a", bg = "#8aadf4" }
 
 # Border
 border_symbol = "│"
-border_style  = { fg = "#8aadf4" }
+border_style  = { fg = "#363a4f" }
 
 # Highlighting
 syntect_theme = "~/.config/yazi/Catppuccin-macchiato.tmTheme"

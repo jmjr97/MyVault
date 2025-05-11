@@ -24,6 +24,7 @@ return {
         "tailwindcss",
         "lua_ls",
         "pyright",
+        "gopls",
       },
       automatic_installation = true,
     })

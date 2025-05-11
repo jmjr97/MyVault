@@ -26,7 +26,6 @@ return {
       { "<leader>fg", desc = "Live Grep" },
       { "<leader>fh", desc = "Help Tags" },
       { "<leader>fm", desc = "Marks" },
-      { "<leader>fo", desc = "Notes" },
       { "<leader>fr", desc = "Recent Files" },
       { "<leader>fs", desc = "Git Status" },
       -- LSP Handler

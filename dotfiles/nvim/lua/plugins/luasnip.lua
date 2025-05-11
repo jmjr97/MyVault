@@ -11,22 +11,35 @@ return {
     local i = ls.insert_node
     local fmt = require('luasnip.extras.fmt').fmt
 
-    -- bash
+    ------------
+    --- bash ---
+    ------------
 
     ls.add_snippets('sh', {
       s('bang', {
-        t('#!/bin/bash')
+        t('#!/usr/bin/bash')
       })
     })
 
-    -- go
+    ----------
+    --- go ---
+    ----------
+
     ls.add_snippets('go', {
       s('clear',{
         t('fmt.Print("\033[H\033[2J")')
       })
     })
 
-    -- lua snippets
+    ls.add_snippets('go', {
+      s('iferr',{
+        t({'if err != nil {', '  fmt.Println("Error:", err)', '  return', '}'})
+      })
+    })
+
+    -----------
+    --- lua ---
+    -----------
 
     ls.add_snippets('lua', {
       s('testing', {
@@ -34,7 +47,9 @@ return {
       })
     })
 
-    -- rust snippets
+    ------------
+    --- rust ---
+    ------------
 
     ls.add_snippets('rust', {
       s('rust', {
@@ -42,7 +57,9 @@ return {
       })
     })
 
-    -- javascript snippets
+    ------------------
+    --- javascript ---
+    ------------------
 
     ls.add_snippets('javascript', {
       s('bang', {
@@ -56,7 +73,9 @@ return {
       })
     })
 
-    -- html snippets
+    ------------
+    --- HTML ---
+    ------------
 
     ls.add_snippets('html', {
       s('doc', fmt(
@@ -73,11 +92,13 @@ return {
             
             </body>
           </html>
-        ]], { i(1)}
+        ]], { i(1) }
       ))
     })
 
-    -- desktop template
+    ---------------
+    --- desktop ---
+    ---------------
 
     ls.add_snippets('desktop', {
       s('desktop', fmt(
@@ -85,13 +106,11 @@ return {
         [Desktop Entry]
 
         Type=Application
-        Version=1.0
         Name={}
-        Comment=
         Exec=
         Terminal=false
-        Categories=Education;
-        ]], { i(1)}
+        Categories=Utility;
+        ]], { i(1) }
       ))
     })
   end,

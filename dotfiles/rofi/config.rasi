@@ -1,4 +1,4 @@
-@theme "/home/john/.config/rofi/themes/custom.rasi"
+//@theme "/home/john/.config/rofi/themes/custom.rasi"
 configuration {
   modes: "drun,filebrowser";
   filebrowser {
@@ -10,3 +10,7 @@ configuration {
     command: "xdg-open";
   }
 }
+
+//@theme "/home/john/.config/rofi/themes/dmenu.rasi"
+
+@theme "/home/john/.config/rofi/themes/custom.rasi"

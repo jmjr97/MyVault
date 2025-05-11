@@ -1,7 +1,7 @@
 #!/bin/bash
 
 menu() {
-  printf "1. Arch XFCE\n"
+  printf "1. Arch i3\n"
   printf "2. Arch Openbox\n"
   printf "3. Window 11\n"
 }
@@ -11,8 +11,8 @@ main() {
 
   case $choice in
     1)
-      virsh --connect qemu:///system start "arch-xfce"
-      virt-manager --connect qemu:///system --show-domain-console "arch-xfce"
+      virsh --connect qemu:///system start "arch-i3"
+      virt-manager --connect qemu:///system --show-domain-console "arch-i3"
       break
       ;;
     2)

@@ -18,23 +18,24 @@ tiling_drag modifier titlebar
 hide_edge_borders smart
 mouse_warping none
 default_border pixel 1
+default_floating_border normal
 
 focus_follows_mouse no
-gaps inner 10px
+gaps inner 8px
 smart_gaps on
 
 ##################
-#### Keybinds ####
+#### keybinds ####
 ##################
 
 bindsym $mod+Control+q kill
-bindsym --release Caps_Lock exec --no-startup-id pkill -SIGRTMIN+10 i3blocks
 bindsym $mod+Return exec --no-startup-id wezterm
 bindsym $mod+w exec --no-startup-id firefox
 bindsym $mod+Control+w exec firefox --private-window
 bindsym $mod+e exec --no-startup-id thunar
-bindsym $mod+n exec --no-startup-id wezterm --config-file ~/.config/wezterm/wezterm-float.lua start --class="__notes" nvim $HOME/Documents/obsidian-sync/Notes/_quick.md
+bindsym $mod+n exec --no-startup-id wezterm --config-file ~/.config/wezterm/wezterm-float.lua start --class="__notes" nvim $HOME/Documents/obsidian-sync/notes/_quick.md
 bindsym $mod+y exec --no-startup-id $HOME/myrepo/myscripts/launchers/launcher.sh btop
+bindsym Print exec --no-startup-id flameshot gui
 
 # rofi
 bindsym $mod+space exec --no-startup-id rofi -m -1 -show drun -drun-display-format {name}
@@ -64,8 +65,8 @@ bindsym $mod+Control+k move up
 bindsym $mod+Control+l move right
 
 # split orientation
-bindsym $mod+Shift+k split h
-bindsym $mod+Shift+j split v
+bindsym $mod+Shift+k split h; exec notify-send --expire-time=1000 'Tile Horizontally'
+bindsym $mod+Shift+j split v; exec notify-send --expire-time=1000 'Tile Vertically'
 
 # enter fullscreen mode for the focused container
 bindsym $mod+a fullscreen toggle
@@ -166,7 +167,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ######################
-#### Window Rules ####
+#### window rules ####
 ######################
 
 # nitrogen window
@@ -204,6 +205,7 @@ for_window [class="Hello" instance="Hello"] floating enabled
 for_window [class="Wild Magic Table" instance="Wild Magic Table"] floating enabled
 for_window [class="Initiative Tracker" instance="Initiative Tracker"] floating enabled
 
+
 # misc rules
 assign [class="discord"] output nonprimary
 assign [class="steam_app_230410"] output primary
@@ -211,7 +213,7 @@ assign [class="steam_app_2183900"] output primary
 assign [class="steam_app_2420110"] output primary
 
 #######################
-#### Themes & Bars ####
+#### themes & bars ####
 #######################
 
 # Window decoration colors
@@ -259,7 +261,7 @@ client.background       $background
 # }
 
 ################
-#### Starup ####
+#### starup ####
 ################
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
