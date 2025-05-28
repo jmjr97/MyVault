@@ -1,0 +1,9 @@
+[Desktop Entry]
+
+Type=Application
+Name=Fire Toolbox
+Comment=Amazon Fire Tablet Toolbox
+Exec=/home/john/apps/firetoolbox.AppImage
+Icon=
+Terminal=false
+Categories=Utility;

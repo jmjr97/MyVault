@@ -2,9 +2,9 @@
 
 Type=Application
 Version=1.0
-Name=Btop
-Comment=Btop Tui
-Exec=/home/john/myrepo/myscripts/bash/rofi/launcher.sh btop
+Name=Notes
+Comment=Notes Menu
+Exec=/home/john/myrepo/myscripts/launchers/notes.sh
 Icon=
 Terminal=false
 Categories=Utility;

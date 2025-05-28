@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Axiom Verge
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/332200
+Icon=steam
+Terminal=false
+Type=Application
+Categories=Game;

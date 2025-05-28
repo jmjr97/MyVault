@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=V Rising
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/1604030
+Icon=steam_icon_1604030
+Terminal=false
+Type=Application
+Categories=Game;

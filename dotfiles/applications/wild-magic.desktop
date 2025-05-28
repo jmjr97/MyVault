@@ -1,10 +1,9 @@
 [Desktop Entry]
 
 Type=Application
-Version=1.0
 Name=Wild Magic Table
-Comment=Barbarian Wild Magic Table
-Exec=/home/john/myrepo/my-apps/wild-magic-table
+Comment=Wild Magic Table
+Exec=/home/john/myrepo/my-apps/wild-magic
 Icon=
 Terminal=false
 Categories=Utility;

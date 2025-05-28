@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Wasteland 3
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/719040
+Icon=steam
+Terminal=false
+Type=Application
+Categories=Game;

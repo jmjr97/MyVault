@@ -1,0 +1,9 @@
+[Desktop Entry]
+
+Type=Application
+Name=FTB Launcher
+Comment=Feed The Beast Launcher
+Exec=/home/john/apps/ftb.AppImage
+Icon=
+Terminal=false
+Categories=Game;

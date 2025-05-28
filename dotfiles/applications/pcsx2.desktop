@@ -1,0 +1,9 @@
+[Desktop Entry]
+
+Type=Application
+Name=PCSX2
+Comment=PS2 Emulator
+Exec=/home/john/apps/pcsx2.AppImage
+Icon=
+Terminal=false
+Categories=Game;
