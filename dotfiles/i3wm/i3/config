@@ -175,6 +175,11 @@ for_window [class="Nitrogen" instance="nitrogen"] floating enabled
 for_window [class="Nitrogen" instance="nitrogen"] resize set 1280 720
 for_window [class="Nitrogen" instance="nitrogen"] move position center
 
+# yazi window
+for_window [class="__yazi" instance="__yazi"] floating enabled
+for_window [class="__yazi" instance="__yazi"] resize set 1280 720
+for_window [class="__yazi" instance="__yazi"] move position center
+
 # spotify window
 for_window [class="__spotify" instance="__spotify"] floating enabled
 for_window [class="__spotify" instance="__spotify"] resize set 1280 720
