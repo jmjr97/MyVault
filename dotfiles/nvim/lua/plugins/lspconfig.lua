@@ -1,123 +1,66 @@
-return {
-  "neovim/nvim-lspconfig",
-  event = { "BufReadPre", "BufNewFile" },
-  dependencies = {
-    "hrsh7th/cmp-nvim-lsp",
-    { "antosha417/nvim-lsp-file-operations", config = true },
-  },
-  config = function()
-    -- import lspconfig plugin
-    local lspconfig = require("lspconfig")
+return { 
+	"williamboman/mason-lspconfig.nvim",
+    {
+			"hrsh7th/nvim-cmp",
+			dependencies = {
+					'hrsh7th/cmp-nvim-lsp',
+					'hrsh7th/cmp-buffer',
+					'hrsh7th/cmp-path',
+					'hrsh7th/cmp-cmdline',
+					'L3MON4D3/LuaSnip',
+					'saadparwaiz1/cmp_luasnip',
+					'hrsh7th/cmp-vsnip',
+					'hrsh7th/vim-vsnip',
+					'rafamadriz/friendly-snippets',
+			}
+    },
 
-    -- import mason_lspconfig plugin
-    local mason_lspconfig = require("mason-lspconfig")
+config = function()
 
-    -- import cmp-nvim-lsp plugin
-    local cmp_nvim_lsp = require("cmp_nvim_lsp")
+	vim.lsp.enable('lua_ls')
+	vim.lsp.enable('html')
+	vim.lsp.enable('cssls')
+	vim.lsp.enable('tailwindcss')
+	vim.lsp.enable('pyright')
+	vim.lsp.enable('gopls')
+	-- vim.lsp.enable('rust_analyzer')
 
-    local keymap = vim.keymap -- for conciseness
+	-- import cmp-nvim-lsp plugin
+	local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-    vim.api.nvim_create_autocmd("LspAttach", {
-      group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-      callback = function(ev)
-        -- Buffer local mappings.
-        -- See `:help vim.lsp.*` for documentation on any of the below functions
-        local opts = { buffer = ev.buf, silent = true }
+	local capabilities = require('cmp_nvim_lsp').default_capabilities()
+	vim.lsp.config('*', {
+			capabilities = capabilities,
+	})
 
-        -- set keybinds
-        opts.desc = "Show LSP references"
-        keymap.set("n", "<leader>lr", "<cmd>Telescope lsp_references<CR>", opts)
+-- Use LspAttach autocommand to only map the following keys
+-- after the language server attaches to the current buffer
+	vim.api.nvim_create_autocmd('LspAttach', {
+			group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+			callback = function(ev)
+					local map = function(keys, func, desc)
+							vim.keymap.set('n', keys, func, { buffer = ev.buf, desc = 'Lsp: ' .. desc })
+					end
 
-        opts.desc = "Show LSP definition"
-        keymap.set("n", "<leader>ld", "<cmd>Telescope lsp_definitions<CR>", opts)
+					local tele = require("telescope.builtin")
+					map('gd', tele.lsp_definitions, 'Goto Definition')
+					map('<leader>ls', tele.lsp_document_symbols, 'Doc Symbols')
+					map('<leader>lS', tele.lsp_dynamic_workspace_symbols, 'Dynamic Symbols')
+					map('<leader>lt', tele.lsp_type_definitions, 'Goto Type')
+					map('<leader>lr', tele.lsp_references, 'Goto References')
+					map('<leader>li', tele.lsp_implementations, 'Goto Impl')
 
-        opts.desc = "Go to declaration"
-        keymap.set("n", "<leader>lD", "vim.lsp.buf.declaration<CR>", opts)
+					map('K', vim.lsp.buf.hover, 'hover')
+					map('<leader>le', vim.diagnostic.open_float, 'diagnostic')
+					map('<leader>lk', vim.lsp.buf.signature_help, 'sig help')
+					map('<leader>ln', vim.lsp.buf.rename, 'rename')
+					map('<leader>la', vim.lsp.buf.code_action, 'code action')
+					map('<leader>lf', vim.lsp.buf.format, 'format')
 
-        opts.desc = "See available code actions"
-        keymap.set("n", "<leader>la", vim.lsp.buf.code_action, opts)
-
-        opts.desc = "Smart rename"
-        keymap.set("n", "<leader>lR", vim.lsp.buf.rename, opts)
-
-        opts.desc = "Show line diagnostics"
-        keymap.set("n", "<leader>lo", vim.diagnostic.open_float, opts) -- show diagnostics for line
-
-        opts.desc = "Go to previous diagnostic"
-        keymap.set("n", "<leader>la", vim.diagnostic.goto_prev, opts)
-
-        opts.desc = "Go to next diagnostic"
-        keymap.set("n", "<leader>la", vim.diagnostic.goto_next, opts)
-
-        opts.desc = "Show hover documentation"
-        keymap.set("n", "<leader>lk", vim.lsp.buf.hover, opts)
-      end,
-    })
-
-    -- used to enable autocompletion (assign to every lsp server config)
-    local capabilities = cmp_nvim_lsp.default_capabilities()
-
-    -- Change the Diagnostic symbols in the sign column (gutter)
-    -- (not in youtube nvim video)
-    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
-    for type, icon in pairs(signs) do
-      local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-    end
-
-    mason_lspconfig.setup_handlers({
-      -- default handler for installed servers
-      function(server_name)
-        lspconfig[server_name].setup({
-          capabilities = capabilities,
-        })
-      end,
-      ["svelte"] = function()
-        -- configure svelte server
-        lspconfig["svelte"].setup({
-          capabilities = capabilities,
-          on_attach = function(client, bufnr)
-            vim.api.nvim_create_autocmd("BufWritePost", {
-              pattern = { "*.js", "*.ts" },
-              callback = function(ctx)
-                -- Here use ctx.match instead of ctx.file
-                client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
-              end,
-            })
-          end,
-        })
-      end,
-      ["graphql"] = function()
-        -- configure graphql language server
-        lspconfig["graphql"].setup({
-          capabilities = capabilities,
-          filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-        })
-      end,
-      ["emmet_ls"] = function()
-        -- configure emmet language server
-        lspconfig["emmet_ls"].setup({
-          capabilities = capabilities,
-          filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
-        })
-      end,
-      ["lua_ls"] = function()
-        -- configure lua server (with special settings)
-        lspconfig["lua_ls"].setup({
-          capabilities = capabilities,
-          settings = {
-            Lua = {
-              -- make the language server recognize "vim" global
-              diagnostics = {
-                globals = { "vim" },
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-            },
-          },
-        })
-      end,
-    })
-  end,
+					vim.keymap.set('v',
+							'<leader>la',
+							vim.lsp.buf.code_action, { buffer = ev.buf, desc = 'Lsp: code_action' })
+			end,
+	})
+end
 }
