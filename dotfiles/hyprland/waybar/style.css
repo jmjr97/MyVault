@@ -1,6 +1,6 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: Hack Nerd Font, Helvetica, Arial, sans-serif;
+  font-family: Firacode Nerd Font Propo, Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -11,7 +11,7 @@ window#waybar {
 }
 
 tooltip {
-  background: #494d64;
+  background: #1e1e2e;
   border: 1px solid #8aadf4;
   border-radius: 5px;
 }
@@ -36,14 +36,25 @@ tooltip label {
 }
 
 #custom-power {
+	font-size: 20px;
   color: #8aadf4;
-  background-color: #181926;
+  /* background-color: #181926; */
   border-bottom: 1px solid #8aadf4;
+	margin-right: 5px;
+}
+
+#custom-power:hover {
+	color: #c6a0f6;
 }
 
 #idle_inhibitor {
+	font-size: 20px;
   padding: 0 8px;
   color: #8aadf4;
+}
+
+#idle_inhibitor:hover {
+	color: #c6a0f6;
 }
 
 #custom-web,
@@ -54,10 +65,22 @@ tooltip label {
   padding: 0 7;
 }
 
+#custom-web:hover,
+#custom-obsidian:hover,
+#custom-files:hover {
+  color: #c6a0f6;
+}
+
 #custom-divider {
   padding: 0;
   color: #494d64;
-  font-size: 20px;
+  font-size: 28px;
+}
+
+#custom-sep {
+  padding: 0;
+  color: #494d64;
+  font-size: 24px;
 }
 
 #tray {
@@ -74,11 +97,40 @@ tooltip label {
 #disk,
 #temperature,
 #backlight,
-#pulseaudio,
+/* #pulseaudio, */
+#keyboard-state,
 #mpd {
-  font-size: 16px;
+  font-size: 20px;
   padding: 0 8px;
   color: #f5a97f;
+}
+
+#pulseaudio {
+  font-size: 20px;
+  padding: 0 8px;
+  color: #8aadf4;
+}
+
+#pulseaudio:hover {
+	color: #c6a0f6;
+}
+
+#pulseaudio.label {
+	color: red;
+}
+
+#custom-prev,
+#custom-play,
+#custom-next {
+	color: #8aadf4;
+  font-size: 20px;
+  padding: 0 8px;
+}
+
+#custom-prev:hover,
+#custom-play:hover,
+#custom-next:hover {
+	color: #c6a0f6;
 }
 
 #clock {
@@ -133,6 +185,12 @@ label:focus {
   background-color: #000000;
 }
 
+#keyboard-state label.locked {
+	background-color: #ed8796;
+	color: #1e1e2e;
+	font-weight: bold;
+}
+
 #temperature.critical {
   color: #ed8796;
 }
@@ -156,6 +214,10 @@ label:focus {
 #idle_inhibitor.activated {
   color: #24273a;
   background-color: #ed8796;
+}
+
+#idle_inhibitor.activated:hover {
+	background-color: #c6a0f6;
 }
 
 #mpd {

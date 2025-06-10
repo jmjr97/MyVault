@@ -1,5 +1,7 @@
 [{
+	// -------------
   // Main Monitor
+	// -------------
   "output": "DP-1",
   "height": 30, // Waybar height (to be removed for auto height)
   "spacing": 4, // Gaps between modules (4px)
@@ -7,17 +9,26 @@
     "clock",
     "hyprland/workspaces",
     "custom/divider",
+    "custom/files",
     "custom/web",
     "custom/obsidian",
-    "custom/files",
   ],
   "modules-right": [
-    "custom/pacman",
+		"keyboard-state",
+		"custom/prev",
+		"custom/play",
+		"custom/next",
+    "custom/sep",
     "pulseaudio",
-    "backlight",
+    "custom/sep",
     "idle_inhibitor",
+    "custom/sep",
     "custom/power"
   ],
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%a, %b %d - %I:%M}",
+  },
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -31,6 +42,13 @@
   "custom/divider": {
     "format": "⏽",
   },
+  "custom/sep": {
+    "format": "",
+  },
+	"custom/files": {
+		"format": "",
+		"on-click": "thunar",
+	},
   "custom/web": {
     "format": "󰖟",
     "on-click": "firefox",
@@ -39,22 +57,33 @@
     "format": "",
     "on-click": "obsidian",
   },
-  "custom/files": {
-    "format": " ",
-    "on-click": "thunar",
+	"keyboard-state": {
+		"numlock": false,
+		"capslock": true,
+		"format": "{icon}",
+		"format-icons": {
+			"locked": " Caps ",
+			"unlocked": " ",
+		}
+	},
+  "custom/prev": {
+    "format": "󰙤",
+    "on-click":"spotify_player playback previous",
+		"tooltip": false,
   },
-  "custom/pacman": {
-    "interval": 180,
-    "exec": "checkupdates | wc -l",
-    "format": "{} <span foreground='#8aadf4'></span>"
+  "custom/play": {
+    "format": "",
+    "on-click": "spotify_player playback play-pause",
+		"tooltip": false,
   },
-  "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%a, %b %d - %I:%M}",
+  "custom/next": {
+    "format": "󰙢",
+    "on-click": "spotify_player playback next",
+		"tooltip": false,
   },
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
-    "format": "{volume}% <span foreground='#8aadf4'>{icon}</span>",
+    "format": "{icon} <span foreground='#f5a97f'>{volume}%</span>",
     "format-icons": {
         "alsa_output.usb-Logitech_PRO_000000000000-00.analog-stereo": "",
         "alsa_output.pci-0000_09_00.4.analog-stereo": "󰓃",
@@ -62,45 +91,6 @@
 
     "on-click": "~/myrepo/myscripts/audio.sh swap",
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-  },
-  "temperature": {
-    // "thermal-zone": 2,
-    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-    "critical-threshold": 80,
-    // "format-critical": "{temperatureC}°C {icon}",
-    "format": "{temperatureC}°C <span foreground='#8aadf4'>{icon}</span>",
-    "format-icons": ["", "", ""],
-    "tooltip": false
-  },
-  "cpu": {
-    "format": "{usage}% <span foreground='#8aadf4'> </span>",
-  },
-  "memory": {
-    "format": "{used}GB <span foreground='#8aadf4'> </span>",
-    "tooltip": false
-  },
-  "backlight": {
-    "format": "{percent}% <span foreground='#8aadf4'>{icon}</span>",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
-    "tooltip": false
-  },
-  "battery": {
-    "states": {
-        // "good": 95,
-        "warning": 30,
-        "critical": 15
-    },
-    "format": "{capacity}% <span foreground='#8aadf4'>{icon} </span>",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} <span foreground='#8aadf4'>{icon} </span>",
-    "format-icons": ["", "", "", "", ""]
-  },
-  "tray": {
-    "icon-size": 20,
-    "spacing": 10,
-    "show-passive-items": true
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -110,12 +100,15 @@
     }
   },
   "custom/power": {
-    "format": "  ⏻  ",
-    "on-click": "wlogout -b 5"
+    "format": " ⏻ ",
+    "on-click": "wlogout -b 5",
+		"tooltip": false,
   },
 },
 {
+	// -------------
   // Right Monitor
+	// -------------
   "output": "HDMI-A-1",
   "height": 30, // Waybar height (to be removed for auto height)
   "spacing": 4, // Gaps between modules (4px)
@@ -126,14 +119,26 @@
     "tray"
   ],
   "modules-right": [
+		"custom/pacman",
+		"custom/sep",
     "temperature",
+		"custom/sep",
     "custom/gpu",
+		"custom/sep",
     "cpu",
+		"custom/sep",
     "memory",
+		"custom/sep",
     "disk",
+		"custom/sep",
     "disk#games",
+		"custom/sep",
     "disk#storage",
   ],
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%a, %b %d - %I:%M}",
+  },
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -147,106 +152,53 @@
   "custom/divider": {
     "format": "⏽",
   },
-  "custom/web": {
-    "format": "󰖟",
-    "on-click": "firefox",
-  },
-  "custom/obsidian": {
-    "format": "",
-    "on-click": "obsidian",
-  },
-  "custom/files": {
-    "format": " ",
-    "on-click": "thunar",
-  },
-  "custom/pacman": {
-    "interval": 180,
-    "exec": "checkupdates | wc -l",
-    "format": "{} <span foreground='#8aadf4'></span>"
-  },
-  "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%a, %b %d - %I:%M}",
-  },
-  "pulseaudio": {
-    "scroll-step": 5, // %, can be a float
-    "format": "{volume}% <span foreground='#8aadf4'>{icon}</span>",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
-    "format-icons": {
-        "headphone": "",
-        "default": [" ", " ", " "]
-    },
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-  },
-  "temperature": {
-    // "thermal-zone": 2,
-    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-    "critical-threshold": 80,
-    // "format-critical": "{temperatureC}°C {icon}",
-    "format": "{temperatureC}°C <span foreground='#8aadf4'>{icon}</span>",
-    "format-icons": ["", "", ""],
-    "tooltip": false
-  },
-  "custom/gpu": {
-    "exec": "$HOME/.config/hypr/scripts/gpu-temp.sh",
-    "interval": 5,
-    "format": "{} <span foreground='#8aadf4'>󰢮 </span>",
-    "icon": "󰢮 ",
-  },
-  "cpu": {
-    "format": "{usage}% <span foreground='#8aadf4'> </span>",
-  },
-  "memory": {
-    "format": "{used}GB <span foreground='#8aadf4'> </span>",
-    "tooltip": false
-  },
-  "disk": {
-    "format": "{percentage_used}% <span foreground='#8aadf4'>󰋊</span>",
-    "path": "/",
-    },
-  "disk#games": {
-    "format": "{percentage_used}% <span foreground='#8aadf4'></span>",
-    "path": "/mnt/Games/",
-    },
-  "disk#storage": {
-    "format": "{percentage_used}% <span foreground='#8aadf4'></span>",
-    "path": "/mnt/Storage/",
-    },
-  "backlight": {
-    "format": "{percent}% <span foreground='#8aadf4'>{icon}</span>",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
-    "tooltip": false
-  },
-  "battery": {
-    "states": {
-        // "good": 95,
-        "warning": 30,
-        "critical": 15
-    },
-    "format": "{capacity}% <span foreground='#8aadf4'>{icon} </span>",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} <span foreground='#8aadf4'>{icon} </span>",
-    "format-icons": ["", "", "", "", ""]
+  "custom/sep": {
+    "format": "",
   },
   "tray": {
     "icon-size": 20,
     "spacing": 10,
     "show-passive-items": true
   },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-        "activated": "",
-        "deactivated": "󱋑"
-    }
+  "custom/pacman": {
+    "interval": 180,
+    "exec": "checkupdates | wc -l",
+    "format": "<span foreground='#8aadf4'>󰮯</span> {}",
+    "tooltip-format": "{} Packages Ready to Install",
   },
-  "custom/power": {
-    "format": "  ⏻  ",
-    "on-click": "wlogout -b 5"
+  "temperature": {
+    // "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C {icon}",
+    "format": "<span foreground='#8aadf4'>{icon}</span> {temperatureC}°C",
+    "format-icons": ["", "", ""],
+    "tooltip": false,
   },
+  "custom/gpu": {
+    "exec": "$HOME/.config/hypr/scripts/gpu-temp.sh",
+    "interval": 5,
+    "format": "<span foreground='#8aadf4'>󰢮</span> {}",
+    "tooltip": false,
+  },
+  "cpu": {
+    "format": "<span foreground='#8aadf4'></span> {usage}%",
+    "tooltip": false,
+  },
+  "memory": {
+    "format": "<span foreground='#8aadf4'></span> {used}GB",
+    "tooltip": false
+  },
+  "disk": {
+    "format": "<span foreground='#8aadf4'>󰋊</span> {percentage_used}%",
+    "path": "/",
+    },
+  "disk#games": {
+    "format": "<span foreground='#8aadf4'></span> {percentage_used}%",
+    "path": "/mnt/Games/",
+    },
+  "disk#storage": {
+    "format": "<span foreground='#8aadf4'></span> {percentage_used}%",
+    "path": "/mnt/Storage/",
+    },
 }]

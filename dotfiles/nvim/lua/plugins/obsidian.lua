@@ -25,7 +25,6 @@ return {
         path = '~/Documents/obsidian-sync/',
       },
     },
-    notes_subdir = 'Notes',
     mappings = {
       -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
       ['<cr>'] = {
