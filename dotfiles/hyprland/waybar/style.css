@@ -44,7 +44,7 @@ tooltip label {
 }
 
 #custom-power:hover {
-	color: #c6a0f6;
+	color: #cad3f5;
 }
 
 #idle_inhibitor {
@@ -54,7 +54,7 @@ tooltip label {
 }
 
 #idle_inhibitor:hover {
-	color: #c6a0f6;
+	color: #cad3f5;
 }
 
 #custom-web,
@@ -68,7 +68,7 @@ tooltip label {
 #custom-web:hover,
 #custom-obsidian:hover,
 #custom-files:hover {
-  color: #c6a0f6;
+  color: #cad3f5;
 }
 
 #custom-divider {
@@ -105,14 +105,16 @@ tooltip label {
   color: #f5a97f;
 }
 
+#custom-clip,
 #pulseaudio {
   font-size: 20px;
   padding: 0 8px;
   color: #8aadf4;
 }
 
+#custom-clip:hover,
 #pulseaudio:hover {
-	color: #c6a0f6;
+	color: #cad3f5;
 }
 
 #pulseaudio.label {
@@ -130,7 +132,7 @@ tooltip label {
 #custom-prev:hover,
 #custom-play:hover,
 #custom-next:hover {
-	color: #c6a0f6;
+	color: #cad3f5;
 }
 
 #clock {
@@ -189,6 +191,7 @@ label:focus {
 	background-color: #ed8796;
 	color: #1e1e2e;
 	font-weight: bold;
+  border-bottom: 1px solid #8aadf4;
 }
 
 #temperature.critical {
@@ -217,7 +220,7 @@ label:focus {
 }
 
 #idle_inhibitor.activated:hover {
-	background-color: #c6a0f6;
+	background-color: #cad3f5;
 }
 
 #mpd {

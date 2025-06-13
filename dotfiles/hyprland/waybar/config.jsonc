@@ -19,6 +19,8 @@
 		"custom/play",
 		"custom/next",
     "custom/sep",
+		"custom/clip",
+    "custom/sep",
     "pulseaudio",
     "custom/sep",
     "idle_inhibitor",
@@ -47,14 +49,17 @@
   },
 	"custom/files": {
 		"format": "",
+		"tooltip": false,
 		"on-click": "thunar",
 	},
   "custom/web": {
     "format": "󰖟",
+		"tooltip": false,
     "on-click": "firefox",
   },
   "custom/obsidian": {
     "format": "",
+		"tooltip": false,
     "on-click": "obsidian",
   },
 	"keyboard-state": {
@@ -81,6 +86,11 @@
     "on-click": "spotify_player playback next",
 		"tooltip": false,
   },
+	"custom/clip": {
+		"format": "󰨸",
+		"on-click": "cliphist list | rofi -dmenu | cliphist decode | wl-copy",
+		"tooltip": false,
+	},
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
     "format": "{icon} <span foreground='#f5a97f'>{volume}%</span>",
