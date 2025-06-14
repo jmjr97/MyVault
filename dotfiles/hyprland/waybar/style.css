@@ -7,7 +7,7 @@
 window#waybar {
   color: #cad3f5;
   background-color: #181926;
-  border-bottom: 1px solid #8aadf4;
+  border-bottom: 1px solid #494d64;
 }
 
 tooltip {
@@ -39,7 +39,7 @@ tooltip label {
 	font-size: 20px;
   color: #8aadf4;
   /* background-color: #181926; */
-  border-bottom: 1px solid #8aadf4;
+  border-bottom: 1px solid #494d64;
 	margin-right: 5px;
 }
 
@@ -96,10 +96,7 @@ tooltip label {
 #memory,
 #disk,
 #temperature,
-#backlight,
-/* #pulseaudio, */
-#keyboard-state,
-#mpd {
+#keyboard-state {
   font-size: 20px;
   padding: 0 8px;
   color: #f5a97f;
@@ -136,7 +133,7 @@ tooltip label {
 }
 
 #clock {
-  border-bottom: 1px solid #8aadf4;
+  border-bottom: 1px solid #494d64;
 }
 
 #window,
@@ -191,7 +188,7 @@ label:focus {
 	background-color: #ed8796;
 	color: #1e1e2e;
 	font-weight: bold;
-  border-bottom: 1px solid #8aadf4;
+  border-bottom: 1px solid #494d64;
 }
 
 #temperature.critical {
@@ -201,7 +198,7 @@ label:focus {
 #tray {
   color: #494d64;
   background-color: #181926;
-  border-bottom: 1px solid #8aadf4;
+  border-bottom: 1px solid #494d64;
 }
 
 #tray > .passive {

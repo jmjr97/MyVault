@@ -12,6 +12,7 @@
     "custom/files",
     "custom/web",
     "custom/obsidian",
+		"network",
   ],
   "modules-right": [
 		"keyboard-state",
@@ -62,6 +63,10 @@
 		"tooltip": false,
     "on-click": "obsidian",
   },
+	"network": {
+		"format-ethernet": "",
+		"format-disconnected": "no net",
+	},
 	"keyboard-state": {
 		"numlock": false,
 		"capslock": true,
