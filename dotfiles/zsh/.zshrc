@@ -60,7 +60,7 @@ alias orn="nvim ~/Documents/obsidian-sync/Notes/_random.md"
 #-- Python
 alias py="python"
 alias pyenv="~/myrepo/myscripts/bash/pyenv.sh"
-alias pya="source .env/bin/activate"
+alias pya="source .venv/bin/activate"
 alias pyd="deactivate"
 
 #-- Python Scripts

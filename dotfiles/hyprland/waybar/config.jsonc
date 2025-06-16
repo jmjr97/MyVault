@@ -16,6 +16,8 @@
   ],
   "modules-right": [
 		"keyboard-state",
+		"custom/weather",
+    "custom/sep",
 		"custom/prev",
 		"custom/play",
 		"custom/next",
@@ -28,6 +30,10 @@
     "custom/sep",
     "custom/power"
   ],
+	"custom/weather": {
+		"interval": 60,
+		"exec": "~/myrepo/my-apps/weather/dist/main",
+	},
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%a, %b %d - %I:%M}",
@@ -84,6 +90,7 @@
   "custom/play": {
     "format": "",
     "on-click": "spotify_player playback play-pause",
+		"on-click-right": "~/myrepo/myscripts/launchers/spotify.sh launch",
 		"tooltip": false,
   },
   "custom/next": {
