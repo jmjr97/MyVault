@@ -32,7 +32,7 @@
   ],
 	"custom/weather": {
 		"interval": 60,
-		"exec": "~/myrepo/my-apps/weather/dist/main",
+		"exec": "~/myrepo/my-apps/weather",
 	},
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
