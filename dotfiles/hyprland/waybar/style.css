@@ -240,3 +240,8 @@ label:focus {
   background-color: #8aadf4;
   color: #494d64;
 }
+
+#network {
+  color: #24273a;
+	background-color: #ed8796;
+}

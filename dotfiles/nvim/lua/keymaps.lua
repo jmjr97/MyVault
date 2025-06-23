@@ -2,91 +2,91 @@ local opts = { noremap = true, silent = true }
 local km = vim.api.nvim_set_keymap
 
 -------------------
--- House Keeping --
+-- house keeping --
 -------------------
 
 km('n', '-', ':lua MiniFiles.open()<CR>', opts)
 
--- Setup Leader
+-- setup leader
 km("", '<Space>', '<Nop>', opts)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Remove Dumb Stuff
+-- remove dumb stuff
 km('n', '<F1>', [[<ESC>]], opts)
 km('i', '<F1>', [[<ESC>]], opts)
 km('n', 'Q', 'q', opts)
 km('n', 'q', '<Nop>', opts)
 
--- Remap redo
+-- remap redo
 km('n', 'U', ':redo<CR>', opts)
 km('n', '<C-r>', '<Nop>', opts)
 
--- Noice
+-- noice
 km('n', '<leader>d', ':Noice dismiss<CR>', opts)
 
--- Maximizer
+-- maximizer
 km('n', '<leader>m', ':MaximizerToggle<CR>', opts)
 
 ------------------
----- Movement ----
+---- movement ----
 ------------------
 
--- Insert Move Movement
+-- insert move movement
 km('i', '<C-k>', [[<Up>]], opts)
 km('i', '<C-j>', [[<Down>]], opts)
 km('i', '<C-h>', [[<Left>]], opts)
 km('i', '<C-l>', [[<Right>]], opts)
 
--- Window Navigation
+-- window navigation
 km('n', '<C-h>', '<C-w>h', opts)
 km('n', '<C-j>', '<C-w>j', opts)
 km('n', '<C-k>', '<C-w>k', opts)
 km('n', '<C-l>', '<C-w>l', opts)
 
--- Terminal Navigation
+-- terminal navigation
 km("t", '<C-n>', [[<C-\><C-n>]], opts)
 km("t", '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
 km("t", '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
 
--- Buffers
+-- buffers
 km('n', '<S-l>', ':bnext<CR>', opts)
 km('n', '<S-h>', ':bprevious<CR>', opts)
 km('n', '<leader>bb', ':bdelete<CR>', opts)
 km('n', '<leader>bd', ':bdelete!<CR>', opts)
 
--- Centered 1/2 Page
+-- centered 1/2 page
 km('n', '<C-d>', '<C-d>zz', opts)
 km('n', '<C-u>', '<C-u>zz', opts)
 
--- Centered Search
+-- centered search
 km('n', 'n', 'nzzzv', opts)
 km('n', 'N', 'Nzzzv', opts)
 
 ---------------------------
----- Text Manipulation ----
+---- text manipulation ----
 ---------------------------
 
--- Visual Move
+-- visual move
 km('v', 'J', ":m '>+1<CR>gv=gv", opts)
 km('v', 'K', ":m '<-2<CR>gv=gv", opts)
 
--- Paste No Copy
+-- paste no copy
 km('x', '<C-p>', '\"_dP', opts)
 
--- Indent Mode
+-- indent mode
 km('v', '<', '<gv', opts)
 km('v', '>', '>gv', opts)
 
--- Yank to Clipboard
+-- yank to clipboard
 vim.keymap.set({'n', 'v'}, '<leader>y', [["+y]], opts)
 vim.keymap.set({'n', 'v'}, '<leader>p', [["+p]], opts)
 
 -------------------------
----- File Management ----
+---- file management ----
 -------------------------
 
--- Oil
+-- oil
 vim.keymap.set('n', '-', function()
   local oil = require('oil')
   local util = require('oil.util')
@@ -98,10 +98,10 @@ end, opts)
 -- km('n', "-", "<CMD>Oil --float <CR>", opts)
 
 -------------------
----- Telescope ----
+---- telescope ----
 -------------------
 
-km('n', '<leader>ff', '<cmd>Telescope find_files theme=ivy<cr>', opts)
+km('n', '<leader>ff', '<cmd>Telescope find_files{ path_display = "absolute" } theme=ivy<cr>', opts)
 km('n', '<leader>fa', '<cmd>Telescope find_files cwd=~/ theme=ivy prompt_title=All-Files<cr>', opts)
 km('n', '<leader>fb', '<cmd>Telescope buffers theme=dropdown preview=false<cr><escape>', opts)
 km('n', '<leader>fc', '<cmd>Telescope find_files cwd=~/.config/nvim/ theme=ivy prompt_title=All-Files<cr>', opts)
@@ -112,7 +112,7 @@ km('n', '<leader>fr', '<cmd>Telescope oldfiles theme=ivy<cr>', opts)
 km('n', '<leader>fs', '<cmd>Telescope git_status theme=ivy<cr>', opts)
 
 ------------------
----- Obsidian ----
+---- obsidian ----
 ------------------
 
 km('n', '<leader>oo', '<cmd>Telescope find_files cwd=~/Documents/obsidian-sync/ theme=ivy prompt_title=Notes<cr>', opts)
@@ -121,7 +121,7 @@ km('n', '<leader>ot', ':ObsidianTOC<cr>', opts)
 
 
 --------------
----- Code ----
+---- code ----
 --------------
 
 km('n', '<leader>rp', '<cmd>TermExec cmd="python %"<CR>:wincmd j<CR>:sleep 1<CR>:start<CR>', opts) -- Python

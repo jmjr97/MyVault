@@ -12,9 +12,9 @@
     "custom/files",
     "custom/web",
     "custom/obsidian",
-		"network",
   ],
   "modules-right": [
+		"network",
 		"keyboard-state",
 		"custom/weather",
     "custom/sep",
@@ -71,7 +71,7 @@
   },
 	"network": {
 		"format-ethernet": "",
-		"format-disconnected": "no net",
+		"format-disconnected": " no net ",
 	},
 	"keyboard-state": {
 		"numlock": false,
