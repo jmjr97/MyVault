@@ -5,20 +5,29 @@
     "clock",
     "hyprland/workspaces",
     "custom/divider",
+		"custom/files",
     "custom/web",
     "custom/obsidian",
-    "custom/files",
   ],
   "modules-right": [
     "custom/pacman",
-    "mpd",
+		"custom/sep",
+		"custom/clip",
+		"custom/sep",
     "pulseaudio",
+		"custom/sep",
     "temperature",
+		"custom/sep",
     "cpu",
+		"custom/sep",
     "memory",
+		"custom/sep",
     "disk",
+		"custom/sep",
     "backlight",
+		"custom/sep",
     "battery",
+		"custom/sep",
     "tray",
     "idle_inhibitor",
     "custom/power"
@@ -41,6 +50,13 @@
   "custom/divider": {
     "format": "⏽",
   },
+	  "custom/sep": {
+    "format": "",
+  },
+	"custom/files": {
+		"format": "",
+		"on-click": "thunar",
+	},
   "custom/web": {
     "format": "󰖟",
     "on-click": "firefox",
@@ -49,29 +65,30 @@
     "format": "",
     "on-click": "obsidian",
   },
-  "custom/files": {
-    "format": " ",
-    "on-click": "thunar",
-  },
   "custom/pacman": {
     "interval": 180,
     "exec": "checkupdates | wc -l",
     "format": "{} <span foreground='#8aadf4'></span>"
   },
+	"custom/clip": {
+		"format": "󰨸",
+		"on-click": "cliphist list | rofi -dmenu | cliphist decode | wl-copy",
+		"tooltip": false,
+	},
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%a, %b %d - %I:%M}",
   },
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
-    "format": "{volume}% <span foreground='#8aadf4'>{icon}</span>",
+    "format": "{icon} <span foreground='#f5a97f'>{volume}%</span>",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
         "headphone": "",
-        "default": [" ", " ", " "]
+        "default": ["", "", ""]
     },
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
@@ -80,22 +97,23 @@
     // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
-    "format": "{temperatureC}°C <span foreground='#8aadf4'>{icon}</span>",
+    "format": "<span foreground='#8aadf4'>{icon}</span> {temperatureC}°C",
     "format-icons": ["", "", ""],
     "tooltip": false
   },
   "cpu": {
-    "format": "{usage}% <span foreground='#8aadf4'> </span>",
+    "format": "<span foreground='#8aadf4'></span> {usage}%",
+		"tooltip": false,
   },
   "memory": {
-    "format": "{used}GB <span foreground='#8aadf4'> </span>",
+    "format": "<span foreground='#8aadf4'></span> {used}GB",
     "tooltip": false
   },
   "disk": {
-    "format": "{percentage_used}% <span foreground='#8aadf4'>󰋊</span>"
+    "format": "<span foreground='#8aadf4'>󰋊</span> {percentage_used}%",
     },
   "backlight": {
-    "format": "{percent}% <span foreground='#8aadf4'>{icon}</span>",
+    "format": "<span foreground='#8aadf4'>{icon}</span> {percent}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
     "tooltip": false
   },
@@ -105,10 +123,10 @@
         "warning": 30,
         "critical": 15
     },
-    "format": "{capacity}% <span foreground='#8aadf4'>{icon} </span>",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
+    "format": "{capacity}% <span foreground='#8aadf4'>{icon}</span>",
+    "format-full": "{capacity}% <span foreground='#8aadf4'>{icon}</span>",
+    "format-charging": "<span foreground='#8aadf4'></span> {capacity}%",
+    "format-plugged": "<span foreground='#8aadf4'></span> {capacity}%",
     "format-alt": "{time} <span foreground='#8aadf4'>{icon} </span>",
     "format-icons": ["", "", "", "", ""]
   },
@@ -125,7 +143,8 @@
     }
   },
   "custom/power": {
-    "format": "  ⏻  ",
-    "on-click": "wlogout -b 5"
+    "format": " ⏻  ",
+    "on-click": "wlogout -b 5",
+		"tooltip": false,
   },
 }
