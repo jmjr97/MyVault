@@ -4,6 +4,6 @@ Type=Application
 Name=PCSX2
 Comment=PS2 Emulator
 Exec=/home/john/apps/pcsx2.AppImage
-Icon=
+Icon=/home/john/apps/icons/pcsx2.png
 Terminal=false
 Categories=Game;

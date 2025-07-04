@@ -1,0 +1,9 @@
+[Desktop Entry]
+
+Type=Application
+Name=DuckStation
+Comment=PS1 Emulator
+Exec=/home/john/apps/duckstation.AppImage
+Icon=/home/john/apps/icons/duckstation.png
+Terminal=false
+Categories=Game;

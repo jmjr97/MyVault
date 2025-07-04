@@ -2,7 +2,7 @@
 Name=Mafia: Definitive Edition
 Comment=Play this game on Steam
 Exec=steam steam://rungameid/1030840
-Icon=steam
+Icon=steam_icon_1030840
 Terminal=false
 Type=Application
-Categories=Game;
+Categories=Steam;

@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=Space Engineers
+Name=Once Human
 Comment=Play this game on Steam
-Exec=steam steam://rungameid/244850
-Icon=steam_icon_244850
+Exec=steam steam://rungameid/2139460
+Icon=steam_icon_2139460
 Terminal=false
 Type=Application
 Categories=Steam;
