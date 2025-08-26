@@ -16,8 +16,6 @@
   "modules-right": [
 		"network",
 		"keyboard-state",
-		"custom/weather",
-    "custom/sep",
 		"custom/prev",
 		"custom/play",
 		"custom/next",
@@ -28,12 +26,10 @@
     "custom/sep",
     "idle_inhibitor",
     "custom/sep",
+		"custom/notify",
+    "custom/sep",
     "custom/power"
   ],
-	"custom/weather": {
-		"interval": 60,
-		"exec": "~/myrepo/my-apps/weather",
-	},
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%a, %b %d - %I:%M}",
@@ -121,6 +117,11 @@
         "deactivated": "󱋑"
     }
   },
+	"custom/notify": {
+		"format": "󰎟",
+		"tooltip": false,
+		"on-click": "swaync-client -t -sw",
+	},
   "custom/power": {
     "format": " ⏻ ",
     "on-click": "wlogout -b 5",
@@ -194,7 +195,7 @@
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
     "format": "<span foreground='#8aadf4'>{icon}</span> {temperatureC}°C",
-    "format-icons": ["", "", ""],
+    "format-icons": ["", "", "", "", ""],
     "tooltip": false,
   },
   "custom/gpu": {

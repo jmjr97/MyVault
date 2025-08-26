@@ -48,6 +48,7 @@ config.window_padding = {
   top = 2,
   bottom = 2,
 }
+config.warn_about_missing_glyphs = false
 
 -- Keybinds
 config.disable_default_key_bindings = true

@@ -18,8 +18,9 @@ function getDashboardConfig()
       keys = {
         { icon = " ", key = "e", desc = "New File", action = ":ene | startinsert" },
         { icon = " ", key = "f", desc = "Find File", action = ":Telescope find_files" },
+        { icon = " ", key = "a", desc = "Find File from Home", action = ":Telescope find_files cwd=~/ prompt_title=All-Files<cr>" },
         { icon = " ", key = "r", desc = "Recent Files", action = ":Telescope oldfiles" },
-        { icon = " ", key = "o", desc = "Notes", action = ":Telescope find_files cwd=~/Documents/obsidian-sync/" },
+        { icon = " ", key = "o", desc = "Notes", action = ":Telescope find_files cwd=~/Dropbox/obsidian/" },
         { icon = " ", key = "g", desc = "Find Text", action = ":Telescope live_grep" },
         { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
         { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },

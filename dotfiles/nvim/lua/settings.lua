@@ -4,7 +4,7 @@ local options = {
 	wrap = false,
 	cursorline = true,
 	mouse = "a",
-	-- clipboard = "unnamedplus",
+	clipboard = "unnamedplus",
 	termguicolors = true,
 
 	tabstop = 2,
