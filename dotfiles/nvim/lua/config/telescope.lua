@@ -17,7 +17,6 @@ telescope.setup {
     file_ignore_patterns = {
       '^.cache/',
       '^.cargo/',
-      '^.config/',
       '^.fonts/',
       '^.icons/',
       '^.local/',

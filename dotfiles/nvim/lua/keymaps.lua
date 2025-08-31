@@ -101,7 +101,8 @@ end, opts)
 ---- telescope ----
 -------------------
 
-km('n', '<leader>ff', '<cmd>Telescope find_files{ path_display = "absolute" } theme=ivy<cr>', opts)
+km('n', '<leader>ff', '<cmd>Telescope find_files theme=ivy<cr>', opts)
+-- km('n', '<leader>ff', '<cmd>Telescope find_files{ path_display = "absolute" } theme=ivy<cr>', opts)
 km('n', '<leader>fa', '<cmd>Telescope find_files cwd=~/ theme=ivy prompt_title=All-Files<cr>', opts)
 km('n', '<leader>fb', '<cmd>Telescope buffers theme=dropdown preview=false<cr><escape>', opts)
 km('n', '<leader>fc', '<cmd>Telescope find_files cwd=~/.config/nvim/ theme=ivy prompt_title=All-Files<cr>', opts)

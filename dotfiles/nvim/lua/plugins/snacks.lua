@@ -11,6 +11,7 @@ return {
     -- refer to the configuration section below
     dashboard = getDashboardConfig(),
     indent = { enabled = true },
+    picker = { enabled = true },
     input = { enabled = true },
     notifier = {
       enabled = true,

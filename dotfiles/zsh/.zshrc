@@ -36,12 +36,14 @@ alias pu="sudo pacman -Syu"
 alias pr="sudo pacman -Rns"
 alias pq="pacman -Qs"
 alias pqe="pacman -Qe"
+alias pc="checkupdates"
 
 #-- Alias
 alias so='source ~/.config/zsh/.zshrc'
 alias ls="eza -a -l -h -s=type --icons=auto"
 alias lss="clear; eza -a -l -h -s=type --icons=auto"
 alias ..="cd .."
+alias f="spf"
 alias cat="bat"
 alias top="btop"
 alias spot="~/myrepo/myscripts/launchers/spotify.sh term"
@@ -67,7 +69,7 @@ alias pyd="deactivate"
 alias stopwatch='/home/john/Code/python/learning/stopwatch/stopwatch.py'
 
 #-- Bash Scripts
-alias pc="~/myrepo/myscripts/bash/pacclean.sh"
+alias pclean="~/myrepo/myscripts/bash/pacclean.sh"
 
 #-- Archive Alias
 alias maketar="tar -czf"
@@ -123,15 +125,37 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-Z}'
 eval "$(zoxide init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+#-- spf
+# spf() {
+#   os=$(uname -s)
+#
+#   # Linux
+#   if [[ "$os" == "Linux" ]]; then
+#     export SPF_LAST_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/superfile/lastdir"
+#   fi
+#
+#   # macOS
+#   if [[ "$os" == "Darwin" ]]; then
+#     export SPF_LAST_DIR="$HOME/Library/Application Support/superfile/lastdir"
+#   fi
+#
+#   command spf "$@"
+#
+#   [ ! -f "$SPF_LAST_DIR" ] || {
+#     . "$SPF_LAST_DIR"
+#     rm -f -- "$SPF_LAST_DIR" > /dev/null
+#   }
+# }
+
 #-- Yazi
-function f() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
+# function f() {
+# 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+# 	yazi "$@" --cwd-file="$tmp"
+# 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+# 		builtin cd -- "$cwd"
+# 	fi
+# 	rm -f -- "$tmp"
+# }
 
 #-- fzf
 alias fff="zle --border --exclude '.cache' -N fzf-cd-widget"
