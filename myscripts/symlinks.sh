@@ -31,10 +31,9 @@ ln -s /home/john/myrepo/dotfiles/lazygit/ /home/john/.config/
 
 #### Services ####
 # ln -s /home/john/myrepo/dotfiles/picom/ /home/john/.config/
-ln -s /home/john/myrepo/dotfiles/dunst/ /home/john/.config/
+# ln -s /home/john/myrepo/dotfiles/dunst/ /home/john/.config/
 ln -s /home/john/myrepo/dotfiles/zsh/ /home/john/.config/
-ln -s /home/john/myrepo/dotfiles/starship.toml /home/john/.config/
 
 #### Misc. ####
 # ln -s /home/john/myrepo/.xprofile /home/john/
-ln -s /home/john/myrepo/dotfiles/.themes/ /home/john/
+# ln -s /home/john/myrepo/dotfiles/.themes/ /home/john/

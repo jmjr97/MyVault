@@ -68,7 +68,7 @@
   "custom/pacman": {
     "interval": 180,
     "exec": "checkupdates | wc -l",
-    "format": "{} <span foreground='#8aadf4'></span>"
+    "format": "{} <span foreground='#8aadf4'>󰮯</span>"
   },
 	"custom/clip": {
 		"format": "󰨸",
