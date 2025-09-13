@@ -22,7 +22,7 @@ return {
     workspaces = {
       {
         name = 'personal',
-        path = '~/Documents/obsidian-sync/',
+        path = '~/Dropbox/obsidian/',
       },
     },
     mappings = {

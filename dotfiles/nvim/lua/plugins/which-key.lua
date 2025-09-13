@@ -25,9 +25,8 @@ return {
       { "<leader>fc", desc = "Neovim Configs" },
       { "<leader>fg", desc = "Live Grep" },
       { "<leader>fh", desc = "Help Tags" },
-      { "<leader>fm", desc = "Marks" },
       { "<leader>fr", desc = "Recent Files" },
-      { "<leader>fs", desc = "Git Status" },
+      { "<leader>fp", desc = "Pull from clipboard" },
       -- LSP Handler
       { "<leader>l", group = "LSP Handler" },
       { "<leader>lr", desc = "Tele References" },

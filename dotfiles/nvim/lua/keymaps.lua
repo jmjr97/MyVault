@@ -97,26 +97,24 @@ vim.keymap.set('n', '-', function()
 end, opts)
 -- km('n', "-", "<CMD>Oil --float <CR>", opts)
 
--------------------
----- telescope ----
--------------------
+-----------------------
+---- snacks picker ----
+-----------------------
 
-km('n', '<leader>ff', '<cmd>Telescope find_files theme=ivy<cr>', opts)
--- km('n', '<leader>ff', '<cmd>Telescope find_files{ path_display = "absolute" } theme=ivy<cr>', opts)
-km('n', '<leader>fa', '<cmd>Telescope find_files cwd=~/ theme=ivy prompt_title=All-Files<cr>', opts)
-km('n', '<leader>fb', '<cmd>Telescope buffers theme=dropdown preview=false<cr><escape>', opts)
-km('n', '<leader>fc', '<cmd>Telescope find_files cwd=~/.config/nvim/ theme=ivy prompt_title=All-Files<cr>', opts)
-km('n', '<leader>fg', '<cmd>Telescope live_grep theme=ivy<cr>', opts)
-km('n', '<leader>fh', '<cmd>Telescope help_tags theme=ivy<cr>', opts)
-km('n', '<leader>fm', '<cmd>Telescope marks theme=dropdown<cr><escape>', opts)
-km('n', '<leader>fr', '<cmd>Telescope oldfiles theme=ivy<cr>', opts)
-km('n', '<leader>fs', '<cmd>Telescope git_status theme=ivy<cr>', opts)
+km('n', '<leader>ff', ':lua Snacks.picker.files({ layout = "ivy_split" })<cr>', opts)
+km('n', '<leader>fa', ':lua Snacks.picker.files({ layout = "ivy_split", cwd = "~/", hidden = true, title = "Files ~/" })<cr>', opts)
+km('n', '<leader>fb', ':lua Snacks.picker.buffers({ layout = "select", focus = "list" })<cr>', opts)
+km('n', '<leader>fc', ':lua Snacks.picker.files({ layout = "sidebar", cwd = "~/.config/nvim/", title = "Configs" })<cr>', opts)
+km('n', '<leader>fr', ':lua Snacks.picker.recent({ layout = "ivy_split" })<cr>', opts)
+km('n', '<leader>fg', ':lua Snacks.picker.grep({ layout = "ivy_split" })<cr>', opts)
+km('n', '<leader>fh', ':lua Snacks.picker.help({ layout = "ivy_split" })<cr>', opts)
+km('n', '<leader>fp', ':lua Snacks.picker.cliphist({ layout = "select" })<cr>', opts)
 
 ------------------
 ---- obsidian ----
 ------------------
 
-km('n', '<leader>oo', '<cmd>Telescope find_files cwd=~/Documents/obsidian-sync/ theme=ivy prompt_title=Notes<cr>', opts)
+km('n', '<leader>oo', ':lua Snacks.picker.files({ layout = "sidebar", cwd = "~/Dropbox/obsidian/", title = "Notes" })<cr>', opts)
 km('n', '<leader>og', ':ObsidianSearch<cr>', opts)
 km('n', '<leader>ot', ':ObsidianTOC<cr>', opts)
 

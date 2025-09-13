@@ -26,6 +26,7 @@ local options = {
 vim.treesitter.language.register('markdown', 'vimwiki')
 vim.g.python_recommended_style = 0
 vim.opt.shortmess:append "c"
+vim.diagnostic.config({ virtual_text = true })
 
 vim.cmd[[
 augroup highlight_yank
