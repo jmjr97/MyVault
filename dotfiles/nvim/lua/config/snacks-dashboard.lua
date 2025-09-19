@@ -17,7 +17,7 @@ function getDashboardConfig()
       ---@type snacks.dashboard.Item[]
       keys = {
         { icon = " ", key = "e", desc = "New File", action = ":ene | startinsert" },
-        { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick( 'files', { layout = 'ivy_split', cwd = '~/' })" },
+        { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick( 'files', { layout = 'ivy_split' })" },
         { icon = " ", key = "a", desc = "Find File from Home", action = ":lua Snacks.dashboard.pick( 'files', { layout = 'ivy_split', cwd = '~/', title = 'Files ~/' })" },
         { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles', { layout = 'ivy_split' })" },
         { icon = " ", key = "o", desc = "Notes", action = ":lua Snacks.dashboard.pick( 'files', { layout = 'sidebar', cwd = '~/Dropbox/obsidian/', title = 'Notes' })" },

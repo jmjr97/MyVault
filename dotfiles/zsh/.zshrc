@@ -43,7 +43,7 @@ alias so='source ~/.config/zsh/.zshrc'
 alias ls="eza -a -l -h -s=type --icons=auto"
 alias lss="clear; eza -a -l -h -s=type --icons=auto"
 alias ..="cd .."
-alias f="yazi"
+# alias f="yazi"
 alias cat="bat"
 alias top="btop"
 alias spot="~/myrepo/myscripts/launchers/spotify.sh term"
@@ -149,11 +149,10 @@ eval "$(zoxide init --cmd cd zsh)"
 
 #-- Yazi
 function f() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
 
