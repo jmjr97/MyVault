@@ -1,3 +1,3 @@
 #!/bin/bash
 
-wezterm start nvim ~/Documents/obsidian-sync/notes/_quick.md
+wezterm start nvim ~/Dropbox/obsidian/notes/_quick.md

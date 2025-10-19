@@ -21,7 +21,7 @@ function main() {
 
   # output
   if [ "${action}" == "icon" ]; then
-    echo ' '$temp_icon
+    echo $temp_icon
   fi
 
   if [ "${action}" == "temp" ]; then
