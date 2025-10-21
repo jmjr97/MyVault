@@ -7,29 +7,37 @@
   "spacing": 4, // Gaps between modules (4px)
   "modules-left": [
     "clock",
-    "hyprland/workspaces",
-    "custom/divider",
-    "custom/files",
-    "custom/web",
-    "custom/obsidian",
+		"group/launchers",
   ],
+	"modules-center": [
+    "hyprland/workspaces",
+	],
   "modules-right": [
 		"network",
 		"keyboard-state",
-		"custom/prev",
-		"custom/play",
-		"custom/next",
-    "custom/sep",
+		"group/media",
 		"custom/clip",
-    "custom/sep",
     "pulseaudio",
-    "custom/sep",
     "idle_inhibitor",
-    "custom/sep",
 		"custom/notify",
-    "custom/sep",
     "custom/power"
   ],
+	"group/launchers": {
+		"orientation": "horizontal",
+		"modules":[
+			"custom/files",
+			"custom/web",
+			"custom/obsidian",
+		],
+	},
+	"group/media": {
+		"orientation": "horizontal",
+		"modules":[
+			"custom/prev",
+			"custom/play",
+			"custom/next",
+		],
+	},
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%a, %b %d - %I:%M}",
@@ -37,18 +45,26 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "1": "󰎤",
-      "2": "󰎧",
-      "3": "󰎪",
-      "4": "󰎭",
-      "5": "󰎱",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
     },
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+		}
   },
   "custom/divider": {
     "format": "⏽",
   },
   "custom/sep": {
-    "format": "",
+    "format": " ",
+    // "format": "",
   },
 	"custom/files": {
 		"format": "",
@@ -103,7 +119,8 @@
     "scroll-step": 5, // %, can be a float
     "format": "{icon} <span foreground='#f5a97f'>{volume}%</span>",
     "format-icons": {
-        "alsa_output.usb-Logitech_PRO_000000000000-00.analog-stereo": "",
+        // "alsa_output.usb-Logitech_PRO_000000000000-00.analog-stereo": "",
+				"alsa_output.usb-Logitech_PRO_000000000000-00.pro-output-0": "",
         "alsa_output.pci-0000_09_00.4.analog-stereo": "󰓃",
     },
 
@@ -123,7 +140,7 @@
 		"on-click": "swaync-client -t -sw",
 	},
   "custom/power": {
-    "format": " ⏻ ",
+    "format": "⏻",
     "on-click": "wlogout -b 5",
 		"tooltip": false,
   },
@@ -137,40 +154,47 @@
   "spacing": 4, // Gaps between modules (4px)
   "modules-left": [
     "clock",
-    "hyprland/workspaces",
-    "custom/divider",
     "tray"
   ],
+	"modules-center": [
+    "hyprland/workspaces",
+	],
   "modules-right": [
 		"custom/pacman",
-		"custom/sep",
     "temperature",
-		"custom/sep",
     "custom/gpu",
-		"custom/sep",
     "cpu",
-		"custom/sep",
     "memory",
-		"custom/sep",
-    "disk",
-		"custom/sep",
-    "disk#games",
-		"custom/sep",
-    "disk#storage",
+		"group/storage",
   ],
-  "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%a, %b %d - %I:%M}",
-  },
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "6": "󰎤",
-      "7": "󰎧",
-      "8": "󰎪",
-      "9": "󰎭",
-      "10": "󰎱",
+      "6": "1",
+      "7": "2",
+      "8": "3",
+      "9": "4",
+      "10": "5",
     },
+		"persistent-workspaces": {
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": [],
+			"10": [],
+		}
+  },
+	"group/storage": {
+		"orientation": "horizontal",
+		"modules":[
+			"disk",
+			"disk#games",
+			"disk#storage",
+		],
+	},
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%a, %b %d - %I:%M}",
   },
   "custom/divider": {
     "format": "⏽",

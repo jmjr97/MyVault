@@ -88,6 +88,7 @@ tooltip label {
   font-size: 20px;
 }
 
+#custom-weather,
 #custom-pacman,
 #custom-gpu,
 #clock,
@@ -102,6 +103,7 @@ tooltip label {
   color: #f5a97f;
 }
 
+#custom-notify,
 #custom-clip,
 #pulseaudio {
   font-size: 20px;
@@ -109,6 +111,7 @@ tooltip label {
   color: #8aadf4;
 }
 
+#custom-notify:hover,
 #custom-clip:hover,
 #pulseaudio:hover {
 	color: #cad3f5;
@@ -188,7 +191,7 @@ label:focus {
 	background-color: #ed8796;
 	color: #1e1e2e;
 	font-weight: bold;
-  border-bottom: 1px solid #8aadf4;
+  border-bottom: 1px solid #494d64;
 }
 
 #temperature.critical {
@@ -238,4 +241,9 @@ label:focus {
 #mpd.paused {
   background-color: #8aadf4;
   color: #494d64;
+}
+
+#network {
+  color: #24273a;
+	background-color: #ed8796;
 }

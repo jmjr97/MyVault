@@ -17,4 +17,6 @@ configuration {
 
 //@theme "/usr/share/rofi/themes/dmenu.rasi"
 
-@theme "/home/john/.config/rofi/themes/custom.rasi"
+//@theme "/home/john/.config/rofi/themes/custom.rasi"
+
+@theme "/home/john/.config/rofi/themes/mytheme.rasi"
