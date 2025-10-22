@@ -23,7 +23,6 @@ tooltip label {
 	border: 1px solid #8aadf4;
   border-radius: 8px;
 	margin-top: 4px;
-	margin-bottom: 4px;
 }
 
 #workspaces button {
@@ -55,7 +54,6 @@ tooltip label {
 	padding: 0 10px;
 	margin-left: 10px;
 	margin-top: 4px;
-	margin-bottom: 4px;
 }
 
 /* main screen */
@@ -68,7 +66,6 @@ tooltip label {
 	font-weight: bold;
 	padding: 0 10px;
 	margin-top: 4px;
-	margin-bottom: 4px;
 }
 
 #custom-web{	
@@ -83,7 +80,6 @@ tooltip label {
 	font-weight: bold;
 	padding: 0 10px;
 	margin-top: 4px;
-	margin-bottom: 4px;
 }
 
 #custom-play {	
@@ -98,7 +94,6 @@ tooltip label {
 	font-weight: bold;
 	padding: 0 10px;
 	margin-top: 4px;
-	margin-bottom: 4px;
 }
 
 #pulseaudio {
@@ -108,7 +103,6 @@ tooltip label {
 	border-radius: 8;
 	padding: 0 10px;
 	margin-top: 4px;
-	margin-bottom: 4px;
 }
 
 #pulseaudio.muted {
@@ -123,7 +117,6 @@ tooltip label {
 	font-weight: bold;
 	padding: 0 10px;
 	margin-top: 4px;
-	margin-bottom: 4px;
 }
 
 #idle_inhibitor.activated {
@@ -138,7 +131,6 @@ tooltip label {
 	font-weight: bold;
 	padding: 0 10px;
 	margin-top: 4px;
-	margin-bottom: 4px;
 }
 
 #custom-power {
@@ -150,7 +142,6 @@ tooltip label {
 	padding: 0 10px;
 	margin-right: 10px;
 	margin-top: 4px;
-	margin-bottom: 4px;
 }
 
 #custom-files:hover,
@@ -182,7 +173,6 @@ tooltip label {
 	border-radius: 8;
 	padding: 0 10px;
 	margin-top: 4px;
-	margin-bottom: 4px;
 }
 
 #storage {
@@ -193,7 +183,6 @@ tooltip label {
 	padding: 0 10px;
 	margin-right: 10px;
 	margin-top: 4px;
-	margin-bottom: 4px;
 }
 
 #disk.games {
