@@ -17,7 +17,9 @@
 		"keyboard-state",
 		"group/media",
 		"custom/clip",
+		"custom/picker",
     "pulseaudio",
+		"custom/weather",
     "idle_inhibitor",
 		"custom/notify",
     "custom/power"
@@ -41,6 +43,7 @@
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%a, %b %d - %I:%M}",
+		"on-click": "firefox https://calendar.google.com",
   },
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -81,6 +84,11 @@
 		"tooltip": false,
     "on-click": "obsidian",
   },
+  "custom/weather": {
+    "interval": 300,
+    "exec": "~/myrepo/my-apps/weather",
+    "format": "{}",
+  },
 	"network": {
 		"format-ethernet": "",
 		"format-disconnected": " no net ",
@@ -113,6 +121,11 @@
 	"custom/clip": {
 		"format": "󰨸",
 		"on-click": "cliphist list | rofi -dmenu | cliphist decode | wl-copy",
+		"tooltip": false,
+	},
+	"custom/picker": {
+		"format": "",
+		"on-click": "hyprpicker -a",
 		"tooltip": false,
 	},
   "pulseaudio": {
@@ -195,6 +208,7 @@
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%a, %b %d - %I:%M}",
+		"on-click": "firefox https://calendar.google.com",
   },
   "custom/divider": {
     "format": "⏽",

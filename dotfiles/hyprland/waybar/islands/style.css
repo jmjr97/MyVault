@@ -49,7 +49,7 @@ tooltip label {
 #clock {
 	background: #24273a;
 	color: #8aadf4;
-	border: 1px solid #a5adcb;
+	border: 1px solid #5b6078;
 	border-radius: 8;
 	padding: 0 10px;
 	margin-left: 10px;
@@ -61,7 +61,7 @@ tooltip label {
 #launchers {
 	background: #24273a;
 	color: #8aadf4;
-	border: 1px solid #a5adcb;
+	border: 1px solid #5b6078;
 	border-radius: 8;
 	font-weight: bold;
 	padding: 0 10px;
@@ -75,7 +75,7 @@ tooltip label {
 #media {
 	background: #24273a;
 	color: #8aadf4;
-	border: 1px solid #a5adcb;
+	border: 1px solid #5b6078;
 	border-radius: 8;
 	font-weight: bold;
 	padding: 0 10px;
@@ -86,20 +86,14 @@ tooltip label {
 	padding: 0 10px;
 }
 
-#custom-clip {
+#custom-clip,
+#custom-picker,
+#pulseaudio,
+#idle_inhibitor,
+#custom-notify {
 	background: #24273a;
 	color: #8aadf4;
-	border: 1px solid #a5adcb;
-	border-radius: 8;
-	font-weight: bold;
-	padding: 0 10px;
-	margin-top: 4px;
-}
-
-#pulseaudio {
-	background: #24273a;
-	color: #8aadf4;
-	border: 1px solid #a5adcb;
+	border: 1px solid #5b6078;
 	border-radius: 8;
 	padding: 0 10px;
 	margin-top: 4px;
@@ -109,34 +103,14 @@ tooltip label {
 	color: #ed8796;
 }
 
-#idle_inhibitor {
-	background: #24273a;
-	color: #8aadf4;
-	border: 1px solid #a5adcb;
-	border-radius: 8;
-	font-weight: bold;
-	padding: 0 10px;
-	margin-top: 4px;
-}
-
 #idle_inhibitor.activated {
 	color: #ed8796;
-}
-
-#custom-notify {
-	background: #24273a;
-	color: #8aadf4;
-	border: 1px solid #a5adcb;
-	border-radius: 8;
-	font-weight: bold;
-	padding: 0 10px;
-	margin-top: 4px;
 }
 
 #custom-power {
 	background: #24273a;
 	color: #8aadf4;
-	border: 1px solid #a5adcb;
+	border: 1px solid #5b6078;
 	border-radius: 8;
 	font-weight: bold;
 	padding: 0 10px;
@@ -169,7 +143,16 @@ tooltip label {
 #memory {
 	background: #24273a;
 	color: #f5a97f;
-	border: 1px solid #a5adcb;
+	border: 1px solid #5b6078;
+	border-radius: 8;
+	padding: 0 10px;
+	margin-top: 4px;
+}
+
+#custom-weather {
+	background: #24273a;
+	color: #8aadf4;
+	border: 1px solid #5b6078;
 	border-radius: 8;
 	padding: 0 10px;
 	margin-top: 4px;
@@ -178,7 +161,7 @@ tooltip label {
 #storage {
 	background: #24273a;
 	color: #f5a97f;
-	border: 1px solid #a5adcb;
+	border: 1px solid #5b6078;
 	border-radius: 8;
 	padding: 0 10px;
 	margin-right: 10px;
