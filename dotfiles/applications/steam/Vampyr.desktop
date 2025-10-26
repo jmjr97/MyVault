@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Vampyr
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/427290
-Icon=steam_icon_427290
-Terminal=false
-Type=Application
-Categories=Game;

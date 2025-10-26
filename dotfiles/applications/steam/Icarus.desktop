@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=Forever Skies
+Name=Icarus
 Comment=Play this game on Steam
-Exec=steam steam://rungameid/1641960
+Exec=steam steam://rungameid/1149460
 Icon=steam
 Terminal=false
 Type=Application

@@ -2,7 +2,7 @@
 Name=METAL GEAR SOLID V: THE PHANTOM PAIN
 Comment=Play this game on Steam
 Exec=steam steam://rungameid/287700
-Icon=steam_icon_287700
+Icon=steam
 Terminal=false
 Type=Application
-Categories=Steam;
+Categories=Game;

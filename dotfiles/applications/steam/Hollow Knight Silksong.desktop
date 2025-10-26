@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=Wasteland 3
+Name=Hollow Knight: Silksong
 Comment=Play this game on Steam
-Exec=steam steam://rungameid/719040
+Exec=steam steam://rungameid/1030300
 Icon=steam
 Terminal=false
 Type=Application

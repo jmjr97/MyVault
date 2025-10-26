@@ -2,7 +2,7 @@
 Name=Horizon Forbidden West™ Complete Edition
 Comment=Play this game on Steam
 Exec=steam steam://rungameid/2420110
-Icon=steam_icon_2420110
+Icon=steam
 Terminal=false
 Type=Application
-Categories=Steam;
+Categories=Game;

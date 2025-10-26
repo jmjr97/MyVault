@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=Path of Exile 2
+Name=Warframe
 Comment=Play this game on Steam
-Exec=steam steam://rungameid/2694490
+Exec=steam steam://rungameid/230410
 Icon=steam
 Terminal=false
 Type=Application

@@ -2,7 +2,7 @@
 Name=Days Gone
 Comment=Play this game on Steam
 Exec=steam steam://rungameid/1259420
-Icon=steam_icon_1259420
+Icon=steam
 Terminal=false
 Type=Application
-Categories=Steam;
+Categories=Game;

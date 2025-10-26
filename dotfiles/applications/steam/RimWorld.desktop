@@ -2,7 +2,7 @@
 Name=RimWorld
 Comment=Play this game on Steam
 Exec=steam steam://rungameid/294100
-Icon=steam_icon_294100
+Icon=steam
 Terminal=false
 Type=Application
-Categories=Steam;
+Categories=Game;

@@ -2,7 +2,7 @@
 Name=Ghost of Tsushima DIRECTOR'S CUT
 Comment=Play this game on Steam
 Exec=steam steam://rungameid/2215430
-Icon=steam_icon_2215430
+Icon=steam
 Terminal=false
 Type=Application
-Categories=Steam;
+Categories=Game;

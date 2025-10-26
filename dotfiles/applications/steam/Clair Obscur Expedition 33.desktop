@@ -2,7 +2,7 @@
 Name=Clair Obscur: Expedition 33
 Comment=Play this game on Steam
 Exec=steam steam://rungameid/1903340
-Icon=steam_icon_1903340
+Icon=steam
 Terminal=false
 Type=Application
-Categories=Steam;
+Categories=Game;

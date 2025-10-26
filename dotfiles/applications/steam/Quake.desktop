@@ -2,7 +2,7 @@
 Name=Quake
 Comment=Play this game on Steam
 Exec=steam steam://rungameid/2310
-Icon=steam_icon_2310
+Icon=steam
 Terminal=false
 Type=Application
-Categories=Steam;
+Categories=Game;
